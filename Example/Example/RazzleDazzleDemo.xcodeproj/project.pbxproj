@@ -42,7 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FA0895741B3F1A37002460BB /* RazzleDazzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RazzleDazzle.framework; path = "/Users/laura_ifttt/Library/Developer/Xcode/DerivedData/RazzleDazzle-extfrqbaevzkbofrprxsjdqllpbd/Build/Products/Debug-iphoneos/RazzleDazzle.framework"; sourceTree = "<absolute>"; };
+		FA0895741B3F1A37002460BB /* RazzleDazzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RazzleDazzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6AC6DC1B3DF6690053688A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAD1C7481B2F57D60053D880 /* RazzleDazzleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RazzleDazzleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD1C74C1B2F57D60053D880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
