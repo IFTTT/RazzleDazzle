@@ -6,7 +6,7 @@
 > **If you're using Xcode 6.3 & Swift 1.2,** use Quick `v0.3.*`.
 > New releases are developed on the `master` branch.
 >
-> **If you're using Xcode 7.0 & Swift 2.0,** use the latest version of Quick--`v0.4.0` at the time of writing.
+> **If you're using Xcode 7.0 & Swift 2.0,** use the latest version of Quick--`v0.5.1` at the time of writing.
 > New releases are developed on the `swift-2.0` branch.
 
 
@@ -95,19 +95,48 @@ First, update CocoaPods to Version 0.36.0 or newer, which is necessary to instal
 Then, add Quick and Nimble to your Podfile. Additionally, the ```use_frameworks!``` line is necessary for using Swift in CocoaPods:
 
 ```rb
+
 # Podfile
 
-link_with 'MyTests', 'MyUITests'
-
 use_frameworks!
-pod 'Quick'
-pod 'Nimble'
+
+def testing_pods
+    # If you're using Xcode 7 / Swift 2
+    pod 'Quick', '~> 0.5.0'
+    pod 'Nimble', '2.0.0-rc.2'
+
+    # If you're using Xcode 6 / Swift 1.2
+    pod 'Quick', '~> 0.3.0'
+    pod 'Nimble', '~> 1.0.0'
+end
+
+target 'MyTests' do
+    testing_pods
+end
+
+target 'MyUITests' do
+    testing_pods
+end
 ```
 
 Finally, download and link Quick and Nimble to your tests:
 
 ```sh
 pod install
+```
+
+### Using Swift 1.2?
+
+The latest release of Quick (0.4.0) is for Swift 2 (Xcode 7), but the latest Nimble (1.0.0) is for Swift 1.2 (Xcode 6).
+
+If you want Xcode 6 do:
+
+```sh
+target 'MyTests' do
+  use_frameworks!
+  pod 'Quick', '~>0.3.0'
+  pod 'Nimble', '~>1.0.0'
+end
 ```
 
 ## [Carthage](https://github.com/Carthage/Carthage)

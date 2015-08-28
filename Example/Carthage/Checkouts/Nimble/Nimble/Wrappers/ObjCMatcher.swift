@@ -1,33 +1,33 @@
 import Foundation
 
-typealias MatcherBlock = (actualExpression: Expression<NSObject>, failureMessage: FailureMessage) -> Bool
-typealias FullMatcherBlock = (actualExpression: Expression<NSObject>, failureMessage: FailureMessage, shouldNotMatch: Bool) -> Bool
-@objc public class NMBObjCMatcher : NMBMatcher {
+public typealias MatcherBlock = (actualExpression: Expression<NSObject>, failureMessage: FailureMessage) -> Bool
+public typealias FullMatcherBlock = (actualExpression: Expression<NSObject>, failureMessage: FailureMessage, shouldNotMatch: Bool) -> Bool
+public class NMBObjCMatcher : NSObject, NMBMatcher {
     let _match: MatcherBlock
     let _doesNotMatch: MatcherBlock
     let canMatchNil: Bool
 
-    init(canMatchNil: Bool, matcher: MatcherBlock, notMatcher: MatcherBlock) {
+    public init(canMatchNil: Bool, matcher: MatcherBlock, notMatcher: MatcherBlock) {
         self.canMatchNil = canMatchNil
         self._match = matcher
         self._doesNotMatch = notMatcher
     }
 
-    convenience init(matcher: MatcherBlock) {
+    public convenience init(matcher: MatcherBlock) {
         self.init(canMatchNil: true, matcher: matcher)
     }
 
-    convenience init(canMatchNil: Bool, matcher: MatcherBlock) {
+    public convenience init(canMatchNil: Bool, matcher: MatcherBlock) {
         self.init(canMatchNil: canMatchNil, matcher: matcher, notMatcher: ({ actualExpression, failureMessage in
             return !matcher(actualExpression: actualExpression, failureMessage: failureMessage)
         }))
     }
 
-    convenience init(matcher: FullMatcherBlock) {
+    public convenience init(matcher: FullMatcherBlock) {
         self.init(canMatchNil: true, matcher: matcher)
     }
 
-    convenience init(canMatchNil: Bool, matcher: FullMatcherBlock) {
+    public convenience init(canMatchNil: Bool, matcher: FullMatcherBlock) {
         self.init(canMatchNil: canMatchNil, matcher: ({ actualExpression, failureMessage in
             return matcher(actualExpression: actualExpression, failureMessage: failureMessage, shouldNotMatch: false)
         }), notMatcher: ({ actualExpression, failureMessage in
@@ -36,8 +36,15 @@ typealias FullMatcherBlock = (actualExpression: Expression<NSObject>, failureMes
     }
 
     private func canMatch(actualExpression: Expression<NSObject>, failureMessage: FailureMessage) -> Bool {
-        if !canMatchNil && actualExpression.evaluate() == nil {
-            failureMessage.postfixActual = " (use beNil() to match nils)"
+        do {
+            if !canMatchNil {
+                if try actualExpression.evaluate() == nil {
+                    failureMessage.postfixActual = " (use beNil() to match nils)"
+                    return false
+                }
+            }
+        } catch let error {
+            failureMessage.actualValue = "an unexpected error thrown: \(error)"
             return false
         }
         return true
