@@ -21,13 +21,19 @@ public class AnimatedPagingScrollViewController : UIViewController, UIScrollView
             return CGRectGetWidth(scrollView.frame)
         }
     }
+    private var _pageOffset: CGFloat = 0
     public var pageOffset : CGFloat {
         get {
-            var currentOffset = scrollView.contentOffset.x
-            if pageWidth > 0 {
-                currentOffset = currentOffset / pageWidth
+            return _pageOffset
+        }
+        set {
+            if newValue < 0 || newValue > CGFloat(numberOfPages() - 1) {
+                return
             }
-            return currentOffset
+            
+            _pageOffset = newValue
+            scrollView.contentOffset = CGPoint(x: pageWidth * _pageOffset, y: 0)
+            animateCurrentFrame()
         }
     }
     
@@ -58,6 +64,7 @@ public class AnimatedPagingScrollViewController : UIViewController, UIScrollView
     
     public override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        pageOffset = _pageOffset
         animateCurrentFrame()
     }
     
@@ -75,7 +82,17 @@ public class AnimatedPagingScrollViewController : UIViewController, UIScrollView
     }
     
     public func scrollViewDidScroll(scrollView: UIScrollView) {
+        updatePageOffset()
         animateCurrentFrame()
+    }
+    
+    private func updatePageOffset() {
+        if pageWidth > 0 {
+            let currentOffset = scrollView.contentOffset.x
+            _pageOffset = currentOffset / pageWidth
+        } else {
+            _pageOffset = 0
+        }
     }
     
     public func animateCurrentFrame () {
