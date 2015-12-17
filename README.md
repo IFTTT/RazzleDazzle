@@ -39,12 +39,12 @@ github "IFTTT/RazzleDazzle"
 `RazzleDazzle` is also available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your `Podfile`:
 
-```
+```ruby
 pod "RazzleDazzle"
 ```
 Because `RazzleDazzle` is written in Swift, be sure to add `use_frameworks!` at the top of your Podfile.
 
-```
+```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
@@ -61,7 +61,7 @@ Open `Example/RazzleDazzle.xcworkspace` and run `RazzleDazzleDemo` to see a simp
 ### Animated Paging Scroll Views
 First, import `RazzleDazzle` into your view controller, and subclass `AnimatedPagingScrollViewController`.
 
-```objc
+```swift
 import RazzleDazzle
 
 class ViewController: AnimatedPagingScrollViewController {
@@ -69,7 +69,7 @@ class ViewController: AnimatedPagingScrollViewController {
 
 Tell the paging scroll view controller how many pages it should have.
 
-```objc
+```swift
 override func numberOfPages() -> Int {
 	return 4
 }
@@ -77,7 +77,7 @@ override func numberOfPages() -> Int {
 
 Add any views you want to animate to the scrollview's `contentView` on `viewDidLoad`.
 
-```objc
+```swift
 override func viewDidLoad() {
 	super.viewDidLoad()
 	contentView.addSubview(firstLabel)
@@ -86,25 +86,25 @@ override func viewDidLoad() {
 
 Add your desired vertical position and size constraints to your views.
 
-```objc
+```swift
 contentView.addConstraint(NSLayoutConstraint(item: firstLabel, attribute: .CenterY, relatedBy: .Equal, toItem: contentView, attribute: .CenterY, multiplier: 1, constant: 0))
 ```
 
 Tell the animated paging scroll view controller to keep the view on the page you want it to stay on.
 
-```objc
+```swift
 keepView(firstLabel, onPage: 1)
 ```
 
 You can even tell the animated paging scroll view controller to keep the view still on more than one page, while other views scroll past it.
 
-```objc
+```swift
 keepView(firstLabel, onPages: [1,2])
 ```
 
 Or offset the view's center from the page's center:
 
-```objc
+```swift
 keepView(firstLabel, onPage: 1.25)
 ```
 
@@ -113,38 +113,38 @@ Just make sure that if you're using any of the `keepView` functions that you don
 ### RazzleDazzle Animations
 Generally, creating animations in `RazzleDazzle` works similarly to creating animations in `JazzHands`. First, import `RazzleDazzle` into your view controller.
 
-```objc
+```swift
 import RazzleDazzle
 ```
 
 Then, create an Animator to manage all of the animations in this `UIViewController`.
 
-```objc
+```swift
 var animator = Animator()
 ```
 
 Create an animation for a view that you want to animate. There are multiple types of animation that can be applied to a view. For this example, we'll use `AlphaAnimation`, which fades a view in and out.
 
-```objc
+```swift
 let alphaAnimation = AlphaAnimation(view: viewThatYouWantToAnimate)
 ```
 
 Register the animation with the animator.
 
-```objc
+```swift
 animator.addAnimation(alphaAnimation)
 ```
 
 Add some keyframes to the animation. Let's fade this view out between times 30 and 60.
 
-```objc
+```swift
 alphaAnimation[30] = 1
 alphaAnimation[60] = 0
 ```
 
 Now, to animate the view, tell the animator what time it is. For example, to tie this animation to a UIScrollView, notify the animator of time in the scroller's delegate method.
 
-```objc
+```swift
 func scrollViewDidScroll(scrollView: UIScrollView) {
 	animator.animate(scrollView.contentOffset.x)
 }
@@ -183,13 +183,13 @@ To create your own custom animation type, your type needs to conform to the `Ani
 
 For most custom animations, you'll want to subclass `Animation` with the specific type of the property you want to interpolate for each keyframe.
 
-```objc
+```swift
 public class BorderWidthAnimation : Animation<CGFloat>, Animatable {
 ```
 
 Create a property to store whatever view (or other object) you are applying the animations to, and create an initializer that takes a view as input.
 
-```objc
+```swift
 private let view : UIView
 
 public init(view: UIView) {
@@ -199,7 +199,7 @@ public init(view: UIView) {
 
 Optionally, you can add a function to validate any input values that will be checked each time a keyframe is added, such as for Alpha values that must range from 0 to 1.
 
-```objc
+```swift
 public override func validateValue(value: CGFloat) -> Bool {
 	return (value >= 0) && (value <= 1)
 }
@@ -207,7 +207,7 @@ public override func validateValue(value: CGFloat) -> Bool {
 
 Then, all you need to do is to make the appropriate changes to your view when the `animate(time:)` function is called.
 
-```objc
+```swift
 public func animate(time: CGFloat) {
 	if !hasKeyframes() {return}
 	view.layer.borderWidth = self[time]
@@ -222,7 +222,7 @@ You can then create an instance of your new Animation in your `UIViewController`
 
 If the property you'd like to animate is of a different type, just extend that type to conform to `Interpolatable` by adding a static function `interpolateFrom(fromValue: toValue: withProgress:)` that returns an instance of that type between two other instances of the same type.
 
-```objc
+```swift
 extension CGPoint : Interpolatable {
     public static func interpolateFrom(fromValue: CGPoint, to toValue: CGPoint, withProgress progress: CGFloat) -> CGPoint {
         assert((0 <= progress) && (progress <= 1), "Progress must be between 0 and 1")
