@@ -46,14 +46,21 @@ public class AnimatedPagingScrollViewController : UIViewController, UIScrollView
         scrollView.addSubview(contentView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
-        view.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .Left, relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .Right, relatedBy: .Equal, toItem: contentView, attribute: .Right, multiplier: 1, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .Top, relatedBy: .Equal, toItem: contentView, attribute: .Top, multiplier: 1, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .Bottom, relatedBy: .Equal, toItem: contentView, attribute: .Bottom, multiplier: 1, constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: contentView, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: CGFloat(numberOfPages()), constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: contentView, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1, constant: 0))
+      
+        NSLayoutConstraint.activateConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
+        NSLayoutConstraint.activateConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
+      
+        let scrollViewLeft = NSLayoutConstraint(item: scrollView, attribute: .Left, relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1, constant: 0)
+        let scrollViewRight = NSLayoutConstraint(item: scrollView, attribute: .Right, relatedBy: .Equal, toItem: contentView, attribute: .Right, multiplier: 1, constant: 0)
+        let scrollViewTop = NSLayoutConstraint(item: scrollView, attribute: .Top, relatedBy: .Equal, toItem: contentView, attribute: .Top, multiplier: 1, constant: 0)
+        let scrollViewBottom = NSLayoutConstraint(item: scrollView, attribute: .Bottom, relatedBy: .Equal, toItem: contentView, attribute: .Bottom, multiplier: 1, constant: 0)
+      
+        NSLayoutConstraint.activateConstraints([scrollViewLeft, scrollViewRight, scrollViewTop, scrollViewBottom])
+      
+        let contentViewWidth = NSLayoutConstraint(item: contentView, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: CGFloat(numberOfPages()), constant: 0)
+        let contentViewHeight = NSLayoutConstraint(item: contentView, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1, constant: 0)
+      
+        NSLayoutConstraint.activateConstraints([contentViewWidth, contentViewHeight])
     }
     
     public override func viewDidAppear(animated: Bool) {
@@ -88,7 +95,7 @@ public class AnimatedPagingScrollViewController : UIViewController, UIScrollView
     
     public func keepView(view: UIView, onPage page: CGFloat, withAttribute attribute: HorizontalPositionAttribute) {
         view.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addConstraint(NSLayoutConstraint(item: view, attribute: layoutAttributeFromRazAttribute(attribute), relatedBy: .Equal, toItem: contentView, attribute: .CenterX, multiplier: multiplierForPage(page, attribute: attribute), constant: 0))
+        NSLayoutConstraint(item: view, attribute: layoutAttributeFromRazAttribute(attribute), relatedBy: .Equal, toItem: contentView, attribute: .CenterX, multiplier: multiplierForPage(page, attribute: attribute), constant: 0).active = true
     }
     
     public func keepView(view: UIView, onPages pages: [CGFloat]) {
@@ -108,7 +115,7 @@ public class AnimatedPagingScrollViewController : UIViewController, UIScrollView
         view.translatesAutoresizingMaskIntoConstraints = false
         
         let xPositionConstraint = NSLayoutConstraint(item: view, attribute: layoutAttributeFromRazAttribute(attribute), relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1, constant: 0)
-        contentView.addConstraint(xPositionConstraint)
+        xPositionConstraint.active = true
         let xPositionAnimation = ScrollViewPageConstraintAnimation(superview: contentView, constraint: xPositionConstraint, pageWidth: pageWidth, attribute: attribute)
         for (index, page) in pages.enumerate() {
             xPositionAnimation[times[index]] = page
