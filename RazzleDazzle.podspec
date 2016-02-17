@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name		= "RazzleDazzle"
-  s.version		= "0.1.1"
+  s.version		= "0.1.2"
   s.summary		= "Simple Swift keyframe animations for scrolling intros"
   s.homepage		= "https://github.com/IFTTT/RazzleDazzle"
   s.license		= 'MIT'
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                           "Devin Foley" => "devin@ifttt.com" 
                           }
   s.source		= { :git => "https://github.com/IFTTT/RazzleDazzle.git", :tag => s.version.to_s }
-  s.social_media_url	= 'https://twitter.com/skelovenko'
+  s.social_media_url	= 'https://twitter.com/IFTTT'
   s.platform		= :ios, '8.0'
   s.requires_arc	= true
   s.compiler_flags	= '-fmodules'
