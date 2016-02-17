@@ -97,7 +97,7 @@ class ViewController: AnimatedPagingScrollViewController {
     
     private func configureIFTTTPresents() {
         // Keep IFTTTPresents centered on pages 0 and 1, offset 20 pixels down from the top of the view
-        scrollView.addConstraint(NSLayoutConstraint(item: iftttPresents, attribute: .Top, relatedBy: .Equal, toItem: contentView, attribute: .Top, multiplier: 1, constant: 20))
+        NSLayoutConstraint(item: iftttPresents, attribute: .Top, relatedBy: .Equal, toItem: contentView, attribute: .Top, multiplier: 1, constant: 20).active = true
         keepView(iftttPresents, onPages: [0,1])
         
         // Hide IFTTTPresents when we get to page 1
@@ -107,11 +107,12 @@ class ViewController: AnimatedPagingScrollViewController {
     
     private func configureStar() {
         // Center the star on the page, and keep it centered on pages 0 and 1
-        scrollView.addConstraint(NSLayoutConstraint(item: star, attribute: .Width, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Width, multiplier: 1.3, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: star, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Height, multiplier: 1, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: star, attribute: .Top, relatedBy: .GreaterThanOrEqual, toItem: scrollView, attribute: .Top, multiplier: 1, constant: 30))
-        scrollView.addConstraint(NSLayoutConstraint(item: star, attribute: .Height, relatedBy: .Equal, toItem: star, attribute: .Width, multiplier: 1, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: star, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 1, constant: 0))
+        let width = NSLayoutConstraint(item: star, attribute: .Width, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Width, multiplier: 1.3, constant: 0)
+        let height = NSLayoutConstraint(item: star, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Height, multiplier: 1, constant: 0)
+        let top = NSLayoutConstraint(item: star, attribute: .Top, relatedBy: .GreaterThanOrEqual, toItem: scrollView, attribute: .Top, multiplier: 1, constant: 30)
+        let aspect = NSLayoutConstraint(item: star, attribute: .Height, relatedBy: .Equal, toItem: star, attribute: .Width, multiplier: 1, constant: 0)
+        let centerY = NSLayoutConstraint(item: star, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 1, constant: 0)
+        NSLayoutConstraint.activateConstraints([width, height, top, aspect, centerY])
         keepView(star, onPages: [0,1])
         
         // Scale up the star to 7 times its original size between pages 0 and 1, with a quadratic Ease In easing function
@@ -127,16 +128,16 @@ class ViewController: AnimatedPagingScrollViewController {
     
     private func configureRazzleDazzleLabels() {
         // Set the size constraints on Razzle and Dazzle
-        scrollView.addConstraint(NSLayoutConstraint(item: razzle, attribute: .Width, relatedBy: .Equal, toItem: star, attribute: .Width, multiplier: 0.6, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: razzle, attribute: .Height, relatedBy: .Equal, toItem: razzle, attribute: .Width, multiplier: 218.0 / 576.0, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: dazzle, attribute: .Width, relatedBy: .Equal, toItem: star, attribute: .Width, multiplier: 0.6, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: dazzle, attribute: .Height, relatedBy: .Equal, toItem: dazzle, attribute: .Width, multiplier: 386.0 / 588.0, constant: 0))
+        let razzleWidth = NSLayoutConstraint(item: razzle, attribute: .Width, relatedBy: .Equal, toItem: star, attribute: .Width, multiplier: 0.6, constant: 0)
+        let razzleHeight = NSLayoutConstraint(item: razzle, attribute: .Height, relatedBy: .Equal, toItem: razzle, attribute: .Width, multiplier: 218.0 / 576.0, constant: 0)
+        let dazzleWidth = NSLayoutConstraint(item: dazzle, attribute: .Width, relatedBy: .Equal, toItem: star, attribute: .Width, multiplier: 0.6, constant: 0)
+        let dazzleHeight = NSLayoutConstraint(item: dazzle, attribute: .Height, relatedBy: .Equal, toItem: dazzle, attribute: .Width, multiplier: 386.0 / 588.0, constant: 0)
+        NSLayoutConstraint.activateConstraints([razzleWidth, razzleHeight, dazzleWidth, dazzleHeight])
 
         // Create the vertical position constraints for Razzle and Dazzle
         let razzleVerticalConstraint = NSLayoutConstraint(item: razzle, attribute: .CenterY, relatedBy: .Equal, toItem: star, attribute: .CenterY, multiplier: 1, constant: 0)
         let dazzleVerticalConstraint = NSLayoutConstraint(item: dazzle, attribute: .CenterY, relatedBy: .Equal, toItem: star, attribute: .CenterY, multiplier: 1, constant: 0)
-        scrollView.addConstraint(razzleVerticalConstraint)
-        scrollView.addConstraint(dazzleVerticalConstraint)
+        NSLayoutConstraint.activateConstraints([razzleVerticalConstraint, dazzleVerticalConstraint])
         
         // Animate the vertical position of Razzle to go from 30 pixels above the center of the view to 200 pixels above, between pages 0 and 1
         let razzleVerticalAnimation = ConstraintConstantAnimation(superview: scrollView, constraint: razzleVerticalConstraint)
@@ -170,11 +171,11 @@ class ViewController: AnimatedPagingScrollViewController {
     private func configureMusicStand() {
         // Create the vertical position constraint for the music stand
         let musicStandVerticalConstraint = NSLayoutConstraint(item: musicStand, attribute: .Bottom, relatedBy: .GreaterThanOrEqual, toItem: scrollView, attribute: .Bottom, multiplier: 1, constant: 0)
-        scrollView.addConstraint(musicStandVerticalConstraint)
-        scrollView.addConstraint(NSLayoutConstraint(item: musicStand, attribute: .Top, relatedBy: .GreaterThanOrEqual, toItem: scrollView, attribute: .Top, multiplier: 1, constant: 40))
-        scrollView.addConstraint(NSLayoutConstraint(item: musicStand, attribute: .Width, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Width, multiplier: 1, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: musicStand, attribute: .Height, relatedBy: .Equal, toItem: musicStand, attribute: .Width, multiplier: 1184.0 / 750.0, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: musicStand, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Height, multiplier: 1, constant: 0))
+        let standTop = NSLayoutConstraint(item: musicStand, attribute: .Top, relatedBy: .GreaterThanOrEqual, toItem: scrollView, attribute: .Top, multiplier: 1, constant: 40)
+        let standWidth = NSLayoutConstraint(item: musicStand, attribute: .Width, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Width, multiplier: 1, constant: 0)
+        let standAspect = NSLayoutConstraint(item: musicStand, attribute: .Height, relatedBy: .Equal, toItem: musicStand, attribute: .Width, multiplier: 1184.0 / 750.0, constant: 0)
+        let standHeight = NSLayoutConstraint(item: musicStand, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Height, multiplier: 1, constant: 0)
+        NSLayoutConstraint.activateConstraints([musicStandVerticalConstraint, standTop, standWidth, standAspect, standHeight])
         
         // Keep the right side of the music stand at the right edge of pages 1 and 2
         keepView(musicStand, onPages: [1,2], withAttribute: .Right)
@@ -187,31 +188,32 @@ class ViewController: AnimatedPagingScrollViewController {
         animator.addAnimation(musicStandVerticalAnimation)
         
         // Lay out the music notes
-        scrollView.addConstraint(NSLayoutConstraint(item: musicNotes, attribute: .Width, relatedBy: .Equal, toItem: musicStand, attribute: .Width, multiplier: 1, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: musicNotes, attribute: .Height, relatedBy: .Equal, toItem: musicStand, attribute: .Height, multiplier: 1, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: musicNotes, attribute: .CenterY, relatedBy: .Equal, toItem: musicStand, attribute: .CenterY, multiplier: 1, constant: 0))
-        
+        let notesWidth = NSLayoutConstraint(item: musicNotes, attribute: .Width, relatedBy: .Equal, toItem: musicStand, attribute: .Width, multiplier: 1, constant: 0)
+        let notesHeight = NSLayoutConstraint(item: musicNotes, attribute: .Height, relatedBy: .Equal, toItem: musicStand, attribute: .Height, multiplier: 1, constant: 0)
+        let notesCenterY = NSLayoutConstraint(item: musicNotes, attribute: .CenterY, relatedBy: .Equal, toItem: musicStand, attribute: .CenterY, multiplier: 1, constant: 0)
+        NSLayoutConstraint.activateConstraints([notesWidth, notesHeight, notesCenterY])
+      
         // Move the music notes in quickly from the right when we change from page 0.5 to 1, and keep them centered on pages 1 and 2
         keepView(musicNotes, onPages: [2, 1, 2], atTimes: [0.5, 1, 2], withAttribute: .Right)
     }
     
     private func configurePageText() {
         // Keep the page2Text slightly above center on page 2
-        scrollView.addConstraint(NSLayoutConstraint(item: page2Text, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 0.95, constant: 0))
+        NSLayoutConstraint(item: page2Text, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 0.95, constant: 0).active = true
         keepView(page2Text, onPage: 2)
         
         // Keep the page3Text centered on page 3
-        scrollView.addConstraint(NSLayoutConstraint(item: page3Text, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 1, constant: 0))
+        NSLayoutConstraint(item: page3Text, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 1, constant: 0).active = true
         keepView(page3Text, onPage: 3)
     }
     
     private func configureClouds() {
         // Lay out the big cloud
         let bigCloudVerticalConstraint = NSLayoutConstraint(item: bigCloud, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .Top, multiplier: 1, constant: 0)
-        scrollView.addConstraint(bigCloudVerticalConstraint)
-        scrollView.addConstraint(NSLayoutConstraint(item: bigCloud, attribute: .Width, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Width, multiplier: 0.78, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: bigCloud, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Height, multiplier: 0.2, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: bigCloud, attribute: .Height, relatedBy: .Equal, toItem: bigCloud, attribute: .Width, multiplier: 0.45, constant: 0))
+        let bigCloudWidth = NSLayoutConstraint(item: bigCloud, attribute: .Width, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Width, multiplier: 0.78, constant: 0)
+        let bigCloudHeight = NSLayoutConstraint(item: bigCloud, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Height, multiplier: 0.2, constant: 0)
+        let bigCloudAspect = NSLayoutConstraint(item: bigCloud, attribute: .Height, relatedBy: .Equal, toItem: bigCloud, attribute: .Width, multiplier: 0.45, constant: 0)
+        NSLayoutConstraint.activateConstraints([bigCloudVerticalConstraint, bigCloudWidth, bigCloudHeight, bigCloudAspect])
         
         // Keep the big cloud slightly to the right on pages 1 and 2, and zoom it out to the left between pages 2 and 3
         keepView(bigCloud, onPages: [1.35, 2.35, 1.8], atTimes: [1, 2, 3])
@@ -223,15 +225,16 @@ class ViewController: AnimatedPagingScrollViewController {
         animator.addAnimation(bigCloudVerticalAnimation)
         
         // Lay out the little cloud
-        scrollView.addConstraint(NSLayoutConstraint(item: littleCloud, attribute: .Bottom, relatedBy: .Equal, toItem: bigCloud, attribute: .Top, multiplier: 1, constant: 20))
-        scrollView.addConstraint(NSLayoutConstraint(item: littleCloud, attribute: .Width, relatedBy: .Equal, toItem: bigCloud, attribute: .Height, multiplier: 1, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: littleCloud, attribute: .Height, relatedBy: .Equal, toItem: littleCloud, attribute: .Width, multiplier: 0.5, constant: 0))
+        let littleCloudBottom = NSLayoutConstraint(item: littleCloud, attribute: .Bottom, relatedBy: .Equal, toItem: bigCloud, attribute: .Top, multiplier: 1, constant: 20)
+        let littleCloudWidth = NSLayoutConstraint(item: littleCloud, attribute: .Width, relatedBy: .Equal, toItem: bigCloud, attribute: .Height, multiplier: 1, constant: 0)
+        let littleCloudAspect = NSLayoutConstraint(item: littleCloud, attribute: .Height, relatedBy: .Equal, toItem: littleCloud, attribute: .Width, multiplier: 0.5, constant: 0)
+        NSLayoutConstraint.activateConstraints([littleCloudBottom, littleCloudWidth, littleCloudAspect])
         
         // Keep the little cloud slightly to the left on pages 1 and 2
         keepView(littleCloud, onPages: [0.75, 1.75], atTimes: [1, 2])
         
         // Lay out the IFTTT cloud on the bottom half of the view
-        scrollView.addConstraint(NSLayoutConstraint(item: iftttCloud, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 1.5, constant: 0))
+        NSLayoutConstraint(item: iftttCloud, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 1.5, constant: 0).active = true
         
         // Zoom in the IFTTT cloud from the right between pages 2 and 3
         keepView(iftttCloud, onPages: [3.5, 3], atTimes: [2, 3])
@@ -239,7 +242,7 @@ class ViewController: AnimatedPagingScrollViewController {
     
     private func configureSun() {
         let sunVerticalConstraint = NSLayoutConstraint(item: sun, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .Top, multiplier: 1, constant: 0)
-        scrollView.addConstraint(sunVerticalConstraint)
+        sunVerticalConstraint.active = true
         
         // Move the sun from the right side to the left side between pages 2.5 and 3
         keepView(sun, onPages: [2.8, 2.6], atTimes: [2.5, 3])
@@ -258,12 +261,14 @@ class ViewController: AnimatedPagingScrollViewController {
         planePathView.addSubview(plane)
         planePathView.translatesAutoresizingMaskIntoConstraints = false
         plane.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addConstraint(NSLayoutConstraint(item: plane, attribute: .Bottom, relatedBy: .Equal, toItem: planePathView, attribute: .CenterY, multiplier: 1, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: plane, attribute: .Right, relatedBy: .Equal, toItem: planePathView, attribute: .CenterX, multiplier: 1, constant: 0))
+        let planeBottom = NSLayoutConstraint(item: plane, attribute: .Bottom, relatedBy: .Equal, toItem: planePathView, attribute: .CenterY, multiplier: 1, constant: 0)
+        let planeRight = NSLayoutConstraint(item: plane, attribute: .Right, relatedBy: .Equal, toItem: planePathView, attribute: .CenterX, multiplier: 1, constant: 0)
+        NSLayoutConstraint.activateConstraints([planeBottom, planeRight])
         
-        scrollView.addConstraint(NSLayoutConstraint(item: planePathView, attribute: .Bottom, relatedBy: .Equal, toItem: scrollView, attribute: .Bottom, multiplier: 1, constant: 40))
-        scrollView.addConstraint(NSLayoutConstraint(item: planePathView, attribute: .Width, relatedBy: .Equal, toItem: plane, attribute: .Width, multiplier: 1, constant: 0))
-        scrollView.addConstraint(NSLayoutConstraint(item: planePathView, attribute: .Height, relatedBy: .Equal, toItem: plane, attribute: .Height, multiplier: 1, constant: 0))
+        let planePathBottom = NSLayoutConstraint(item: planePathView, attribute: .Bottom, relatedBy: .Equal, toItem: scrollView, attribute: .Bottom, multiplier: 1, constant: 40)
+        let planePathWidth = NSLayoutConstraint(item: planePathView, attribute: .Width, relatedBy: .Equal, toItem: plane, attribute: .Width, multiplier: 1, constant: 0)
+        let planePathHeight = NSLayoutConstraint(item: planePathView, attribute: .Height, relatedBy: .Equal, toItem: plane, attribute: .Height, multiplier: 1, constant: 0)
+        NSLayoutConstraint.activateConstraints([planePathBottom, planePathWidth, planePathHeight])
         
         // Keep the left edge of the planePathView at the center of pages 1 and 2
         keepView(planePathView, onPages: [1.5, 2.5], atTimes: [1, 2], withAttribute: .Left)
