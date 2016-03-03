@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC9849CF1C88C8DA001D60BB /* FrameAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9849CE1C88C8DA001D60BB /* FrameAnimation.swift */; };
 		FA0895731B3F188E002460BB /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0895721B3F188E002460BB /* HideAnimation.swift */; };
 		FA340D681B3B4F78003F2CD8 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA340D671B3B4F78003F2CD8 /* Animation.swift */; };
 		FA340D6C1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA340D6B1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC9849CE1C88C8DA001D60BB /* FrameAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameAnimation.swift; sourceTree = "<group>"; };
 		FA0895721B3F188E002460BB /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideAnimation.swift; sourceTree = "<group>"; };
 		FA340D671B3B4F78003F2CD8 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		FA340D6B1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFillColorAnimation.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				FA0895721B3F188E002460BB /* HideAnimation.swift */,
 				FA340D671B3B4F78003F2CD8 /* Animation.swift */,
 				FA5991491B433F2600C0FBA9 /* PathPositionAnimation.swift */,
+				BC9849CE1C88C8DA001D60BB /* FrameAnimation.swift */,
 				FA340D6B1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift */,
 				FA340D6D1B3B5E0B003F2CD8 /* LayerStrokeStartAnimation.swift */,
 				FA340D6F1B3B5E54003F2CD8 /* LayerStrokeEndAnimation.swift */,
@@ -349,6 +352,7 @@
 				FA42E8671B2FDD200050795E /* ConstraintMultiplierAnimation.swift in Sources */,
 				FACD9CA41B2E74DE00AC1614 /* TranslationAnimation.swift in Sources */,
 				FA340D701B3B5E54003F2CD8 /* LayerStrokeEndAnimation.swift in Sources */,
+				BC9849CF1C88C8DA001D60BB /* FrameAnimation.swift in Sources */,
 				FA71FBB21B2FB48F00C49C16 /* CubicBezier.swift in Sources */,
 				FA340D741B3B5EF5003F2CD8 /* LabelTextColorAnimation.swift in Sources */,
 				FACD9C8A1B2CB54200AC1614 /* AlphaAnimation.swift in Sources */,
