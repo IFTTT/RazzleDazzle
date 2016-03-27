@@ -23,7 +23,7 @@ public class LayerStrokeStartAnimation : Animation<CGFloat>, Animatable {
         // CAAnimations are lost when application enters the background, so re-add them
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: "createStrokeStartAnimation",
+            selector: #selector(LayerStrokeStartAnimation.createStrokeStartAnimation),
             name: UIApplicationDidBecomeActiveNotification,
             object: nil)
     }

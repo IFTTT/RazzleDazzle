@@ -34,7 +34,7 @@ public class PathPositionAnimation : Animation<CGFloat>, Animatable {
         // CAAnimations are lost when application enters the background, so re-add them
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: "createKeyframeAnimation",
+            selector: #selector(PathPositionAnimation.createKeyframeAnimation),
             name: UIApplicationDidBecomeActiveNotification,
             object: nil)
     }
