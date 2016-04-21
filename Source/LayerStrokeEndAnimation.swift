@@ -24,7 +24,7 @@ public class LayerStrokeEndAnimation : Animation<CGFloat>, Animatable {
         // CAAnimations are lost when application enters the background, so re-add them
         NSNotificationCenter.defaultCenter().addObserver(
             self,
-            selector: "createStrokeEndAnimation",
+            selector: #selector(LayerStrokeEndAnimation.createStrokeEndAnimation),
             name: UIApplicationDidBecomeActiveNotification,
             object: nil)
     }

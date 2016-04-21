@@ -12,7 +12,7 @@ import UIKit
 Protocol for types that can return smoothly incremented values between two given values.
 */
 public protocol Interpolatable {
-    typealias ValueType
+    associatedtype ValueType
     /**
     Find a value at a certain progress point (from 0 to 1) between two values of the same type.
     
