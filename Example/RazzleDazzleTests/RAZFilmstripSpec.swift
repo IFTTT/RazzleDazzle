@@ -105,6 +105,14 @@ class FilmstripSpec: QuickSpec {
                 floatFilmstrip.setValue(30, atTime: 3)
                 expect(floatFilmstrip.valueAtTime(2.5)).to(equal(25))
             }
+            it("should allow replacement of keyframes") {
+                floatFilmstrip[2] = 0
+                floatFilmstrip[4] = 5
+                floatFilmstrip[2] = 3
+                expect(floatFilmstrip[1]).to(equal(3))
+                expect(floatFilmstrip[2]).to(equal(3))
+                expect(floatFilmstrip[3]).to(equal(4))
+            }
         }
     }
 }

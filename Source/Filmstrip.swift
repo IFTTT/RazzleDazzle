@@ -13,10 +13,6 @@ private class Keyframe<T: Interpolatable where T.ValueType == T> {
     let value : T
     let easing : EasingFunction
     
-    private convenience init(time: CGFloat, value: T) {
-        self.init(time: time, value: value, easing: EasingFunctionLinear)
-    }
-    
     private init(time: CGFloat, value: T, easing: EasingFunction) {
         self.time = time
         self.value = value
@@ -48,14 +44,14 @@ public class Filmstrip<T: Interpolatable where T.ValueType == T> {
         }
     }
     
-    public func setValue(value: T, atTime time: CGFloat) {
+    public func setValue(value: T, atTime time: CGFloat, easing: EasingFunction = EasingFunctionLinear) {
         let index = indexOfKeyframeAfterTime(time) ?? keyframes.count
-        keyframes.insert(Keyframe(time: time, value: value), atIndex: index)
-    }
-    
-    public func setValue(value: T, atTime time: CGFloat, easing: EasingFunction) {
-        let index = indexOfKeyframeAfterTime(time) ?? keyframes.count
-        keyframes.insert(Keyframe(time: time, value: value, easing: easing), atIndex: index)
+        if index > 0 && keyframes[index-1].time == time {
+            keyframes.replaceRange(index-1..<index, with: [Keyframe(time: time, value: value, easing: easing)])
+        }
+        else {
+            keyframes.insert(Keyframe(time: time, value: value, easing: easing), atIndex: index)
+        }
     }
     
     public func valueAtTime(time: CGFloat) -> T {
