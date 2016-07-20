@@ -289,9 +289,14 @@
 				TargetAttributes = {
 					FACD9C5C1B2A554100AC1614 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					FACD9C671B2A554100AC1614 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7E4DSQQ9E2;
+						DevelopmentTeamName = "Raphael Cruzeiro (Personal Team)";
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -484,6 +489,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -496,6 +502,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -505,6 +512,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -516,6 +524,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ifttt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -535,6 +544,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ifttt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -550,6 +560,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ifttt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

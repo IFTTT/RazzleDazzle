@@ -18,22 +18,22 @@ public class ScaleAnimation : Animation<CGFloat>, Animatable {
         self.view = view
     }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         let scale = self[time]
-        let scaleTransform = CGAffineTransformMakeScale(scale, scale)
+        let scaleTransform = CGAffineTransform(scaleX: scale, y: scale)
         view.scaleTransform = scaleTransform
         var newTransform = scaleTransform
         if let rotationTransform = view.rotationTransform {
-            newTransform = CGAffineTransformConcat(newTransform, rotationTransform)
+            newTransform = newTransform.concat(rotationTransform)
         }
         if let translationTransform = view.translationTransform {
-            newTransform = CGAffineTransformConcat(newTransform, translationTransform)
+            newTransform = newTransform.concat(translationTransform)
         }
         view.transform = newTransform
     }
     
-    public override func validateValue(value: CGFloat) -> Bool {
+    public override func validateValue(_ value: CGFloat) -> Bool {
         return (value >= 0)
     }
 }

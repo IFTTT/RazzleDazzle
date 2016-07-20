@@ -9,9 +9,9 @@
 import UIKit
 
 public enum HorizontalPositionAttribute {
-    case Left
-    case Right
-    case CenterX
+    case left
+    case right
+    case centerX
 }
 
 /**
@@ -30,17 +30,17 @@ public class ScrollViewPageConstraintAnimation : Animation<CGFloat>, Animatable 
         self.pageWidth = pageWidth
     }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         let page = self[time]
         
         var offset : CGFloat
         switch attribute {
-        case .CenterX:
+        case .centerX:
             offset = 0.5
-        case .Left:
+        case .left:
             offset = 0
-        case .Right:
+        case .right:
             offset = 1
         }
         

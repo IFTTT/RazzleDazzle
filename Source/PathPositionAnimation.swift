@@ -13,7 +13,7 @@ Animates the view's position along the given path.
 */
 public class PathPositionAnimation : Animation<CGFloat>, Animatable {
     private let view : UIView
-    public var path : CGPathRef? {
+    public var path : CGPath? {
         didSet {
             createKeyframeAnimation()
         }
@@ -25,36 +25,36 @@ public class PathPositionAnimation : Animation<CGFloat>, Animatable {
         }
     }
     
-    public init(view: UIView, path: CGPathRef?) {
+    public init(view: UIView, path: CGPath?) {
         self.view = view
         self.path = path
         super.init()
         createKeyframeAnimation()
         
         // CAAnimations are lost when application enters the background, so re-add them
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(PathPositionAnimation.createKeyframeAnimation),
-            name: UIApplicationDidBecomeActiveNotification,
+            name: NSNotification.Name.UIApplicationDidBecomeActive,
             object: nil)
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         view.layer.timeOffset = CFTimeInterval(self[time])
     }
     
-    public override func validateValue(value: CGFloat) -> Bool {
+    public override func validateValue(_ value: CGFloat) -> Bool {
         return (value >= 0) && (value <= 1)
     }
     
     @objc private func createKeyframeAnimation() {
         // Set up a CAKeyframeAnimation to move the view along the path
-        view.layer.addAnimation(pathAnimation(), forKey: animationKey)
+        view.layer.add(pathAnimation(), forKey: animationKey)
         view.layer.speed = 0
         view.layer.timeOffset = 0
     }
@@ -64,12 +64,12 @@ public class PathPositionAnimation : Animation<CGFloat>, Animatable {
         animation.keyPath = "position"
         animation.path = path
         animation.duration = 1
-        animation.additive = true
+        animation.isAdditive = true
         animation.repeatCount = Float.infinity
         animation.calculationMode = kCAAnimationPaced
         animation.rotationMode = rotationMode
         animation.fillMode = kCAFillModeBoth
-        animation.removedOnCompletion = false
+        animation.isRemovedOnCompletion = false
         return animation
     }
 }

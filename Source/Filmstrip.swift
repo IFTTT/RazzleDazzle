@@ -48,17 +48,17 @@ public class Filmstrip<T: Interpolatable where T.ValueType == T> {
         }
     }
     
-    public func setValue(value: T, atTime time: CGFloat) {
+    public func setValue(_ value: T, atTime time: CGFloat) {
         let index = indexOfKeyframeAfterTime(time) ?? keyframes.count
-        keyframes.insert(Keyframe(time: time, value: value), atIndex: index)
+        keyframes.insert(Keyframe(time: time, value: value), at: index)
     }
     
-    public func setValue(value: T, atTime time: CGFloat, easing: EasingFunction) {
+    public func setValue(_ value: T, atTime time: CGFloat, easing: EasingFunction) {
         let index = indexOfKeyframeAfterTime(time) ?? keyframes.count
-        keyframes.insert(Keyframe(time: time, value: value, easing: easing), atIndex: index)
+        keyframes.insert(Keyframe(time: time, value: value, easing: easing), at: index)
     }
     
-    public func valueAtTime(time: CGFloat) -> T {
+    public func valueAtTime(_ time: CGFloat) -> T {
         assert(!self.isEmpty, "At least one KeyFrame must be set before animation begins.")
         var value : T
         let indexAfter = (indexOfKeyframeAfterTime(time) ?? keyframes.count)
@@ -76,9 +76,9 @@ public class Filmstrip<T: Interpolatable where T.ValueType == T> {
         return value
     }
     
-    private func indexOfKeyframeAfterTime(time: CGFloat) -> Int? {
+    private func indexOfKeyframeAfterTime(_ time: CGFloat) -> Int? {
         var indexAfter : Int?
-        for (index, keyframe) in keyframes.enumerate() {
+        for (index, keyframe) in keyframes.enumerated() {
             if time < keyframe.time {
                 indexAfter = index
                 break
@@ -87,7 +87,7 @@ public class Filmstrip<T: Interpolatable where T.ValueType == T> {
         return indexAfter
     }
     
-    private func progressFromTime(fromTime: CGFloat, toTime: CGFloat, atTime: CGFloat, easing: EasingFunction) -> CGFloat {
+    private func progressFromTime(_ fromTime: CGFloat, toTime: CGFloat, atTime: CGFloat, easing: EasingFunction) -> CGFloat {
         let duration = toTime - fromTime
         if duration == 0 {return 0}
         let timeElapsed = atTime - fromTime

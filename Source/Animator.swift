@@ -16,13 +16,13 @@ public class Animator {
     
     public init() { }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         for animation in animations {
             animation.animate(time)
         }
     }
     
-    public func addAnimation(animation: Animatable) {
+    public func addAnimation(_ animation: Animatable) {
         animations.append(animation)
     }
 }

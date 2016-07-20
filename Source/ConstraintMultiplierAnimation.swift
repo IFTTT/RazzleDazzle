@@ -9,12 +9,12 @@
 import UIKit
 
 public enum LayoutAttribute {
-    case OriginX
-    case OriginY
-    case CenterX
-    case CenterY
-    case Width
-    case Height
+    case originX
+    case originY
+    case centerX
+    case centerY
+    case width
+    case height
 }
 
 /**
@@ -39,23 +39,23 @@ public class ConstraintMultiplierAnimation : Animation<CGFloat>, Animatable {
         self.constant = constant
     }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         let multiplier = self[time]
         var referenceAttributeValue : CGFloat
         switch attribute {
-        case .OriginX:
-            referenceAttributeValue = CGRectGetMinX(referenceView.frame)
-        case .OriginY:
-            referenceAttributeValue = CGRectGetMinY(referenceView.frame)
-        case .CenterX:
-            referenceAttributeValue = CGRectGetMinX(referenceView.frame) + (CGRectGetWidth(referenceView.frame) / 2.0)
-        case .CenterY:
-            referenceAttributeValue = CGRectGetMinY(referenceView.frame) + (CGRectGetHeight(referenceView.frame) / 2.0)
-        case .Width:
-            referenceAttributeValue = CGRectGetWidth(referenceView.frame)
-        case .Height:
-            referenceAttributeValue = CGRectGetHeight(referenceView.frame)
+        case .originX:
+            referenceAttributeValue = referenceView.frame.minX
+        case .originY:
+            referenceAttributeValue = referenceView.frame.minY
+        case .centerX:
+            referenceAttributeValue = referenceView.frame.minX + (referenceView.frame.width / 2.0)
+        case .centerY:
+            referenceAttributeValue = referenceView.frame.minY + (referenceView.frame.height / 2.0)
+        case .width:
+            referenceAttributeValue = referenceView.frame.width
+        case .height:
+            referenceAttributeValue = referenceView.frame.height
         }
         constraint.constant = (multiplier * referenceAttributeValue) + constant
         superview.layoutIfNeeded()

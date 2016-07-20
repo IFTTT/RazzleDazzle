@@ -18,8 +18,8 @@ public class LayerFillColorAnimation : Animation<UIColor>, Animatable {
         self.layer = layer
     }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
-        layer.fillColor = self[time].CGColor
+        layer.fillColor = self[time].cgColor
     }
 }

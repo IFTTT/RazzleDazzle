@@ -66,11 +66,11 @@ private final class Lifted<T> {
     }
 }
 
-private func lift<T>(x: T) -> Lifted<T>  {
+private func lift<T>(_ x: T) -> Lifted<T>  {
     return Lifted(x)
 }
 
-private func setAssociatedObject<T>(object: AnyObject, value: T, associativeKey: UnsafePointer<Void>, policy: objc_AssociationPolicy) {
+private func setAssociatedObject<T>(_ object: AnyObject, value: T, associativeKey: UnsafePointer<Void>, policy: objc_AssociationPolicy) {
     if let v: AnyObject = value as? AnyObject {
         objc_setAssociatedObject(object, associativeKey, v,  policy)
     }
@@ -79,7 +79,7 @@ private func setAssociatedObject<T>(object: AnyObject, value: T, associativeKey:
     }
 }
 
-private func getAssociatedObject<T>(object: AnyObject, associativeKey: UnsafePointer<Void>) -> T? {
+private func getAssociatedObject<T>(_ object: AnyObject, associativeKey: UnsafePointer<Void>) -> T? {
     if let v = objc_getAssociatedObject(object, associativeKey) as? T {
         return v
     }
