@@ -25,10 +25,10 @@ public class ScaleAnimation : Animation<CGFloat>, Animatable {
         view.scaleTransform = scaleTransform
         var newTransform = scaleTransform
         if let rotationTransform = view.rotationTransform {
-            newTransform = newTransform.concat(rotationTransform)
+            newTransform = newTransform.concatenating(rotationTransform)
         }
         if let translationTransform = view.translationTransform {
-            newTransform = newTransform.concat(translationTransform)
+            newTransform = newTransform.concatenating(translationTransform)
         }
         view.transform = newTransform
     }

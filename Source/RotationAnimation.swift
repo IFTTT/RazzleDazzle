@@ -26,10 +26,10 @@ public class RotationAnimation : Animation<CGFloat>, Animatable {
         view.rotationTransform = rotationTransform
         var newTransform = rotationTransform
         if let scaleTransform = view.scaleTransform {
-            newTransform = newTransform.concat(scaleTransform)
+            newTransform = newTransform.concatenating(scaleTransform)
         }
         if let translationTransform = view.translationTransform {
-            newTransform = newTransform.concat(translationTransform)
+            newTransform = newTransform.concatenating(translationTransform)
         }
         view.transform = newTransform
     }

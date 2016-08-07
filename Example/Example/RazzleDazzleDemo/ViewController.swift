@@ -41,7 +41,7 @@ class ViewController: AnimatedPagingScrollViewController {
         super.viewDidLoad()
         configureViews()
         configureAnimations()
-        UIApplication.shared().setStatusBarHidden(true, with: .fade)
+        UIApplication.shared.setStatusBarHidden(true, with: .fade)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -309,7 +309,7 @@ class ViewController: AnimatedPagingScrollViewController {
         // Create a shape layer to draw the airplane's path
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = airplanePath()
-        shapeLayer.strokeColor = UIColor.white().cgColor
+        shapeLayer.strokeColor = UIColor.white.cgColor
         shapeLayer.lineDashPattern = [20, 20]
         shapeLayer.lineWidth = 4
         shapeLayer.miterLimit = 4

@@ -25,10 +25,10 @@ public class TranslationAnimation : Animation<CGPoint>, Animatable {
         view.translationTransform = translationTransform
         var newTransform = translationTransform
         if let scaleTransform = view.scaleTransform {
-            newTransform = newTransform.concat(scaleTransform)
+            newTransform = newTransform.concatenating(scaleTransform)
         }
         if let rotationTransform = view.rotationTransform {
-            newTransform = newTransform.concat(rotationTransform)
+            newTransform = newTransform.concatenating(rotationTransform)
         }
         view.transform = newTransform
     }
