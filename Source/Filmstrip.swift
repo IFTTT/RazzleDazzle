@@ -8,16 +8,16 @@
 
 import Foundation
 
-private class Keyframe<T: Interpolatable where T.ValueType == T> {
+public class Keyframe<T: Interpolatable> where T.ValueType == T {
     let time : CGFloat
     let value : T
     let easing : EasingFunction
     
-    private convenience init(time: CGFloat, value: T) {
+    public convenience init(time: CGFloat, value: T) {
         self.init(time: time, value: value, easing: EasingFunctionLinear)
     }
     
-    private init(time: CGFloat, value: T, easing: EasingFunction) {
+    public init(time: CGFloat, value: T, easing: EasingFunction) {
         self.time = time
         self.value = value
         self.easing = easing
@@ -27,9 +27,9 @@ private class Keyframe<T: Interpolatable where T.ValueType == T> {
 /**
 Keeps track of the keyframes set, and lazily generates interpolated values between them for the requested time as needed.
 */
-public class Filmstrip<T: Interpolatable where T.ValueType == T> {
+public class Filmstrip<T: Interpolatable> where T.ValueType == T {
     
-    private var keyframes = [Keyframe<T>]()
+    var keyframes = [Keyframe<T>]()
     
     public init() { }
     

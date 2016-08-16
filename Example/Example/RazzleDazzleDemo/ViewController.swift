@@ -37,18 +37,18 @@ class ViewController: AnimatedPagingScrollViewController {
         return 4
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
         configureAnimations()
         UIApplication.shared.setStatusBarHidden(true, with: .fade)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         scaleAirplanePathToSize(scrollView.frame.size)
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    override public func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: {context in
             self.scaleAirplanePathToSize(size)

@@ -11,17 +11,17 @@ import UIKit
 /**
 View controller for creating scrolling app intros. Set animation times based on the page number, and this view controller handles calling `animate:` on the `animator`.
 */
-public class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDelegate {
-    public let scrollView = UIScrollView()
-    public let contentView = UIView()
-    public var animator = Animator()
+open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDelegate {
+    open let scrollView = UIScrollView()
+    open let contentView = UIView()
+    open var animator = Animator()
     private var scrollViewPageConstraintAnimations = [ScrollViewPageConstraintAnimation]()
-    public var pageWidth : CGFloat {
+    open var pageWidth : CGFloat {
         get {
             return scrollView.frame.width
         }
     }
-    public var pageOffset : CGFloat {
+    open var pageOffset : CGFloat {
         get {
             var currentOffset = scrollView.contentOffset.x
             if pageWidth > 0 {
@@ -31,11 +31,11 @@ public class AnimatedPagingScrollViewController : UIViewController, UIScrollView
         }
     }
     
-    public func numberOfPages() -> Int {
+    open func numberOfPages() -> Int {
         return 2
     }
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
@@ -63,12 +63,12 @@ public class AnimatedPagingScrollViewController : UIViewController, UIScrollView
         NSLayoutConstraint.activate([contentViewWidth, contentViewHeight])
     }
     
-    public override func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateCurrentFrame()
     }
     
-    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         let newPageWidth = size.width
         for animation in scrollViewPageConstraintAnimations {
