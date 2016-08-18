@@ -81,36 +81,36 @@ open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDe
             }, completion: nil)
     }
     
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
         animateCurrentFrame()
     }
     
-    public func animateCurrentFrame () {
+    open func animateCurrentFrame () {
         animator.animate(pageOffset)
     }
     
-    public func keepView(_ view: UIView, onPage page: CGFloat) {
+    open func keepView(_ view: UIView, onPage page: CGFloat) {
         keepView(view, onPage: page, withAttribute: .centerX)
     }
     
-    public func keepView(_ view: UIView, onPage page: CGFloat, withAttribute attribute: HorizontalPositionAttribute) {
+    open func keepView(_ view: UIView, onPage page: CGFloat, withAttribute attribute: HorizontalPositionAttribute) {
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: view, attribute: layoutAttributeFromRazAttribute(attribute), relatedBy: .equal, toItem: contentView, attribute: .centerX, multiplier: multiplierForPage(page, attribute: attribute), constant: 0).isActive = true
     }
     
-    public func keepView(_ view: UIView, onPages pages: [CGFloat]) {
+    open func keepView(_ view: UIView, onPages pages: [CGFloat]) {
         keepView(view, onPages: pages, atTimes: pages)
     }
     
-    public func keepView(_ view: UIView, onPages pages: [CGFloat], withAttribute attribute: HorizontalPositionAttribute) {
+    open func keepView(_ view: UIView, onPages pages: [CGFloat], withAttribute attribute: HorizontalPositionAttribute) {
         keepView(view, onPages: pages, atTimes: pages, withAttribute: attribute)
     }
 
-    public func keepView(_ view: UIView, onPages pages: [CGFloat], atTimes times: [CGFloat]) {
+    open func keepView(_ view: UIView, onPages pages: [CGFloat], atTimes times: [CGFloat]) {
         keepView(view, onPages: pages, atTimes: times, withAttribute: .centerX)
     }
     
-    public func keepView(_ view: UIView, onPages pages: [CGFloat], atTimes times: [CGFloat], withAttribute attribute: HorizontalPositionAttribute) {
+    open func keepView(_ view: UIView, onPages pages: [CGFloat], atTimes times: [CGFloat], withAttribute attribute: HorizontalPositionAttribute) {
         assert(pages.count == times.count, "Make sure you set a time for each position.")
         view.translatesAutoresizingMaskIntoConstraints = false
         
@@ -124,19 +124,19 @@ open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDe
         scrollViewPageConstraintAnimations.append(xPositionAnimation)
     }
     
-    public func centerXMultiplierForPage(_ page: CGFloat) -> CGFloat {
+    open func centerXMultiplierForPage(_ page: CGFloat) -> CGFloat {
         return multiplierForPage(page, attribute: .centerX)
     }
     
-    public func leftMultiplierForPage(_ page: CGFloat) -> CGFloat {
+    open func leftMultiplierForPage(_ page: CGFloat) -> CGFloat {
         return multiplierForPage(page, attribute: .left)
     }
     
-    public func rightMultiplierForPage(_ page: CGFloat) -> CGFloat {
+    open func rightMultiplierForPage(_ page: CGFloat) -> CGFloat {
         return multiplierForPage(page, attribute: .right)
     }
     
-    public func multiplierForPage(_ page: CGFloat, attribute: HorizontalPositionAttribute) -> CGFloat {
+    open func multiplierForPage(_ page: CGFloat, attribute: HorizontalPositionAttribute) -> CGFloat {
         var offset : CGFloat
         switch attribute {
         case .centerX:
@@ -149,7 +149,7 @@ open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDe
         return 2.0 * (offset + page) / CGFloat(numberOfPages())
     }
     
-    public func layoutAttributeFromRazAttribute(_ razAttribute: HorizontalPositionAttribute) -> NSLayoutAttribute {
+    open func layoutAttributeFromRazAttribute(_ razAttribute: HorizontalPositionAttribute) -> NSLayoutAttribute {
         var attribute : NSLayoutAttribute
         switch razAttribute {
         case .centerX:
