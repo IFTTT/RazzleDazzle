@@ -209,7 +209,7 @@ Then, all you need to do is to make the appropriate changes to your view when th
 
 ```swift
 public func animate(time: CGFloat) {
-	if !hasKeyframes() {return}
+	guard hasKeyframes() else { return }
 	view.layer.borderWidth = self[time]
 }
 ```
