@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Animation<T: Interpolatable where T.ValueType == T> {
+public class Animation<T: Interpolatable> where T.ValueType == T {
     private let filmstrip = Filmstrip<T>()
     
     public init() {}

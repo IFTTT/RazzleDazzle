@@ -394,10 +394,10 @@ the default timeout and poll interval values. This can be done as follows:
 // Swift
 
 // Increase the global timeout to 5 seconds:
-Nimble.Defaults.AsyncTimeout = 5
+Nimble.AsyncDefaults.Timeout = 5
 
 // Slow the polling interval to 0.1 seconds:
-Nimble.Defaults.AsyncPollInterval = 0.1
+Nimble.AsyncDefaults.PollInterval = 0.1
 ```
 
 ## Objective-C Support
@@ -491,6 +491,9 @@ expect(actual) === expected
 expect(actual).toNot(beIdenticalTo(expected))
 expect(actual) !== expected
 ```
+
+Its important to remember that `beIdenticalTo` only makes sense when comparing types with reference semantics, which have a notion of identity. In Swift, that means a `class`. This matcher will not work with types with value semantics such as `struct` or `enum`. If you need to compare two value types, you can either compare individual properties or if it makes sense to do so, make your type implement `Equatable` and use Nimble's equivalence matchers instead.
+
 
 ```objc
 // Objective-C
@@ -646,13 +649,13 @@ expect(dolphin).to(beAKindOf([Mammal class]));
 // Passes if actual is not nil, true, or an object with a boolean value of true:
 expect(actual).to(beTruthy())
 
-// Passes if actual is only true (not nil or an object conforming to BooleanType true):
+// Passes if actual is only true (not nil or an object conforming to Boolean true):
 expect(actual).to(beTrue())
 
 // Passes if actual is nil, false, or an object with a boolean value of false:
 expect(actual).to(beFalsy())
 
-// Passes if actual is only false (not nil or an object conforming to BooleanType false):
+// Passes if actual is only false (not nil or an object conforming to Boolean false):
 expect(actual).to(beFalse())
 
 // Passes if actual is nil:
@@ -665,13 +668,13 @@ expect(actual).to(beNil())
 // Passes if actual is not nil, true, or an object with a boolean value of true:
 expect(actual).to(beTruthy());
 
-// Passes if actual is only true (not nil or an object conforming to BooleanType true):
+// Passes if actual is only true (not nil or an object conforming to Boolean true):
 expect(actual).to(beTrue());
 
 // Passes if actual is nil, false, or an object with a boolean value of false:
 expect(actual).to(beFalsy());
 
-// Passes if actual is only false (not nil or an object conforming to BooleanType false):
+// Passes if actual is only false (not nil or an object conforming to Boolean false):
 expect(actual).to(beFalse());
 
 // Passes if actual is nil:
@@ -685,11 +688,11 @@ If you're using Swift 2.0+, you can use the `throwError` matcher to check if an 
 ```swift
 // Swift
 
-// Passes if somethingThatThrows() throws an ErrorType:
+// Passes if somethingThatThrows() throws an ErrorProtocol:
 expect{ try somethingThatThrows() }.to(throwError())
 
 // Passes if somethingThatThrows() throws an error with a given domain:
-expect{ try somethingThatThrows() }.to(throwError { (error: ErrorType) in
+expect{ try somethingThatThrows() }.to(throwError { (error: ErrorProtocol) in
     expect(error._domain).to(equal(NSCocoaErrorDomain))
 })
 
@@ -697,21 +700,21 @@ expect{ try somethingThatThrows() }.to(throwError { (error: ErrorType) in
 expect{ try somethingThatThrows() }.to(throwError(NSCocoaError.PropertyListReadCorruptError))
 
 // Passes if somethingThatThrows() throws an error with a given type:
-expect{ try somethingThatThrows() }.to(throwError(errorType: MyError.self))
+expect{ try somethingThatThrows() }.to(throwError(errorType: NimbleError.self))
 ```
 
-If you are working directly with `ErrorType` values, as is sometimes the case when using `Result` or `Promise` types, you can use the `matchError` matcher to check if the error is the same error is is supposed to be, without requiring explicit casting.
+If you are working directly with `ErrorProtocol` values, as is sometimes the case when using `Result` or `Promise` types, you can use the `matchError` matcher to check if the error is the same error is is supposed to be, without requiring explicit casting.
 
 ```swift
 // Swift
 
-let actual: ErrorType = …
+let actual: ErrorProtocol = …
 
-// Passes if actual contains any error value from the MyErrorEnum type:
-expect(actual).to(matchError(MyErrorEnum))
+// Passes if actual contains any error value from the NimbleErrorEnum type:
+expect(actual).to(matchError(NimbleErrorEnum))
 
-// Passes if actual contains the Timeout value from the MyErrorEnum type:
-expect(actual).to(matchError(MyErrorEnum.Timeout))
+// Passes if actual contains the Timeout value from the NimbleErrorEnum type:
+expect(actual).to(matchError(NimbleErrorEnum.Timeout))
 
 // Passes if actual contains an NSError equal to the given one:
 expect(actual).to(matchError(NSError(domain: "err", code: 123, userInfo: nil)))
@@ -895,7 +898,7 @@ expect([1,2,3,4]).to(allPass(beLessThan(5)))
 expect(@[@1, @2, @3,@4]).to(allPass(beLessThan(@5)));
 ```
 
-For Swift the actual value has to be a SequenceType, e.g. an array, a set or a custom seqence type.
+For Swift the actual value has to be a Sequence, e.g. an array, a set or a custom seqence type.
 
 For Objective-C the actual value has to be a NSFastEnumeration, e.g. NSArray and NSSet, of NSObjects and only the variant which
 uses another matcher is available here.
@@ -918,7 +921,7 @@ expect(actual).to(haveCount(expected))
 expect(actual).notTo(haveCount(expected))
 ```
 
-For Swift the actual value must be a `CollectionType` such as array, dictionary or set.
+For Swift the actual value must be a `Collection` such as array, dictionary or set.
 
 For Objective-C the actual value has to be one of the following classes `NSArray`, `NSDictionary`, `NSSet`, `NSHashTable` or one of their subclasses.
 
@@ -983,7 +986,7 @@ in an Xcode project you distribute to others.
   distribute it yourself via GitHub.
 
 For examples of how to write your own matchers, just check out the
-[`Matchers` directory](https://github.com/Quick/Nimble/tree/master/Nimble/Matchers)
+[`Matchers` directory](https://github.com/Quick/Nimble/tree/master/Sources/Nimble/Matchers)
 to see how Nimble's built-in set of matchers are implemented. You can
 also check out the tips below.
 
@@ -1128,11 +1131,11 @@ automatically generate expected value failure messages when they're nil.
 
 ```swift
 
-public func beginWith<S: SequenceType, T: Equatable where S.Generator.Element == T>(startingElement: T) -> NonNilMatcherFunc<S> {
+public func beginWith<S: Sequence, T: Equatable where S.Iterator.Element == T>(startingElement: T) -> NonNilMatcherFunc<S> {
     return NonNilMatcherFunc { actualExpression, failureMessage in
         failureMessage.postfixMessage = "begin with <\(startingElement)>"
         if let actualValue = actualExpression.evaluate() {
-            var actualGenerator = actualValue.generate()
+            var actualGenerator = actualValue.makeIterator()
             return actualGenerator.next() == startingElement
         }
         return false
@@ -1190,7 +1193,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'YOUR_APP_NAME_HERE_Tests', :exclusive => true do
   use_frameworks!
-  pod 'Nimble', '~> 3.1.0'
+  pod 'Nimble', '~> 4.0.0'
 end
 ```
 

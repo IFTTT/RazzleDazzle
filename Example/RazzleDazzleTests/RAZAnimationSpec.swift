@@ -30,10 +30,10 @@ class AnimationSpec: QuickSpec {
                 let translationAnimation = TranslationAnimation(view: view)
                 
                 alphaAnimation[2] = 0.5
-                colorAnimation[2] = UIColor.redColor()
+                colorAnimation[2] = UIColor.red
                 scaleAnimation[2] = 3
                 rotationAnimation[2] = 90
-                translationAnimation[2] = CGPointMake(5, 15)
+                translationAnimation[2] = CGPoint(x: 5, y: 15)
                 
                 animator.addAnimation(alphaAnimation)
                 animator.addAnimation(colorAnimation)
@@ -41,10 +41,10 @@ class AnimationSpec: QuickSpec {
                 animator.addAnimation(rotationAnimation)
                 animator.addAnimation(translationAnimation)
                 
-                let scaleTransform = CGAffineTransformMakeScale(3, 3)
-                let rotationTransform = CGAffineTransformMakeRotation(90 * CGFloat(M_PI / -180.0))
-                let translationTransform = CGAffineTransformMakeTranslation(5, 15)
-                mixedTransform = CGAffineTransformConcat(translationTransform, CGAffineTransformConcat(scaleTransform, rotationTransform))
+                let scaleTransform = CGAffineTransform(scaleX: 3, y: 3)
+                let rotationTransform = CGAffineTransform(rotationAngle: 90 * CGFloat(M_PI / -180.0))
+                let translationTransform = CGAffineTransform(translationX: 5, y: 15)
+                mixedTransform = translationTransform.concatenating(scaleTransform.concatenating(rotationTransform))
                 
                 animator.animate(2)
             }
@@ -52,10 +52,10 @@ class AnimationSpec: QuickSpec {
                 expect(view.alpha).to(beCloseTo(0.5))
             }
             it("should apply the correct background color to the view") {
-                expect(view.backgroundColor).to(equal(UIColor.redColor()))
+                expect(view.backgroundColor).to(equal(UIColor.red))
             }
             it("should apply the correct transform to the view") {
-                expect(CGAffineTransformEqualToTransform(view.transform, mixedTransform)).to(beTruthy())
+                expect(view.transform == mixedTransform).to(beTruthy())
             }
         }
     }

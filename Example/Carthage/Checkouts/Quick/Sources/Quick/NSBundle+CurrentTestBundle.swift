@@ -2,13 +2,14 @@
 
 import Foundation
 
-extension NSBundle {
+extension Bundle {
 
     /**
      Locates the first bundle with a '.xctest' file extension.
      */
-    internal static var currentTestBundle: NSBundle? {
-        return allBundles().lazy
+    internal static var currentTestBundle: Bundle? {
+        return allBundles
+            .lazy
             .filter {
                 $0.bundlePath.hasSuffix(".xctest")
             }

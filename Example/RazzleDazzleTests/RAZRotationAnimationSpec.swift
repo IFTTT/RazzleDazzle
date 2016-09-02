@@ -53,13 +53,13 @@ class RotationAnimationSpec: QuickSpec {
                 let radiansOne = 3 * CGFloat(M_PI / -180.0)
                 let radiansThree = 5 * CGFloat(M_PI / -180.0)
                 animation.animate(1)
-                expect(CGAffineTransformEqualToTransform(view.transform, CGAffineTransformMakeRotation(radiansOne))).to(beTruthy())
+                expect(view.transform == CGAffineTransform(rotationAngle: radiansOne)).to(beTruthy())
                 animation.animate(3)
-                expect(CGAffineTransformEqualToTransform(view.transform, CGAffineTransformMakeRotation(radiansThree))).to(beTruthy())
+                expect(view.transform == CGAffineTransform(rotationAngle: radiansThree)).to(beTruthy())
             }
             it("should do nothing if no keyframes have been set") {
                 animation.animate(5)
-                expect(CGAffineTransformEqualToTransform(view.transform, CGAffineTransformIdentity)).to(beTruthy())
+                expect(view.transform == CGAffineTransform.identity).to(beTruthy())
             }
         }
     }

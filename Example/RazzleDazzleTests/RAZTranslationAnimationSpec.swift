@@ -22,42 +22,42 @@ class TranslationAnimationSpec: QuickSpec {
         }
         describe("TranslationAnimation") {
             it("should add and retrieve keyframes") {
-                animation[2] = CGPointMake(1, 2)
-                expect(CGPointEqualToPoint(animation[2], CGPointMake(1, 2))).to(beTruthy())
+                animation[2] = CGPoint(x: 1, y: 2)
+                expect(animation[2].equalTo(CGPoint(x: 1, y: 2))).to(beTruthy())
             }
             it("should add and retrieve negative keyframes") {
-                animation[-2] = CGPointMake(1, 2)
-                expect(CGPointEqualToPoint(animation[-2], CGPointMake(1, 2))).to(beTruthy())
+                animation[-2] = CGPoint(x: 1, y: 2)
+                expect(animation[-2].equalTo(CGPoint(x: 1, y: 2))).to(beTruthy())
             }
             it("should add and retrieve multiple keyframes") {
-                animation[-2] = CGPointMake(1, 2)
-                animation[2] = CGPointMake(3, 4)
-                expect(CGPointEqualToPoint(animation[-2], CGPointMake(1, 2))).to(beTruthy())
-                expect(CGPointEqualToPoint(animation[2], CGPointMake(3, 4))).to(beTruthy())
+                animation[-2] = CGPoint(x: 1, y: 2)
+                animation[2] = CGPoint(x: 3, y: 4)
+                expect(animation[-2].equalTo(CGPoint(x: 1, y: 2))).to(beTruthy())
+                expect(animation[2].equalTo(CGPoint(x: 3, y: 4))).to(beTruthy())
             }
             it("should return the first value for times before the start time") {
-                animation[2] = CGPointMake(1, 2)
-                animation[4] = CGPointMake(3, 4)
-                expect(CGPointEqualToPoint(animation[1], CGPointMake(1, 2))).to(beTruthy())
-                expect(CGPointEqualToPoint(animation[0], CGPointMake(1, 2))).to(beTruthy())
+                animation[2] = CGPoint(x: 1, y: 2)
+                animation[4] = CGPoint(x: 3, y: 4)
+                expect(animation[1].equalTo(CGPoint(x: 1, y: 2))).to(beTruthy())
+                expect(animation[0].equalTo(CGPoint(x: 1, y: 2))).to(beTruthy())
             }
             it("should return the last value for times after the end time") {
-                animation[2] = CGPointMake(1, 2)
-                animation[4] = CGPointMake(3, 4)
-                expect(CGPointEqualToPoint(animation[5], CGPointMake(3, 4))).to(beTruthy())
-                expect(CGPointEqualToPoint(animation[6], CGPointMake(3, 4))).to(beTruthy())
+                animation[2] = CGPoint(x: 1, y: 2)
+                animation[4] = CGPoint(x: 3, y: 4)
+                expect(animation[5].equalTo(CGPoint(x: 3, y: 4))).to(beTruthy())
+                expect(animation[6].equalTo(CGPoint(x: 3, y: 4))).to(beTruthy())
             }
             it("should apply changes to the view's translation transform") {
-                animation[2] = CGPointMake(1, 2)
-                animation[4] = CGPointMake(3, 4)
+                animation[2] = CGPoint(x: 1, y: 2)
+                animation[4] = CGPoint(x: 3, y: 4)
                 animation.animate(2)
-                expect(CGAffineTransformEqualToTransform(view.transform, CGAffineTransformMakeTranslation(1, 2))).to(beTruthy())
+                expect(view.transform == CGAffineTransform(translationX: 1, y: 2)).to(beTruthy())
                 animation.animate(4)
-                expect(CGAffineTransformEqualToTransform(view.transform, CGAffineTransformMakeTranslation(3, 4))).to(beTruthy())
+                expect(view.transform == CGAffineTransform(translationX: 3, y: 4)).to(beTruthy())
             }
             it("should do nothing if no keyframes have been set") {
                 animation.animate(5)
-                expect(CGAffineTransformEqualToTransform(view.transform, CGAffineTransformIdentity)).to(beTruthy())
+                expect(view.transform == CGAffineTransform.identity).to(beTruthy())
             }
         }
     }
