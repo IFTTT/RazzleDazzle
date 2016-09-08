@@ -9,11 +9,8 @@ checkout:
 dependencies:
   pre:
     - brew update
-    - brew uninstall xctool && brew install --HEAD xctool
 
 test:
   override:
     - rake test:ios
     - rake test:osx
-    - rake test:xctool:ios
-    - rake test:xctool:osx
