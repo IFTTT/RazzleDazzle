@@ -17,7 +17,7 @@ public class Keyframe<T: Interpolatable> where T.ValueType == T {
         self.init(time: time, value: value, easing: EasingFunctionLinear)
     }
     
-    public init(time: CGFloat, value: T, easing: EasingFunction) {
+    public init(time: CGFloat, value: T, easing: @escaping EasingFunction) {
         self.time = time
         self.value = value
         self.easing = easing
@@ -53,7 +53,7 @@ public class Filmstrip<T: Interpolatable> where T.ValueType == T {
         keyframes.insert(Keyframe(time: time, value: value), at: index)
     }
     
-    public func setValue(_ value: T, atTime time: CGFloat, easing: EasingFunction) {
+    public func setValue(_ value: T, atTime time: CGFloat, easing: @escaping EasingFunction) {
         let index = indexOfKeyframeAfterTime(time) ?? keyframes.count
         keyframes.insert(Keyframe(time: time, value: value, easing: easing), at: index)
     }

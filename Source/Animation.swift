@@ -27,7 +27,7 @@ public class Animation<T: Interpolatable> where T.ValueType == T {
         filmstrip[time] = value
     }
     
-    public func addKeyframe(_ time: CGFloat, value: T, easing: EasingFunction) {
+    public func addKeyframe(_ time: CGFloat, value: T, easing: @escaping EasingFunction) {
         if !checkValidity(value) {return}
         filmstrip.setValue(value, atTime: time, easing: easing)
     }
