@@ -17,5 +17,5 @@ public protocol Animatable {
     
     - parameter time:    The point in time for which to animate the view
     */
-    func animate(time: CGFloat)
+    func animate(_ time: CGFloat)
 }

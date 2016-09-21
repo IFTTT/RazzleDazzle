@@ -11,17 +11,17 @@ import UIKit
 /**
 View controller for creating scrolling app intros. Set animation times based on the page number, and this view controller handles calling `animate:` on the `animator`.
 */
-public class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDelegate {
-    public let scrollView = UIScrollView()
-    public let contentView = UIView()
-    public var animator = Animator()
-    private var scrollViewPageConstraintAnimations = [ScrollViewPageConstraintAnimation]()
-    public var pageWidth : CGFloat {
+open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDelegate {
+    open let scrollView = UIScrollView()
+    open let contentView = UIView()
+    open var animator = Animator()
+    fileprivate var scrollViewPageConstraintAnimations = [ScrollViewPageConstraintAnimation]()
+    open var pageWidth : CGFloat {
         get {
-            return CGRectGetWidth(scrollView.frame)
+            return scrollView.frame.width
         }
     }
-    public var pageOffset : CGFloat {
+    open var pageOffset : CGFloat {
         get {
             var currentOffset = scrollView.contentOffset.x
             if pageWidth > 0 {
@@ -31,133 +31,133 @@ public class AnimatedPagingScrollViewController : UIViewController, UIScrollView
         }
     }
     
-    public func numberOfPages() -> Int {
+    open func numberOfPages() -> Int {
         return 2
     }
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
-        scrollView.pagingEnabled = true
+        scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
-        scrollView.contentSize = CGSizeMake(CGFloat(numberOfPages()) * CGRectGetWidth(view.frame), CGRectGetHeight(view.frame))
+        scrollView.contentSize = CGSize(width: CGFloat(numberOfPages()) * view.frame.width, height: view.frame.height)
         view.addSubview(scrollView)
         scrollView.frame = view.bounds
         scrollView.addSubview(contentView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
       
-        NSLayoutConstraint.activateConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
-        NSLayoutConstraint.activateConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
+        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
       
-        let scrollViewLeft = NSLayoutConstraint(item: scrollView, attribute: .Left, relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1, constant: 0)
-        let scrollViewRight = NSLayoutConstraint(item: scrollView, attribute: .Right, relatedBy: .Equal, toItem: contentView, attribute: .Right, multiplier: 1, constant: 0)
-        let scrollViewTop = NSLayoutConstraint(item: scrollView, attribute: .Top, relatedBy: .Equal, toItem: contentView, attribute: .Top, multiplier: 1, constant: 0)
-        let scrollViewBottom = NSLayoutConstraint(item: scrollView, attribute: .Bottom, relatedBy: .Equal, toItem: contentView, attribute: .Bottom, multiplier: 1, constant: 0)
+        let scrollViewLeft = NSLayoutConstraint(item: scrollView, attribute: .left, relatedBy: .equal, toItem: contentView, attribute: .left, multiplier: 1, constant: 0)
+        let scrollViewRight = NSLayoutConstraint(item: scrollView, attribute: .right, relatedBy: .equal, toItem: contentView, attribute: .right, multiplier: 1, constant: 0)
+        let scrollViewTop = NSLayoutConstraint(item: scrollView, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 0)
+        let scrollViewBottom = NSLayoutConstraint(item: scrollView, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: 0)
       
-        NSLayoutConstraint.activateConstraints([scrollViewLeft, scrollViewRight, scrollViewTop, scrollViewBottom])
+        NSLayoutConstraint.activate([scrollViewLeft, scrollViewRight, scrollViewTop, scrollViewBottom])
       
-        let contentViewWidth = NSLayoutConstraint(item: contentView, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: CGFloat(numberOfPages()), constant: 0)
-        let contentViewHeight = NSLayoutConstraint(item: contentView, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1, constant: 0)
+        let contentViewWidth = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: CGFloat(numberOfPages()), constant: 0)
+        let contentViewHeight = NSLayoutConstraint(item: contentView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1, constant: 0)
       
-        NSLayoutConstraint.activateConstraints([contentViewWidth, contentViewHeight])
+        NSLayoutConstraint.activate([contentViewWidth, contentViewHeight])
     }
     
-    public override func viewDidAppear(animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateCurrentFrame()
     }
     
-    public override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+    open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         let newPageWidth = size.width
         for animation in scrollViewPageConstraintAnimations {
             animation.pageWidth = newPageWidth
         }
         let futurePixelOffset = pageOffset * newPageWidth
-        coordinator.animateAlongsideTransition({context in
+        coordinator.animate(alongsideTransition: {context in
             self.animateCurrentFrame()
             self.scrollView.contentOffset.x = futurePixelOffset
             }, completion: nil)
     }
     
-    public func scrollViewDidScroll(scrollView: UIScrollView) {
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
         animateCurrentFrame()
     }
     
-    public func animateCurrentFrame () {
+    open func animateCurrentFrame () {
         animator.animate(pageOffset)
     }
     
-    public func keepView(view: UIView, onPage page: CGFloat) {
-        keepView(view, onPage: page, withAttribute: .CenterX)
+    open func keepView(_ view: UIView, onPage page: CGFloat) {
+        keepView(view, onPage: page, withAttribute: .centerX)
     }
     
-    public func keepView(view: UIView, onPage page: CGFloat, withAttribute attribute: HorizontalPositionAttribute) {
+    open func keepView(_ view: UIView, onPage page: CGFloat, withAttribute attribute: HorizontalPositionAttribute) {
         view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: view, attribute: layoutAttributeFromRazAttribute(attribute), relatedBy: .Equal, toItem: contentView, attribute: .CenterX, multiplier: multiplierForPage(page, attribute: attribute), constant: 0).active = true
+        NSLayoutConstraint(item: view, attribute: layoutAttributeFromRazAttribute(attribute), relatedBy: .equal, toItem: contentView, attribute: .centerX, multiplier: multiplierForPage(page, attribute: attribute), constant: 0).isActive = true
     }
     
-    public func keepView(view: UIView, onPages pages: [CGFloat]) {
+    open func keepView(_ view: UIView, onPages pages: [CGFloat]) {
         keepView(view, onPages: pages, atTimes: pages)
     }
     
-    public func keepView(view: UIView, onPages pages: [CGFloat], withAttribute attribute: HorizontalPositionAttribute) {
+    open func keepView(_ view: UIView, onPages pages: [CGFloat], withAttribute attribute: HorizontalPositionAttribute) {
         keepView(view, onPages: pages, atTimes: pages, withAttribute: attribute)
     }
 
-    public func keepView(view: UIView, onPages pages: [CGFloat], atTimes times: [CGFloat]) {
-        keepView(view, onPages: pages, atTimes: times, withAttribute: .CenterX)
+    open func keepView(_ view: UIView, onPages pages: [CGFloat], atTimes times: [CGFloat]) {
+        keepView(view, onPages: pages, atTimes: times, withAttribute: .centerX)
     }
     
-    public func keepView(view: UIView, onPages pages: [CGFloat], atTimes times: [CGFloat], withAttribute attribute: HorizontalPositionAttribute) {
+    open func keepView(_ view: UIView, onPages pages: [CGFloat], atTimes times: [CGFloat], withAttribute attribute: HorizontalPositionAttribute) {
         assert(pages.count == times.count, "Make sure you set a time for each position.")
         view.translatesAutoresizingMaskIntoConstraints = false
         
-        let xPositionConstraint = NSLayoutConstraint(item: view, attribute: layoutAttributeFromRazAttribute(attribute), relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1, constant: 0)
-        xPositionConstraint.active = true
+        let xPositionConstraint = NSLayoutConstraint(item: view, attribute: layoutAttributeFromRazAttribute(attribute), relatedBy: .equal, toItem: contentView, attribute: .left, multiplier: 1, constant: 0)
+        xPositionConstraint.isActive = true
         let xPositionAnimation = ScrollViewPageConstraintAnimation(superview: contentView, constraint: xPositionConstraint, pageWidth: pageWidth, attribute: attribute)
-        for (index, page) in pages.enumerate() {
+        for (index, page) in pages.enumerated() {
             xPositionAnimation[times[index]] = page
         }
         animator.addAnimation(xPositionAnimation)
         scrollViewPageConstraintAnimations.append(xPositionAnimation)
     }
     
-    public func centerXMultiplierForPage(page: CGFloat) -> CGFloat {
-        return multiplierForPage(page, attribute: .CenterX)
+    open func centerXMultiplierForPage(_ page: CGFloat) -> CGFloat {
+        return multiplierForPage(page, attribute: .centerX)
     }
     
-    public func leftMultiplierForPage(page: CGFloat) -> CGFloat {
-        return multiplierForPage(page, attribute: .Left)
+    open func leftMultiplierForPage(_ page: CGFloat) -> CGFloat {
+        return multiplierForPage(page, attribute: .left)
     }
     
-    public func rightMultiplierForPage(page: CGFloat) -> CGFloat {
-        return multiplierForPage(page, attribute: .Right)
+    open func rightMultiplierForPage(_ page: CGFloat) -> CGFloat {
+        return multiplierForPage(page, attribute: .right)
     }
     
-    public func multiplierForPage(page: CGFloat, attribute: HorizontalPositionAttribute) -> CGFloat {
+    open func multiplierForPage(_ page: CGFloat, attribute: HorizontalPositionAttribute) -> CGFloat {
         var offset : CGFloat
         switch attribute {
-        case .CenterX:
+        case .centerX:
             offset = 0.5
-        case .Left:
+        case .left:
             offset = 0
-        case .Right:
+        case .right:
             offset = 1
         }
         return 2.0 * (offset + page) / CGFloat(numberOfPages())
     }
     
-    public func layoutAttributeFromRazAttribute(razAttribute: HorizontalPositionAttribute) -> NSLayoutAttribute {
+    open func layoutAttributeFromRazAttribute(_ razAttribute: HorizontalPositionAttribute) -> NSLayoutAttribute {
         var attribute : NSLayoutAttribute
         switch razAttribute {
-        case .CenterX:
-            attribute = .CenterX
-        case .Left:
-            attribute = .Left
-        case .Right:
-            attribute = .Right
+        case .centerX:
+            attribute = .centerX
+        case .left:
+            attribute = .left
+        case .right:
+            attribute = .right
         }
         return attribute
     }

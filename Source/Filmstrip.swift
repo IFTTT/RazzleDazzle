@@ -8,16 +8,16 @@
 
 import Foundation
 
-private class Keyframe<T: Interpolatable where T.ValueType == T> {
+private class Keyframe<T: Interpolatable> where T.ValueType == T {
     let time : CGFloat
     let value : T
     let easing : EasingFunction
     
-    private convenience init(time: CGFloat, value: T) {
+    fileprivate convenience init(time: CGFloat, value: T) {
         self.init(time: time, value: value, easing: EasingFunctionLinear)
     }
     
-    private init(time: CGFloat, value: T, easing: EasingFunction) {
+    fileprivate init(time: CGFloat, value: T, easing: @escaping EasingFunction) {
         self.time = time
         self.value = value
         self.easing = easing
@@ -27,19 +27,19 @@ private class Keyframe<T: Interpolatable where T.ValueType == T> {
 /**
 Keeps track of the keyframes set, and lazily generates interpolated values between them for the requested time as needed.
 */
-public class Filmstrip<T: Interpolatable where T.ValueType == T> {
+open class Filmstrip<T: Interpolatable> where T.ValueType == T {
     
-    private var keyframes = [Keyframe<T>]()
+    fileprivate var keyframes = [Keyframe<T>]()
     
     public init() { }
     
-    public var isEmpty: Bool {
+    open var isEmpty: Bool {
         get {
             return keyframes.isEmpty
         }
     }
     
-    public subscript(time: CGFloat) -> T {
+    open subscript(time: CGFloat) -> T {
         get {
             return valueAtTime(time)
         }
@@ -48,17 +48,17 @@ public class Filmstrip<T: Interpolatable where T.ValueType == T> {
         }
     }
     
-    public func setValue(value: T, atTime time: CGFloat) {
+    open func setValue(_ value: T, atTime time: CGFloat) {
         let index = indexOfKeyframeAfterTime(time) ?? keyframes.count
-        keyframes.insert(Keyframe(time: time, value: value), atIndex: index)
+        keyframes.insert(Keyframe(time: time, value: value), at: index)
     }
     
-    public func setValue(value: T, atTime time: CGFloat, easing: EasingFunction) {
+    open func setValue(_ value: T, atTime time: CGFloat, easing: @escaping EasingFunction) {
         let index = indexOfKeyframeAfterTime(time) ?? keyframes.count
-        keyframes.insert(Keyframe(time: time, value: value, easing: easing), atIndex: index)
+        keyframes.insert(Keyframe(time: time, value: value, easing: easing), at: index)
     }
     
-    public func valueAtTime(time: CGFloat) -> T {
+    open func valueAtTime(_ time: CGFloat) -> T {
         assert(!self.isEmpty, "At least one KeyFrame must be set before animation begins.")
         var value : T
         let indexAfter = (indexOfKeyframeAfterTime(time) ?? keyframes.count)
@@ -76,9 +76,9 @@ public class Filmstrip<T: Interpolatable where T.ValueType == T> {
         return value
     }
     
-    private func indexOfKeyframeAfterTime(time: CGFloat) -> Int? {
+    fileprivate func indexOfKeyframeAfterTime(_ time: CGFloat) -> Int? {
         var indexAfter : Int?
-        for (index, keyframe) in keyframes.enumerate() {
+        for (index, keyframe) in keyframes.enumerated() {
             if time < keyframe.time {
                 indexAfter = index
                 break
@@ -87,7 +87,7 @@ public class Filmstrip<T: Interpolatable where T.ValueType == T> {
         return indexAfter
     }
     
-    private func progressFromTime(fromTime: CGFloat, toTime: CGFloat, atTime: CGFloat, easing: EasingFunction) -> CGFloat {
+    fileprivate func progressFromTime(_ fromTime: CGFloat, toTime: CGFloat, atTime: CGFloat, easing: EasingFunction) -> CGFloat {
         let duration = toTime - fromTime
         if duration == 0 {return 0}
         let timeElapsed = atTime - fromTime

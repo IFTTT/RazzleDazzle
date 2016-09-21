@@ -11,15 +11,15 @@ import UIKit
 /**
 Animates the `fillColor` property of a `CAShapeLayer`.
 */
-public class LayerFillColorAnimation : Animation<UIColor>, Animatable {
-    private let layer : CAShapeLayer
+open class LayerFillColorAnimation : Animation<UIColor>, Animatable {
+    fileprivate let layer : CAShapeLayer
     
     public init(layer: CAShapeLayer) {
         self.layer = layer
     }
     
-    public func animate(time: CGFloat) {
+    open func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
-        layer.fillColor = self[time].CGColor
+        layer.fillColor = self[time].cgColor
     }
 }

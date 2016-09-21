@@ -9,19 +9,19 @@
 import UIKit
 
 public enum HorizontalPositionAttribute {
-    case Left
-    case Right
-    case CenterX
+    case left
+    case right
+    case centerX
 }
 
 /**
 Animates the `constant` of an `NSLayoutConstraint` to keep the view on a certain page given the `pageWidth` of the scroll view.
 */
-public class ScrollViewPageConstraintAnimation : Animation<CGFloat>, Animatable {
-    private let superview : UIView
-    private let constraint : NSLayoutConstraint
-    private let attribute : HorizontalPositionAttribute
-    public var pageWidth : CGFloat
+open class ScrollViewPageConstraintAnimation : Animation<CGFloat>, Animatable {
+    fileprivate let superview : UIView
+    fileprivate let constraint : NSLayoutConstraint
+    fileprivate let attribute : HorizontalPositionAttribute
+    open var pageWidth : CGFloat
     
     public init(superview: UIView, constraint: NSLayoutConstraint, pageWidth: CGFloat, attribute: HorizontalPositionAttribute) {
         self.superview = superview
@@ -30,17 +30,17 @@ public class ScrollViewPageConstraintAnimation : Animation<CGFloat>, Animatable 
         self.pageWidth = pageWidth
     }
     
-    public func animate(time: CGFloat) {
+    open func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         let page = self[time]
         
         var offset : CGFloat
         switch attribute {
-        case .CenterX:
+        case .centerX:
             offset = 0.5
-        case .Left:
+        case .left:
             offset = 0
-        case .Right:
+        case .right:
             offset = 1
         }
         
