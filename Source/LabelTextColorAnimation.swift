@@ -11,14 +11,14 @@ import UIKit
 /**
 Animates the `textColor` property of a `UILabel`.
 */
-public class LabelTextColorAnimation: Animation<UIColor>, Animatable {
-    private let label : UILabel
+open class LabelTextColorAnimation: Animation<UIColor>, Animatable {
+    fileprivate let label : UILabel
     
     public init(label : UILabel) {
         self.label = label
     }
     
-    public func animate(time: CGFloat) {
+    open func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         label.textColor = self[time]
     }

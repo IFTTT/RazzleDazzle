@@ -11,7 +11,7 @@
 
 import Foundation
 
-public func CubicBezier(x1: CGFloat, _ y1: CGFloat, _ x2: CGFloat, _ y2: CGFloat) -> EasingFunction {
+public func CubicBezier(_ x1: CGFloat, _ y1: CGFloat, _ x2: CGFloat, _ y2: CGFloat) -> EasingFunction {
     if (x1 == y1) && (x2 == y2) { return EasingFunctionLinear }
     return { x in
         let t = CubicBezierBinarySubdivide(x, x1: x1, x2: x2)
@@ -19,27 +19,27 @@ public func CubicBezier(x1: CGFloat, _ y1: CGFloat, _ x2: CGFloat, _ y2: CGFloat
     }
 }
 
-private func A(a1: CGFloat, a2: CGFloat) -> CGFloat {
+private func A(_ a1: CGFloat, a2: CGFloat) -> CGFloat {
     return 1.0 - (3.0 * a2) + (3.0 * a1)
 }
 
-private func B(a1: CGFloat, a2: CGFloat) -> CGFloat {
+private func B(_ a1: CGFloat, a2: CGFloat) -> CGFloat {
     return (3.0 * a2) - (6.0 * a1)
 }
 
-private func C(a1: CGFloat) -> CGFloat {
+private func C(_ a1: CGFloat) -> CGFloat {
     return (3.0 * a1)
 }
 
-private func CubicBezierCalculate(t: CGFloat, a1: CGFloat, a2: CGFloat) -> CGFloat {
+private func CubicBezierCalculate(_ t: CGFloat, a1: CGFloat, a2: CGFloat) -> CGFloat {
     return ((((A(a1, a2: a2) * t) + B(a1, a2: a2)) * t) + C(a1)) * t
 }
 
-private func CubicBezierSlope(t: CGFloat, a1: CGFloat, a2: CGFloat) -> CGFloat {
+private func CubicBezierSlope(_ t: CGFloat, a1: CGFloat, a2: CGFloat) -> CGFloat {
     return (3.0 * A(a1, a2: a2) * t * t) + (2.0 * B(a1, a2: a2) * t) + C(a1)
 }
 
-private func CubicBezierBinarySubdivide(x: CGFloat, x1: CGFloat, x2: CGFloat) -> CGFloat {
+private func CubicBezierBinarySubdivide(_ x: CGFloat, x1: CGFloat, x2: CGFloat) -> CGFloat {
     let epsilon : CGFloat = 0.0000001
     let maxIterations = 10
     

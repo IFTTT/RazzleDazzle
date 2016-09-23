@@ -11,15 +11,15 @@ import UIKit
 /**
 Animates the `strokeColor` property of a `CAShapeLayer`.
 */
-public class LayerStrokeColorAnimation : Animation<UIColor>, Animatable {
-    private let layer : CAShapeLayer
+open class LayerStrokeColorAnimation : Animation<UIColor>, Animatable {
+    fileprivate let layer : CAShapeLayer
     
     public init(layer: CAShapeLayer) {
         self.layer = layer
     }
     
-    public func animate(time: CGFloat) {
+    open func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
-        layer.strokeColor = self[time].CGColor
+        layer.strokeColor = self[time].cgColor
     }
 }

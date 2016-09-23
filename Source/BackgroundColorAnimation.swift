@@ -11,14 +11,14 @@ import UIKit
 /**
 Animates the `backgroundColor` property of a `UIView`.
 */
-public class BackgroundColorAnimation : Animation<UIColor>, Animatable {
-    private let view : UIView
+open class BackgroundColorAnimation : Animation<UIColor>, Animatable {
+    fileprivate let view : UIView
     
     public init(view: UIView) {
         self.view = view
     }
     
-    public func animate(time: CGFloat) {
+    open func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         view.backgroundColor = self[time]
     }

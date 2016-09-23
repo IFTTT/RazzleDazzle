@@ -11,9 +11,9 @@ import UIKit
 /**
 Animates the `strokeEnd` property of a `CAShapeLayer`.
 */
-public class LayerStrokeEndAnimation : Animation<CGFloat>, Animatable {
-    private let layer : CAShapeLayer
-    private let animationKey = "StrokeEnd"
+open class LayerStrokeEndAnimation : Animation<CGFloat>, Animatable {
+    fileprivate let layer : CAShapeLayer
+    fileprivate let animationKey = "StrokeEnd"
     
     public init(layer: CAShapeLayer) {
         self.layer = layer
@@ -22,40 +22,40 @@ public class LayerStrokeEndAnimation : Animation<CGFloat>, Animatable {
         createStrokeEndAnimation()
         
         // CAAnimations are lost when application enters the background, so re-add them
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(LayerStrokeEndAnimation.createStrokeEndAnimation),
-            name: UIApplicationDidBecomeActiveNotification,
+            name: NSNotification.Name.UIApplicationDidBecomeActive,
             object: nil)
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
-    public func animate(time: CGFloat) {
+    open func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         layer.timeOffset = CFTimeInterval(self[time])
     }
     
-    public override func validateValue(value: CGFloat) -> Bool {
+    open override func validateValue(_ value: CGFloat) -> Bool {
         return (value >= 0) && (value <= 1)
     }
     
-    @objc private func createStrokeEndAnimation() {
+    @objc fileprivate func createStrokeEndAnimation() {
         // Set up a CABasicAnimation to change the stroke end
-        layer.addAnimation(strokeEndAnimation(), forKey: animationKey)
+        layer.add(strokeEndAnimation(), forKey: animationKey)
         layer.speed = 0
         layer.timeOffset = 0
     }
     
-    private func strokeEndAnimation() -> CABasicAnimation {
+    fileprivate func strokeEndAnimation() -> CABasicAnimation {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = 1
         animation.fromValue = 0
         animation.toValue = 1
         animation.fillMode = kCAFillModeBoth
-        animation.removedOnCompletion = false
+        animation.isRemovedOnCompletion = false
         return animation
     }
 }
