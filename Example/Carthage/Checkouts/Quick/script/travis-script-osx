@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-
-rake test:ios
-rake test:osx
-rake test:xctool:ios
-rake test:xctool:osx

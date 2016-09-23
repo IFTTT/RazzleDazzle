@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-set -e
-
-git submodule update --init --recursive
-
-brew update
-brew uninstall xctool && brew install --HEAD xctool
