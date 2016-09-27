@@ -4,7 +4,7 @@ matrix:
   include:
     - os: osx
       env:
-        - PLATFORM=osx
+        - PLATFORM=macos
         - XCODE_ACTION="build-for-testing test-without-building"
     - os: osx
       env:
@@ -14,19 +14,19 @@ matrix:
       env:
         - PLATFORM=tvos
         - XCODE_ACTION="build-for-testing test-without-building"
-#     - os: osx
-#       sudo: required
-#       env:
-#         - PODSPEC=1
+    - os: osx
+      sudo: required
+      env:
+        - PODSPEC=1
     - os: linux
       env:
         - PLATFORM=linux
       sudo: required
       dist: trusty
 install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx"   ]]; then ./script/travis-install-osx;   fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx"   ]]; then ./script/travis-install-macos;   fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./script/travis-install-linux; fi
-  - if [[ "$PODSPEC" ]]; then sudo gem install bundler; bundle install; fi
+  - if [[ "$PODSPEC" ]]; then rvm system; sudo gem install bundler; bundle install; fi
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "osx"   ]]; then ./script/travis-script-osx;   fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx"   ]]; then ./script/travis-script-macos;   fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./script/travis-script-linux; fi

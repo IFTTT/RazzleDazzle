@@ -276,9 +276,6 @@
 		6CAEDD0A1CAEA86F003F1584 /* LinuxSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEDD091CAEA86F003F1584 /* LinuxSupport.swift */; };
 		6CAEDD0B1CAEA86F003F1584 /* LinuxSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEDD091CAEA86F003F1584 /* LinuxSupport.swift */; };
 		6CAEDD0C1CAEA86F003F1584 /* LinuxSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEDD091CAEA86F003F1584 /* LinuxSupport.swift */; };
-		6CBC154D1CAF36B500B158E6 /* LinuxSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBC154C1CAF36B500B158E6 /* LinuxSupport.swift */; };
-		6CBC154F1CAF36BB00B158E6 /* LinuxSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBC154C1CAF36B500B158E6 /* LinuxSupport.swift */; };
-		6CBC15501CAF36BC00B158E6 /* LinuxSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBC154C1CAF36B500B158E6 /* LinuxSupport.swift */; };
 		7B5358BA1C3846C900A23FAA /* SatisfyAnyOfTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5358B91C3846C900A23FAA /* SatisfyAnyOfTest.swift */; };
 		7B5358BB1C3846C900A23FAA /* SatisfyAnyOfTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5358B91C3846C900A23FAA /* SatisfyAnyOfTest.swift */; };
 		7B5358BC1C3846C900A23FAA /* SatisfyAnyOfTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5358B91C3846C900A23FAA /* SatisfyAnyOfTest.swift */; };
@@ -520,7 +517,6 @@
 		472FD1361B9E094B00C7B8DA /* HaveCountTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaveCountTest.swift; sourceTree = "<group>"; };
 		4793854C1BA0BB2500296F85 /* ObjCHaveCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCHaveCount.m; sourceTree = "<group>"; };
 		6CAEDD091CAEA86F003F1584 /* LinuxSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxSupport.swift; sourceTree = "<group>"; };
-		6CBC154C1CAF36B500B158E6 /* LinuxSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxSupport.swift; sourceTree = "<group>"; };
 		7B5358B91C3846C900A23FAA /* SatisfyAnyOfTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SatisfyAnyOfTest.swift; sourceTree = "<group>"; };
 		7B5358BD1C38479700A23FAA /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SatisfyAnyOf.swift; sourceTree = "<group>"; };
 		7B5358C11C39155600A23FAA /* ObjCSatisfyAnyOfTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCSatisfyAnyOfTest.m; sourceTree = "<group>"; };
@@ -660,7 +656,6 @@
 				1FD8CD091968AB07008ED995 /* Expectation.swift */,
 				1FD8CD0A1968AB07008ED995 /* Expression.swift */,
 				1FD8CD0B1968AB07008ED995 /* FailureMessage.swift */,
-				6CBC154C1CAF36B500B158E6 /* LinuxSupport.swift */,
 				1F1A742D1940169200FFFC47 /* Info.plist */,
 				1FD8CD0C1968AB07008ED995 /* Matchers */,
 				1F1A742E1940169200FFFC47 /* Nimble.h */,
@@ -936,9 +931,9 @@
 			productReference = 1F5DF15E1BDCA0CE00C3A531 /* NimbleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1F925EAC195C0D6300ED456B /* Nimble-OSX */ = {
+		1F925EAC195C0D6300ED456B /* Nimble-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F925EC0195C0D6300ED456B /* Build configuration list for PBXNativeTarget "Nimble-OSX" */;
+			buildConfigurationList = 1F925EC0195C0D6300ED456B /* Build configuration list for PBXNativeTarget "Nimble-macOS" */;
 			buildPhases = (
 				1F925EA8195C0D6300ED456B /* Sources */,
 				1F925EA9195C0D6300ED456B /* Frameworks */,
@@ -949,14 +944,14 @@
 			);
 			dependencies = (
 			);
-			name = "Nimble-OSX";
+			name = "Nimble-macOS";
 			productName = "Nimble-OSX";
 			productReference = 1F925EAD195C0D6300ED456B /* Nimble.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1F925EB6195C0D6300ED456B /* Nimble-OSXTests */ = {
+		1F925EB6195C0D6300ED456B /* Nimble-macOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F925EC3195C0D6300ED456B /* Build configuration list for PBXNativeTarget "Nimble-OSXTests" */;
+			buildConfigurationList = 1F925EC3195C0D6300ED456B /* Build configuration list for PBXNativeTarget "Nimble-macOSTests" */;
 			buildPhases = (
 				1F925EB3195C0D6300ED456B /* Sources */,
 				1F925EB4195C0D6300ED456B /* Frameworks */,
@@ -970,7 +965,7 @@
 				1F9B7C001968AD760094EB8F /* PBXTargetDependency */,
 				1F9B7C021968AD820094EB8F /* PBXTargetDependency */,
 			);
-			name = "Nimble-OSXTests";
+			name = "Nimble-macOSTests";
 			productName = "Nimble-OSXTests";
 			productReference = 1F925EB7195C0D6300ED456B /* NimbleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1025,10 +1020,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				1F925EAC195C0D6300ED456B /* Nimble-macOS */,
+				1F925EB6195C0D6300ED456B /* Nimble-macOSTests */,
 				1F1A74281940169200FFFC47 /* Nimble-iOS */,
 				1F1A74331940169200FFFC47 /* Nimble-iOSTests */,
-				1F925EAC195C0D6300ED456B /* Nimble-OSX */,
-				1F925EB6195C0D6300ED456B /* Nimble-OSXTests */,
 				1F5DF1541BDCA0CE00C3A531 /* Nimble-tvOS */,
 				1F5DF15D1BDCA0CE00C3A531 /* Nimble-tvOSTests */,
 			);
@@ -1127,7 +1122,6 @@
 				1FD8CD521968AB07008ED995 /* BeNil.swift in Sources */,
 				1FD8CD6A1968AB07008ED995 /* Async.swift in Sources */,
 				1FD8CD581968AB07008ED995 /* EndWith.swift in Sources */,
-				6CBC154D1CAF36B500B158E6 /* LinuxSupport.swift in Sources */,
 				1FD8CD5C1968AB07008ED995 /* MatcherProtocols.swift in Sources */,
 				1FD8CD341968AB07008ED995 /* DSL.swift in Sources */,
 				7B5358BE1C38479700A23FAA /* SatisfyAnyOf.swift in Sources */,
@@ -1250,7 +1244,6 @@
 				1F5DF16F1BDCA0F500C3A531 /* AssertionDispatcher.swift in Sources */,
 				1F5DF1841BDCA0F500C3A531 /* EndWith.swift in Sources */,
 				1F5DF18D1BDCA0F500C3A531 /* SourceLocation.swift in Sources */,
-				6CBC15501CAF36BC00B158E6 /* LinuxSupport.swift in Sources */,
 				1F5DF1701BDCA0F500C3A531 /* DSL.swift in Sources */,
 				1F5DF1721BDCA0F500C3A531 /* Expectation.swift in Sources */,
 				7B5358C01C38479700A23FAA /* SatisfyAnyOf.swift in Sources */,
@@ -1371,7 +1364,6 @@
 				1FD8CD531968AB07008ED995 /* BeNil.swift in Sources */,
 				1FD8CD6B1968AB07008ED995 /* Async.swift in Sources */,
 				1FD8CD591968AB07008ED995 /* EndWith.swift in Sources */,
-				6CBC154F1CAF36BB00B158E6 /* LinuxSupport.swift in Sources */,
 				1FD8CD5D1968AB07008ED995 /* MatcherProtocols.swift in Sources */,
 				1FD8CD351968AB07008ED995 /* DSL.swift in Sources */,
 				7B5358BF1C38479700A23FAA /* SatisfyAnyOf.swift in Sources */,
@@ -1477,22 +1469,22 @@
 		};
 		1F925EBA195C0D6300ED456B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1F925EAC195C0D6300ED456B /* Nimble-OSX */;
+			target = 1F925EAC195C0D6300ED456B /* Nimble-macOS */;
 			targetProxy = 1F925EB9195C0D6300ED456B /* PBXContainerItemProxy */;
 		};
 		1F9B7BFE1968AD760094EB8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1F925EAC195C0D6300ED456B /* Nimble-OSX */;
+			target = 1F925EAC195C0D6300ED456B /* Nimble-macOS */;
 			targetProxy = 1F9B7BFD1968AD760094EB8F /* PBXContainerItemProxy */;
 		};
 		1F9B7C001968AD760094EB8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1F925EAC195C0D6300ED456B /* Nimble-OSX */;
+			target = 1F925EAC195C0D6300ED456B /* Nimble-macOS */;
 			targetProxy = 1F9B7BFF1968AD760094EB8F /* PBXContainerItemProxy */;
 		};
 		1F9B7C021968AD820094EB8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1F925EAC195C0D6300ED456B /* Nimble-OSX */;
+			target = 1F925EAC195C0D6300ED456B /* Nimble-macOS */;
 			targetProxy = 1F9B7C011968AD820094EB8F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1512,8 +1504,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
@@ -1566,8 +1560,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
@@ -1968,7 +1964,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1F925EC0195C0D6300ED456B /* Build configuration list for PBXNativeTarget "Nimble-OSX" */ = {
+		1F925EC0195C0D6300ED456B /* Build configuration list for PBXNativeTarget "Nimble-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F925EC1195C0D6300ED456B /* Debug */,
@@ -1977,7 +1973,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1F925EC3195C0D6300ED456B /* Build configuration list for PBXNativeTarget "Nimble-OSXTests" */ = {
+		1F925EC3195C0D6300ED456B /* Build configuration list for PBXNativeTarget "Nimble-macOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F925EC4195C0D6300ED456B /* Debug */,
