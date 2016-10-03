@@ -208,7 +208,7 @@ public override func validateValue(_ value: CGFloat) -> Bool {
 Then, all you need to do is to make the appropriate changes to your view when the `animate(time:)` function is called.
 
 ```swift
-public func animate(time: CGFloat) {
+public func animate(_ time: CGFloat) {
 	if !hasKeyframes() {return}
 	view.layer.borderWidth = self[time]
 }
