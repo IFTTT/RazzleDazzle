@@ -27,6 +27,8 @@ testing, consider reading them in the order they're introduced below:
   *examples* and *example groups*.
 - **[Testing OS X and iOS Applications](TestingApps.md)**:
   Read this to learn more about testing code that uses the AppKit and UIKit frameworks.
+- **[Testing with test doubles](TestUsingTestDoubles.md)**:
+  Read this to learn what test doubles are and how to use them.
 - **[Reducing Test Boilerplate with Shared Assertions](SharedExamples.md)**:
   Read this to learn how to share sets of assertions among your tests.
 - **[Configuring How Quick Behaves](ConfiguringQuick.md)**:
@@ -38,5 +40,7 @@ testing, consider reading them in the order they're introduced below:
   Git submodules, CocoaPods, Carthage, or the Swift Package Manager.
 - **[Installing Quick File Templates](InstallingFileTemplates.md)**:
   Read this to learn how to install file templates that make writing Quick specs faster.
-- **[More Resources](MoreResources.md)**
+- **[More Resources](MoreResources.md)**:
   A list of additional resources on OS X and iOS testing.
+- **[Troubleshooting](Troubleshooting.md)**:
+  Read this when you experience other troubles.

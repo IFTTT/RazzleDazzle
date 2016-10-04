@@ -30,6 +30,8 @@ Quickでテストを書くと、SwiftとObjective-Cで書かれたプログラ�
   これでより簡潔にたくさんのテストが書けるようになります。
 - **[OS XとiOSアプリのテスト](TestingApps.md)**:
   AppKitとUIKitを使ったコードをどうやってテストできるか説明します。
+- **[Test doublesを使ったテスト](TestUsingTestDoubles.md)**:
+  Test doublesを使って対象のクラスのみをテストする方法を説明します。
 - **[assertの共有でボイラープレートコードをなくしましょう](SharedExamples.md)**:
   どうやってassertを共有できるか、なぜそうするのが望ましいのか説明します。
 - **[Quickの挙動をカスタマイズしましょう](ConfiguringQuick.md)**:
@@ -42,5 +44,7 @@ Quickでテストを書くと、SwiftとObjective-Cで書かれたプログラ�
   CocoaPods、Carthage、全部サポートしています！
 - **[Quickファイル・テンプレートのインストール方法](InstallingFileTemplates.md)**:
   Quickテストをすばやく作成するためのファイル・テンプレートをインストールする方法を説明します。
-- **[その他の参考資料](MoreResources.md)**
+- **[その他の参考資料](MoreResources.md)**:
   OS X・iOSのテストに関しての資料集を用意しています。
+- **[トラブルシューティング](Troubleshooting.md)**:
+  その他の不具合に遭遇した場合にこれを読んでください。

@@ -51,13 +51,13 @@ class ScaleAnimationSpec: QuickSpec {
                 animation[1] = 3
                 animation[3] = 5
                 animation.animate(1)
-                expect(CGAffineTransformEqualToTransform(view.transform, CGAffineTransformMakeScale(3, 3))).to(beTruthy())
+                expect(view.transform == CGAffineTransform(scaleX: 3, y: 3)).to(beTruthy())
                 animation.animate(3)
-                expect(CGAffineTransformEqualToTransform(view.transform, CGAffineTransformMakeScale(5, 5))).to(beTruthy())
+                expect(view.transform == CGAffineTransform(scaleX: 5, y: 5)).to(beTruthy())
             }
             it("should do nothing if no keyframes have been set") {
                 animation.animate(5)
-                expect(CGAffineTransformEqualToTransform(view.transform, CGAffineTransformIdentity)).to(beTruthy())
+                expect(view.transform == CGAffineTransform.identity).to(beTruthy())
             }
         }
     }

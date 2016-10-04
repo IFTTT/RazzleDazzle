@@ -18,7 +18,7 @@ public class LabelTextColorAnimation: Animation<UIColor>, Animatable {
         self.label = label
     }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         label.textColor = self[time]
     }

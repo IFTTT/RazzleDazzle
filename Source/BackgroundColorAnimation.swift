@@ -18,7 +18,7 @@ public class BackgroundColorAnimation : Animation<UIColor>, Animatable {
         self.view = view
     }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         view.backgroundColor = self[time]
     }

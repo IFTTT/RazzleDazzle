@@ -18,12 +18,12 @@ public class CornerRadiusAnimation : Animation<CGFloat>, Animatable {
         self.view = view
     }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         view.layer.cornerRadius = self[time]
     }
     
-    public override func validateValue(value: CGFloat) -> Bool {
+    public override func validateValue(_ value: CGFloat) -> Bool {
         return (value >= 0)
     }
 }

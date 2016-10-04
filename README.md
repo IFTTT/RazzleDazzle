@@ -145,7 +145,7 @@ alphaAnimation[60] = 0
 Now, to animate the view, tell the animator what time it is. For example, to tie this animation to a UIScrollView, notify the animator of time in the scroller's delegate method.
 
 ```swift
-func scrollViewDidScroll(scrollView: UIScrollView) {
+func scrollViewDidScroll(_ scrollView: UIScrollView) {
 	animator.animate(scrollView.contentOffset.x)
 }
 ```
@@ -200,7 +200,7 @@ public init(view: UIView) {
 Optionally, you can add a function to validate any input values that will be checked each time a keyframe is added, such as for Alpha values that must range from 0 to 1.
 
 ```swift
-public override func validateValue(value: CGFloat) -> Bool {
+public override func validateValue(_ value: CGFloat) -> Bool {
 	return (value >= 0) && (value <= 1)
 }
 ```
@@ -208,7 +208,7 @@ public override func validateValue(value: CGFloat) -> Bool {
 Then, all you need to do is to make the appropriate changes to your view when the `animate(time:)` function is called.
 
 ```swift
-public func animate(time: CGFloat) {
+public func animate(_ time: CGFloat) {
 	if !hasKeyframes() {return}
 	view.layer.borderWidth = self[time]
 }

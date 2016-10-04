@@ -18,8 +18,8 @@ public class LayerStrokeColorAnimation : Animation<UIColor>, Animatable {
         self.layer = layer
     }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
-        layer.strokeColor = self[time].CGColor
+        layer.strokeColor = self[time].cgColor
     }
 }

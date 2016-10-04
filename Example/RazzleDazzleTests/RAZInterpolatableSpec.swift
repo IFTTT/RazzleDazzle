@@ -37,20 +37,20 @@ class InterpolatableSpec: QuickSpec {
         }
         describe("Interpolatable-CGPoint") {
             it("should interpolate points") {
-                let middlePoint = CGPoint.interpolateFrom(CGPointMake(1, 2), to: CGPointMake(3, 6), withProgress: 0.5)
-                expect(middlePoint).to(equal(CGPointMake(2, 4)))
+                let middlePoint = CGPoint.interpolateFrom(CGPoint(x: 1, y: 2), to: CGPoint(x: 3, y: 6), withProgress: 0.5)
+                expect(middlePoint).to(equal(CGPoint(x: 2, y: 4)))
             }
         }
         describe("Interpolatable-CGSize") {
             it("should interpolate sizes") {
-                let middleSize = CGSize.interpolateFrom(CGSizeMake(1, 2), to: CGSizeMake(3, 6), withProgress: 0.5)
-                expect(middleSize).to(equal(CGSizeMake(2, 4)))
+                let middleSize = CGSize.interpolateFrom(CGSize(width: 1, height: 2), to: CGSize(width: 3, height: 6), withProgress: 0.5)
+                expect(middleSize).to(equal(CGSize(width: 2, height: 4)))
             }
         }
         describe("Interpolatable-CGRect") {
             it("should interpolate rects") {
-                let middleRect = CGRect.interpolateFrom(CGRectMake(1, 2, 10, 20), to: CGRectMake(3, 6, 30, 60), withProgress: 0.5)
-                expect(middleRect).to(equal(CGRectMake(2, 4, 20, 40)))
+                let middleRect = CGRect.interpolateFrom(CGRect(x: 1, y: 2, width: 10, height: 20), to: CGRect(x: 3, y: 6, width: 30, height: 60), withProgress: 0.5)
+                expect(middleRect).to(equal(CGRect(x: 2, y: 4, width: 20, height: 40)))
             }
         }
     }

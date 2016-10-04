@@ -20,7 +20,7 @@ public class ConstraintConstantAnimation : Animation<CGFloat>, Animatable {
         self.constraint = constraint
     }
     
-    public func animate(time: CGFloat) {
+    public func animate(_ time: CGFloat) {
         if !hasKeyframes() {return}
         constraint.constant = self[time]
         superview.layoutIfNeeded()

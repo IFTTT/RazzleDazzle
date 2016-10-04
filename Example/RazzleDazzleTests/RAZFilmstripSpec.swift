@@ -31,8 +31,8 @@ class FilmstripSpec: QuickSpec {
                 expect(floatFilmstrip[2]).to(equal(3))
             }
             it("should set and get a color") {
-                colorFilmstrip[2] = UIColor.redColor()
-                expect(colorFilmstrip[2]).to(equal(UIColor.redColor()))
+                colorFilmstrip[2] = UIColor.red
+                expect(colorFilmstrip[2]).to(equal(UIColor.red))
             }
             it("should set and get multiple floats") {
                 floatFilmstrip[2] = 3
@@ -41,10 +41,10 @@ class FilmstripSpec: QuickSpec {
                 expect(floatFilmstrip[5]).to(equal(8))
             }
             it("should set and get multiple colors") {
-                colorFilmstrip[2] = UIColor.redColor()
-                colorFilmstrip[5] = UIColor.blueColor()
-                expect(colorFilmstrip[2]).to(equal(UIColor.redColor()))
-                expect(colorFilmstrip[5]).to(equal(UIColor.blueColor()))
+                colorFilmstrip[2] = UIColor.red
+                colorFilmstrip[5] = UIColor.blue
+                expect(colorFilmstrip[2]).to(equal(UIColor.red))
+                expect(colorFilmstrip[5]).to(equal(UIColor.blue))
             }
             it("should interpolate between values") {
                 floatFilmstrip[2] = 3
@@ -58,10 +58,10 @@ class FilmstripSpec: QuickSpec {
                 expect(floatFilmstrip[0]).to(equal(3))
             }
             it("should return the first value for times before the start time") {
-                colorFilmstrip[2] = UIColor.redColor()
-                colorFilmstrip[5] = UIColor.blueColor()
-                expect(colorFilmstrip[1]).to(equal(UIColor.redColor()))
-                expect(colorFilmstrip[0]).to(equal(UIColor.redColor()))
+                colorFilmstrip[2] = UIColor.red
+                colorFilmstrip[5] = UIColor.blue
+                expect(colorFilmstrip[1]).to(equal(UIColor.red))
+                expect(colorFilmstrip[0]).to(equal(UIColor.red))
             }
             it("should return the last value for times after the end time") {
                 floatFilmstrip[2] = 3
@@ -70,10 +70,10 @@ class FilmstripSpec: QuickSpec {
                 expect(floatFilmstrip[10]).to(equal(5))
             }
             it("should return the last value for times after the end time") {
-                colorFilmstrip[2] = UIColor.redColor()
-                colorFilmstrip[5] = UIColor.blueColor()
-                expect(colorFilmstrip[6]).to(equal(UIColor.blueColor()))
-                expect(colorFilmstrip[10]).to(equal(UIColor.blueColor()))
+                colorFilmstrip[2] = UIColor.red
+                colorFilmstrip[5] = UIColor.blue
+                expect(colorFilmstrip[6]).to(equal(UIColor.blue))
+                expect(colorFilmstrip[10]).to(equal(UIColor.blue))
             }
             it("should work for negative times") {
                 floatFilmstrip[-2] = 3
@@ -83,11 +83,11 @@ class FilmstripSpec: QuickSpec {
                 expect(floatFilmstrip[4]).to(equal(5))
             }
             it("should work for negative times") {
-                colorFilmstrip[-2] = UIColor.redColor()
-                colorFilmstrip[4] = UIColor.blueColor()
-                expect(colorFilmstrip[-5]).to(equal(UIColor.redColor()))
-                expect(colorFilmstrip[-2]).to(equal(UIColor.redColor()))
-                expect(colorFilmstrip[4]).to(equal(UIColor.blueColor()))
+                colorFilmstrip[-2] = UIColor.red
+                colorFilmstrip[4] = UIColor.blue
+                expect(colorFilmstrip[-5]).to(equal(UIColor.red))
+                expect(colorFilmstrip[-2]).to(equal(UIColor.red))
+                expect(colorFilmstrip[4]).to(equal(UIColor.blue))
             }
             it("should set a timing curve") {
                 floatFilmstrip.setValue(10, atTime: 1, easing: EasingFunctionEaseInQuad)

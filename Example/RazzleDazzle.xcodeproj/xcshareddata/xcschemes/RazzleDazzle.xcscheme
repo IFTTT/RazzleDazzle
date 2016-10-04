@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -57,10 +57,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FACD9C5C1B2A554100AC1614"
-            BuildableName = "RazzleDazzle.framework"
-            BlueprintName = "RazzleDazzle"
-            ReferencedContainer = "container:RazzleDazzle.xcodeproj">
+            BlueprintIdentifier = "FAD1C7471B2F57D60053D880"
+            BuildableName = "RazzleDazzleDemo.app"
+            BlueprintName = "RazzleDazzleDemo"
+            ReferencedContainer = "container:Example/RazzleDazzleDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,15 +76,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FACD9C5C1B2A554100AC1614"
-            BuildableName = "RazzleDazzle.framework"
-            BlueprintName = "RazzleDazzle"
-            ReferencedContainer = "container:RazzleDazzle.xcodeproj">
+            BlueprintIdentifier = "FAD1C7471B2F57D60053D880"
+            BuildableName = "RazzleDazzleDemo.app"
+            BlueprintName = "RazzleDazzleDemo"
+            ReferencedContainer = "container:Example/RazzleDazzleDemo.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
