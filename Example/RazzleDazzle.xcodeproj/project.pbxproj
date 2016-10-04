@@ -294,7 +294,6 @@
 					};
 					FACD9C671B2A554100AC1614 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 7E4DSQQ9E2;
 						DevelopmentTeamName = "Raphael Cruzeiro (Personal Team)";
 						LastSwiftMigration = 0800;
 					};

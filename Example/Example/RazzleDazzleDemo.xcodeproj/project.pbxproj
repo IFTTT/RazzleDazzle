@@ -182,7 +182,6 @@
 				TargetAttributes = {
 					FAD1C7471B2F57D60053D880 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 7E4DSQQ9E2;
 						DevelopmentTeamName = "Raphael Cruzeiro (Personal Team)";
 						LastSwiftMigration = 0800;
 					};
