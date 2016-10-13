@@ -239,7 +239,7 @@ If your property is a `CGFloat` or one of the other built-in interpolatable type
 
 An animator can only handle one animation per type per view. If you want multiple animations of the same type on a view, use keyframes of a single animation instead of two separate animations.
 
-`RazzleDazzle` is written in Swift 2.0, so it will only compile in Xcode 7 and up. If you want to use a library like this that will integrate with an older version of Swift, you can use [`JazzHands`](https://github.com/IFTTT/JazzHands), which is written in Objective-C, and use a bridging header to access the methods from your Swift 1.2 classes.
+`RazzleDazzle` is written in Swift 3.0, so it will only compile in Xcode 8 and up. If you want to use a library like this that will integrate with an older version of Swift, you can use [`JazzHands`](https://github.com/IFTTT/JazzHands), which is written in Objective-C, and use a bridging header to access the methods from your Swift 1.2 classes.
 
 Looking for libraries to build awesome keyframe animations like RazzleDazzle on Android? Check out [`SparkleMotion`](https://github.com/IFTTT/SparkleMotion).
 
