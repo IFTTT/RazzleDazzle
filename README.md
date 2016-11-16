@@ -172,6 +172,7 @@ This will produce an effect where the view will be fully faded in and visible fo
 * **ConstraintConstantAnimation** animates an `AutoLayout` constraint constant.
 * **ConstraintMultiplierAnimation** animates an `AutoLayout` constraint constant as a multiple of an attribute of another view _(to offset or resize views based on another view's size)_
 * **ScrollViewPageConstraintAnimation** animates an `AutoLayout` constraint constant to place a view on a scroll view page _(to position views on a scrollView using AutoLayout)_. This is the animation doing the heavy lifting for `AnimatedPagingScrollViewController`'s `keepView(view: onPage:)` function.
+* **FrameAnimation** animates the `frame` property. _(moves and sizes views. Not compatible with AutoLayout)_.
 
 ## Creating Custom Animation Types
 
