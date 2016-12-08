@@ -75,6 +75,10 @@ public class Filmstrip<T: Interpolatable> where T.ValueType == T {
         }
         return value
     }
+
+    public func removeAll() {
+        keyframes.removeAll()
+    }
     
     private func indexOfKeyframeAfterTime(_ time: CGFloat) -> Int? {
         var indexAfter : Int?

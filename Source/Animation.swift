@@ -36,6 +36,10 @@ open class Animation<T: Interpolatable> where T.ValueType == T {
         return !filmstrip.isEmpty
     }
 
+    open func removeAllKeyframes() {
+        filmstrip.removeAll()
+    }
+
     open func validateValue(_ value: T) -> Bool {
         return true
     }
