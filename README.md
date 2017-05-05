@@ -163,6 +163,7 @@ This will produce an effect where the view will be fully faded in and visible fo
 * **TranslationAnimation** applies a translation transform _(to translate view position)_.
 * **CornerRadiusAnimation** animates the `layer.cornerRadius` property.
 * **HideAnimation** animates the `hidden` property _(hides and shows views)_.
+* **MaskAnimation** animates view using masking layer _(ex. from center to circle)_
 * **LayerStrokeStartAnimation** animates the `strokeStart` property of a `CAShapeLayer` _(does not work with LayerStrokeEndAnimation)_.
 * **LayerStrokeEndAnimation** animates the `strokeEnd` property of a `CAShapeLayer` _(does not work with LayerStrokeStartAnimation)_.
 * **LayerFillColorAnimation** animates the `fillColor` property of a `CAShapeLayer`.

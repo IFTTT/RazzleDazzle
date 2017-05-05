@@ -53,6 +53,16 @@
                ReferencedContainer = "container:RazzleDazzle.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FAD1C75C1B2F57D60053D880"
+               BuildableName = "RazzleDazzleDemoTests.xctest"
+               BlueprintName = "RazzleDazzleDemoTests"
+               ReferencedContainer = "container:Example/RazzleDazzleDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
