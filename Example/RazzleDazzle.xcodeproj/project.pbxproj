@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD4B3F491EBCBEA500762A3D /* MaskAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4B3F481EBCBEA500762A3D /* MaskAnimation.swift */; };
 		FA0895731B3F188E002460BB /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0895721B3F188E002460BB /* HideAnimation.swift */; };
 		FA340D681B3B4F78003F2CD8 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA340D671B3B4F78003F2CD8 /* Animation.swift */; };
 		FA340D6C1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA340D6B1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD4B3F481EBCBEA500762A3D /* MaskAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskAnimation.swift; sourceTree = "<group>"; };
 		FA0895721B3F188E002460BB /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideAnimation.swift; sourceTree = "<group>"; };
 		FA340D671B3B4F78003F2CD8 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		FA340D6B1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFillColorAnimation.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				FA340D731B3B5EF5003F2CD8 /* LabelTextColorAnimation.swift */,
 				FACD9C951B2D0A6000AC1614 /* ScaleAnimation.swift */,
 				FACD9C971B2D0DD200AC1614 /* RotationAnimation.swift */,
+				DD4B3F481EBCBEA500762A3D /* MaskAnimation.swift */,
 				FACD9CA31B2E74DE00AC1614 /* TranslationAnimation.swift */,
 				FA5C96D01B2F759000BBA5DE /* CornerRadiusAnimation.swift */,
 				FA4D85DF1B2F6D900051770C /* ConstraintConstantAnimation.swift */,
@@ -359,6 +362,7 @@
 				FA340D721B3B5E9B003F2CD8 /* LayerStrokeColorAnimation.swift in Sources */,
 				FA340D681B3B4F78003F2CD8 /* Animation.swift in Sources */,
 				FA340D6C1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift in Sources */,
+				DD4B3F491EBCBEA500762A3D /* MaskAnimation.swift in Sources */,
 				FA340D6E1B3B5E0B003F2CD8 /* LayerStrokeStartAnimation.swift in Sources */,
 				FACD9CA01B2E3FC000AC1614 /* Filmstrip.swift in Sources */,
 				FACD9C901B2CE91900AC1614 /* BackgroundColorAnimation.swift in Sources */,
