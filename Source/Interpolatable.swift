@@ -153,3 +153,39 @@ extension Bool : Interpolatable {
         return toValue
     }
 }
+
+extension CATransform3D : Interpolatable {
+    
+    /**
+     Find a CATransform3D at a certain progress point (from 0 to 1) between two other CATransform3Ds.
+     
+     - parameter fromValue: The starting CATransform3D
+     - parameter toValue:   The ending CATransform3D
+     - parameter progress:  The progress (from 0 to 1) from the starting CATransform3D to the end CATransform3D for this CATransform3D
+     
+     - returns: The CATransform3D at the given progress point between the given starting and ending CATransform3D
+     */
+    
+    public static func interpolateFrom(_ fromValue: CATransform3D, to toValue: CATransform3D, withProgress progress: CGFloat) -> CATransform3D {
+        assert((0 <= progress) && (progress <= 1), "Progress must be between 0 and 1")
+        
+        return CATransform3D(
+            m11: CGFloat.interpolateFrom(fromValue.m11, to: toValue.m11, withProgress: progress),
+            m12: CGFloat.interpolateFrom(fromValue.m12, to: toValue.m12, withProgress: progress),
+            m13: CGFloat.interpolateFrom(fromValue.m13, to: toValue.m13, withProgress: progress),
+            m14: CGFloat.interpolateFrom(fromValue.m14, to: toValue.m14, withProgress: progress),
+            m21: CGFloat.interpolateFrom(fromValue.m21, to: toValue.m21, withProgress: progress),
+            m22: CGFloat.interpolateFrom(fromValue.m22, to: toValue.m22, withProgress: progress),
+            m23: CGFloat.interpolateFrom(fromValue.m23, to: toValue.m23, withProgress: progress),
+            m24: CGFloat.interpolateFrom(fromValue.m24, to: toValue.m24, withProgress: progress),
+            m31: CGFloat.interpolateFrom(fromValue.m31, to: toValue.m31, withProgress: progress),
+            m32: CGFloat.interpolateFrom(fromValue.m32, to: toValue.m32, withProgress: progress),
+            m33: CGFloat.interpolateFrom(fromValue.m33, to: toValue.m33, withProgress: progress),
+            m34: CGFloat.interpolateFrom(fromValue.m34, to: toValue.m34, withProgress: progress),
+            m41: CGFloat.interpolateFrom(fromValue.m41, to: toValue.m41, withProgress: progress),
+            m42: CGFloat.interpolateFrom(fromValue.m42, to: toValue.m42, withProgress: progress),
+            m43: CGFloat.interpolateFrom(fromValue.m43, to: toValue.m43, withProgress: progress),
+            m44: CGFloat.interpolateFrom(fromValue.m44, to: toValue.m44, withProgress: progress)
+        )
+    }
+}
