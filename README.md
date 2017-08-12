@@ -167,6 +167,7 @@ This will produce an effect where the view will be fully faded in and visible fo
 * **LayerStrokeEndAnimation** animates the `strokeEnd` property of a `CAShapeLayer` _(does not work with LayerStrokeStartAnimation)_.
 * **LayerFillColorAnimation** animates the `fillColor` property of a `CAShapeLayer`.
 * **LayerStrokeColorAnimation** animates the `strokeColor` property of a `CAShapeLayer`.
+* **LayerTransformAnimation** animates the `transform` property of a `CALayer`.
 * **PathPositionAnimation** animates the `layer.position` property of a `UIView` along a path.
 * **LabelTextColorAnimation** animates the `textColor` property of a `UILabel`.
 * **ConstraintConstantAnimation** animates an `AutoLayout` constraint constant.
