@@ -52,7 +52,7 @@ public class PathPositionAnimation : Animation<CGFloat>, Animatable {
         return (value >= 0) && (value <= 1)
     }
     
-    @objc private func createKeyframeAnimation() {
+    @objc func createKeyframeAnimation() {
         // Set up a CAKeyframeAnimation to move the view along the path
         view.layer.add(pathAnimation(), forKey: animationKey)
         view.layer.speed = 0
