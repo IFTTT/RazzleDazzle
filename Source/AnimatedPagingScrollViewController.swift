@@ -47,8 +47,16 @@ open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDe
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
       
-        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
-        NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
+        
+        if #available(iOS 11.0, *) {
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+            scrollView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+            scrollView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        } else {
+            NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
+            NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|[scrollView]|", options: [], metrics: nil, views: ["scrollView" : scrollView]))
+        }
       
         let scrollViewLeft = NSLayoutConstraint(item: scrollView, attribute: .left, relatedBy: .equal, toItem: contentView, attribute: .left, multiplier: 1, constant: 0)
         let scrollViewRight = NSLayoutConstraint(item: scrollView, attribute: .right, relatedBy: .equal, toItem: contentView, attribute: .right, multiplier: 1, constant: 0)
@@ -58,7 +66,7 @@ open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDe
         NSLayoutConstraint.activate([scrollViewLeft, scrollViewRight, scrollViewTop, scrollViewBottom])
       
         let contentViewWidth = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: CGFloat(numberOfPages()), constant: 0)
-        let contentViewHeight = NSLayoutConstraint(item: contentView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1, constant: 0)
+        let contentViewHeight = NSLayoutConstraint(item: contentView, attribute: .height, relatedBy: .equal, toItem: scrollView, attribute: .height, multiplier: 1, constant: 0)
       
         NSLayoutConstraint.activate([contentViewWidth, contentViewHeight])
     }
@@ -66,6 +74,10 @@ open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDe
     open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animateCurrentFrame()
+        
+        if #available(iOS 11.0, *) {
+            scrollView.contentSize = CGSize(width: CGFloat(numberOfPages()) * view.frame.width, height: view.frame.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom)
+        }
     }
     
     open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
