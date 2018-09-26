@@ -42,7 +42,7 @@ class AnimationSpec: QuickSpec {
                 animator.addAnimation(translationAnimation)
                 
                 let scaleTransform = CGAffineTransform(scaleX: 3, y: 3)
-                let rotationTransform = CGAffineTransform(rotationAngle: 90 * CGFloat(M_PI / -180.0))
+                let rotationTransform = CGAffineTransform(rotationAngle: 90 * CGFloat(Double.pi / -180.0))
                 let translationTransform = CGAffineTransform(translationX: 5, y: 15)
                 mixedTransform = translationTransform.concatenating(scaleTransform.concatenating(rotationTransform))
                 
