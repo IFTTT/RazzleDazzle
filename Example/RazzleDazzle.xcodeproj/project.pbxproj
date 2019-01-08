@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89343D8621E4F1F600E53DA2 /* BlockAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89343D8521E4F1F600E53DA2 /* BlockAnimation.swift */; };
 		FA0895731B3F188E002460BB /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0895721B3F188E002460BB /* HideAnimation.swift */; };
 		FA340D681B3B4F78003F2CD8 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA340D671B3B4F78003F2CD8 /* Animation.swift */; };
 		FA340D6C1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA340D6B1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		89343D8521E4F1F600E53DA2 /* BlockAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockAnimation.swift; sourceTree = "<group>"; };
 		FA0895721B3F188E002460BB /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideAnimation.swift; sourceTree = "<group>"; };
 		FA340D671B3B4F78003F2CD8 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		FA340D6B1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFillColorAnimation.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				FACD9C9B1B2E113C00AC1614 /* Interpolatable.swift */,
 				FACD9C9D1B2E2F3500AC1614 /* Animatable.swift */,
 				FACD9C891B2CB54200AC1614 /* AlphaAnimation.swift */,
+				89343D8521E4F1F600E53DA2 /* BlockAnimation.swift */,
 				FA0895721B3F188E002460BB /* HideAnimation.swift */,
 				FA340D671B3B4F78003F2CD8 /* Animation.swift */,
 				FA5991491B433F2600C0FBA9 /* PathPositionAnimation.swift */,
@@ -353,6 +356,7 @@
 				FA42E8671B2FDD200050795E /* ConstraintMultiplierAnimation.swift in Sources */,
 				FACD9CA41B2E74DE00AC1614 /* TranslationAnimation.swift in Sources */,
 				FA340D701B3B5E54003F2CD8 /* LayerStrokeEndAnimation.swift in Sources */,
+				89343D8621E4F1F600E53DA2 /* BlockAnimation.swift in Sources */,
 				FA71FBB21B2FB48F00C49C16 /* CubicBezier.swift in Sources */,
 				FA340D741B3B5EF5003F2CD8 /* LabelTextColorAnimation.swift in Sources */,
 				FACD9C8A1B2CB54200AC1614 /* AlphaAnimation.swift in Sources */,
