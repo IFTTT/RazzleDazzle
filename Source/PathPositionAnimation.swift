@@ -19,7 +19,7 @@ public class PathPositionAnimation : Animation<CGFloat>, Animatable {
         }
     }
     private let animationKey = "PathPosition"
-    public var rotationMode : String? = kCAAnimationRotateAuto {
+    public var rotationMode : String? = convertFromCAAnimationRotationMode(CAAnimationRotationMode.rotateAuto) {
         didSet {
             createKeyframeAnimation()
         }
@@ -35,7 +35,7 @@ public class PathPositionAnimation : Animation<CGFloat>, Animatable {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(PathPositionAnimation.createKeyframeAnimation),
-            name: NSNotification.Name.UIApplicationDidBecomeActive,
+            name: UIApplication.didBecomeActiveNotification,
             object: nil)
     }
     
@@ -66,10 +66,21 @@ public class PathPositionAnimation : Animation<CGFloat>, Animatable {
         animation.duration = 1
         animation.isAdditive = true
         animation.repeatCount = Float.infinity
-        animation.calculationMode = kCAAnimationPaced
-        animation.rotationMode = rotationMode
-        animation.fillMode = kCAFillModeBoth
+        animation.calculationMode = CAAnimationCalculationMode.paced
+        animation.rotationMode = convertToOptionalCAAnimationRotationMode(rotationMode)
+        animation.fillMode = CAMediaTimingFillMode.both
         animation.isRemovedOnCompletion = false
         return animation
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCAAnimationRotationMode(_ input: CAAnimationRotationMode) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalCAAnimationRotationMode(_ input: String?) -> CAAnimationRotationMode? {
+	guard let input = input else { return nil }
+	return CAAnimationRotationMode(rawValue: input)
 }
