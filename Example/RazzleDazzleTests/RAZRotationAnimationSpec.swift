@@ -50,8 +50,8 @@ class RotationAnimationSpec: QuickSpec {
             it("should apply changes to the view's rotation transform") {
                 animation[1] = 3
                 animation[3] = 5
-                let radiansOne = 3 * CGFloat(M_PI / -180.0)
-                let radiansThree = 5 * CGFloat(M_PI / -180.0)
+                let radiansOne = 3 * CGFloat(Double.pi / -180.0)
+                let radiansThree = 5 * CGFloat(Double.pi / -180.0)
                 animation.animate(1)
                 expect(view.transform == CGAffineTransform(rotationAngle: radiansOne)).to(beTruthy())
                 animation.animate(3)
