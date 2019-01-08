@@ -26,3 +26,5 @@ public class Animator {
         animations.append(animation)
     }
 }
+
+extension Animator: Animatable { }
