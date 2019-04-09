@@ -19,7 +19,7 @@ public class PathPositionAnimation : Animation<CGFloat>, Animatable {
         }
     }
     private let animationKey = "PathPosition"
-    public var rotationMode : String? = kCAAnimationRotateAuto {
+    public var rotationMode : CAAnimationRotationMode = .rotateAuto {
         didSet {
             createKeyframeAnimation()
         }
@@ -35,7 +35,7 @@ public class PathPositionAnimation : Animation<CGFloat>, Animatable {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(PathPositionAnimation.createKeyframeAnimation),
-            name: NSNotification.Name.UIApplicationDidBecomeActive,
+            name: UIApplication.didBecomeActiveNotification,
             object: nil)
     }
     
@@ -66,9 +66,9 @@ public class PathPositionAnimation : Animation<CGFloat>, Animatable {
         animation.duration = 1
         animation.isAdditive = true
         animation.repeatCount = Float.infinity
-        animation.calculationMode = kCAAnimationPaced
+        animation.calculationMode = .paced
         animation.rotationMode = rotationMode
-        animation.fillMode = kCAFillModeBoth
+        animation.fillMode = .both
         animation.isRemovedOnCompletion = false
         return animation
     }

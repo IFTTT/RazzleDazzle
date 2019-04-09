@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2D5D31C7244E98E2B09EC6 /* Pods_RazzleDazzleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B34D1BBC7BDA260E8A3EA3 /* Pods_RazzleDazzleTests.framework */; };
+		9E947C33826104F9DD58FEA4 /* Pods_RazzleDazzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D610CF2B6D0D8EE815197D47 /* Pods_RazzleDazzle.framework */; };
 		FA0895731B3F188E002460BB /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0895721B3F188E002460BB /* HideAnimation.swift */; };
 		FA340D681B3B4F78003F2CD8 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA340D671B3B4F78003F2CD8 /* Animation.swift */; };
 		FA340D6C1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA340D6B1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift */; };
@@ -18,10 +20,6 @@
 		FA4D85E01B2F6D900051770C /* ConstraintConstantAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D85DF1B2F6D900051770C /* ConstraintConstantAnimation.swift */; };
 		FA59914A1B433F2600C0FBA9 /* PathPositionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5991491B433F2600C0FBA9 /* PathPositionAnimation.swift */; };
 		FA5BC1CD1B3147AE004DB083 /* RAZFilmstripSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BC1CC1B3147AE004DB083 /* RAZFilmstripSpec.swift */; };
-		FA5BC1D01B314DCA004DB083 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5BC1CE1B314DCA004DB083 /* Nimble.framework */; };
-		FA5BC1D11B314DCA004DB083 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5BC1CF1B314DCA004DB083 /* Quick.framework */; };
-		FA5BC1D31B314DF2004DB083 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA5BC1CE1B314DCA004DB083 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FA5BC1D41B314DF6004DB083 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA5BC1CF1B314DCA004DB083 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA5BC1D61B314EAF004DB083 /* RAZEasingFunctionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BC1D51B314EAF004DB083 /* RAZEasingFunctionSpec.swift */; };
 		FA5BC1D81B315347004DB083 /* RAZInterpolatableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BC1D71B315347004DB083 /* RAZInterpolatableSpec.swift */; };
 		FA5C96D11B2F759000BBA5DE /* CornerRadiusAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C96D01B2F759000BBA5DE /* CornerRadiusAnimation.swift */; };
@@ -66,14 +64,18 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA5BC1D41B314DF6004DB083 /* Quick.framework in CopyFiles */,
-				FA5BC1D31B314DF2004DB083 /* Nimble.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		256CFBE6C8F9DB1468F28CB2 /* Pods-RazzleDazzleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RazzleDazzleTests.debug.xcconfig"; path = "Target Support Files/Pods-RazzleDazzleTests/Pods-RazzleDazzleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		425DB87A21B1C3AC2173536D /* Pods-RazzleDazzleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RazzleDazzleTests.release.xcconfig"; path = "Target Support Files/Pods-RazzleDazzleTests/Pods-RazzleDazzleTests.release.xcconfig"; sourceTree = "<group>"; };
+		4C0139F8ECEE7BE893A67B15 /* Pods-RazzleDazzle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RazzleDazzle.debug.xcconfig"; path = "Target Support Files/Pods-RazzleDazzle/Pods-RazzleDazzle.debug.xcconfig"; sourceTree = "<group>"; };
+		65B34D1BBC7BDA260E8A3EA3 /* Pods_RazzleDazzleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RazzleDazzleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D610CF2B6D0D8EE815197D47 /* Pods_RazzleDazzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RazzleDazzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F28ADCAA01404D1826BCDB6A /* Pods-RazzleDazzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RazzleDazzle.release.xcconfig"; path = "Target Support Files/Pods-RazzleDazzle/Pods-RazzleDazzle.release.xcconfig"; sourceTree = "<group>"; };
 		FA0895721B3F188E002460BB /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideAnimation.swift; sourceTree = "<group>"; };
 		FA340D671B3B4F78003F2CD8 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		FA340D6B1B3B5D9E003F2CD8 /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFillColorAnimation.swift; sourceTree = "<group>"; };
@@ -85,8 +87,6 @@
 		FA4D85DF1B2F6D900051770C /* ConstraintConstantAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantAnimation.swift; sourceTree = "<group>"; };
 		FA5991491B433F2600C0FBA9 /* PathPositionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathPositionAnimation.swift; sourceTree = "<group>"; };
 		FA5BC1CC1B3147AE004DB083 /* RAZFilmstripSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAZFilmstripSpec.swift; sourceTree = "<group>"; };
-		FA5BC1CE1B314DCA004DB083 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		FA5BC1CF1B314DCA004DB083 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		FA5BC1D51B314EAF004DB083 /* RAZEasingFunctionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAZEasingFunctionSpec.swift; sourceTree = "<group>"; };
 		FA5BC1D71B315347004DB083 /* RAZInterpolatableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAZInterpolatableSpec.swift; sourceTree = "<group>"; };
 		FA5C96D01B2F759000BBA5DE /* CornerRadiusAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusAnimation.swift; sourceTree = "<group>"; };
@@ -122,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E947C33826104F9DD58FEA4 /* Pods_RazzleDazzle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,23 +130,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA5BC1D01B314DCA004DB083 /* Nimble.framework in Frameworks */,
-				FA5BC1D11B314DCA004DB083 /* Quick.framework in Frameworks */,
 				FACD9C691B2A554100AC1614 /* RazzleDazzle.framework in Frameworks */,
+				5C2D5D31C7244E98E2B09EC6 /* Pods_RazzleDazzleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31827E5A3BA3378EB41D2412 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D610CF2B6D0D8EE815197D47 /* Pods_RazzleDazzle.framework */,
+				65B34D1BBC7BDA260E8A3EA3 /* Pods_RazzleDazzleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7740E8B1531096DF476EE3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C0139F8ECEE7BE893A67B15 /* Pods-RazzleDazzle.debug.xcconfig */,
+				F28ADCAA01404D1826BCDB6A /* Pods-RazzleDazzle.release.xcconfig */,
+				256CFBE6C8F9DB1468F28CB2 /* Pods-RazzleDazzleTests.debug.xcconfig */,
+				425DB87A21B1C3AC2173536D /* Pods-RazzleDazzleTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FACD9C531B2A554100AC1614 = {
 			isa = PBXGroup;
 			children = (
-				FA5BC1CE1B314DCA004DB083 /* Nimble.framework */,
-				FA5BC1CF1B314DCA004DB083 /* Quick.framework */,
 				FACD9C5F1B2A554100AC1614 /* Source */,
 				FACD9C6C1B2A554100AC1614 /* RazzleDazzleTests */,
 				FACD9C5E1B2A554100AC1614 /* Products */,
+				F7740E8B1531096DF476EE3F /* Pods */,
+				31827E5A3BA3378EB41D2412 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FACD9C731B2A554100AC1614 /* Build configuration list for PBXNativeTarget "RazzleDazzle" */;
 			buildPhases = (
+				D825A3564B9633A4D01B9089 /* [CP] Check Pods Manifest.lock */,
 				FACD9C581B2A554100AC1614 /* Sources */,
 				FACD9C591B2A554100AC1614 /* Frameworks */,
 				FACD9C5A1B2A554100AC1614 /* Headers */,
@@ -262,10 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FACD9C761B2A554100AC1614 /* Build configuration list for PBXNativeTarget "RazzleDazzleTests" */;
 			buildPhases = (
+				B1B2C1F2D506340ED02C0652 /* [CP] Check Pods Manifest.lock */,
 				FACD9C641B2A554100AC1614 /* Sources */,
 				FACD9C651B2A554100AC1614 /* Frameworks */,
 				FACD9C661B2A554100AC1614 /* Resources */,
 				FA5BC1D21B314DDB004DB083 /* CopyFiles */,
+				2A88800444BB462A10EDA5C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,6 +328,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = FACD9C531B2A554100AC1614;
@@ -333,6 +358,77 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A88800444BB462A10EDA5C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RazzleDazzleTests/Pods-RazzleDazzleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RazzleDazzleTests/Pods-RazzleDazzleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1B2C1F2D506340ED02C0652 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RazzleDazzleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D825A3564B9633A4D01B9089 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RazzleDazzle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FACD9C581B2A554100AC1614 /* Sources */ = {
@@ -489,6 +585,7 @@
 		};
 		FACD9C741B2A554100AC1614 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C0139F8ECEE7BE893A67B15 /* Pods-RazzleDazzle.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,12 +603,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		FACD9C751B2A554100AC1614 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F28ADCAA01404D1826BCDB6A /* Pods-RazzleDazzle.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -528,12 +626,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ifttt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		FACD9C771B2A554100AC1614 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 256CFBE6C8F9DB1468F28CB2 /* Pods-RazzleDazzleTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -548,12 +647,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ifttt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		FACD9C781B2A554100AC1614 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 425DB87A21B1C3AC2173536D /* Pods-RazzleDazzleTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -564,7 +664,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ifttt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
