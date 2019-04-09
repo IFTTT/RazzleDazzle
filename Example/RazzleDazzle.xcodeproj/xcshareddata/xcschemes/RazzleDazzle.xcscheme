@@ -34,6 +34,20 @@
                ReferencedContainer = "container:RazzleDazzle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FAD1C7471B2F57D60053D880"
+               BuildableName = "RazzleDazzleDemo.app"
+               BlueprintName = "RazzleDazzleDemo"
+               ReferencedContainer = "container:Example/RazzleDazzleDemo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
