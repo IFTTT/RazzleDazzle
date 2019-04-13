@@ -98,7 +98,11 @@ class ViewController: AnimatedPagingScrollViewController {
     
     private func configureIFTTTPresents() {
         // Keep IFTTTPresents centered on pages 0 and 1, offset 20 pixels down from the top of the view
-        NSLayoutConstraint(item: iftttPresents, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 20).isActive = true
+        if #available(iOS 11.0, *) {
+            NSLayoutConstraint(item: iftttPresents, attribute: .top, relatedBy: .equal, toItem: contentView.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 20).isActive = true
+        } else {
+            NSLayoutConstraint(item: iftttPresents, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 20).isActive = true
+        }
         keepView(iftttPresents, onPages: [0,1])
         
         // Hide IFTTTPresents when we get to page 1
@@ -242,7 +246,12 @@ class ViewController: AnimatedPagingScrollViewController {
     }
     
     private func configureSun() {
-        let sunVerticalConstraint = NSLayoutConstraint(item: sun, attribute: .centerY, relatedBy: .equal, toItem: scrollView, attribute: .top, multiplier: 1, constant: 0)
+        let sunVerticalConstraint: NSLayoutConstraint
+        if #available(iOS 11.0, *) {
+            sunVerticalConstraint = NSLayoutConstraint(item: sun, attribute: .centerY, relatedBy: .equal, toItem: scrollView.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 0)
+        } else {
+            sunVerticalConstraint = NSLayoutConstraint(item: sun, attribute: .centerY, relatedBy: .equal, toItem: scrollView, attribute: .top, multiplier: 1, constant: 0)
+        }
         sunVerticalConstraint.isActive = true
         
         // Move the sun from the right side to the left side between pages 2.5 and 3
@@ -314,7 +323,7 @@ class ViewController: AnimatedPagingScrollViewController {
         shapeLayer.lineWidth = 4
         shapeLayer.miterLimit = 4
         shapeLayer.fillColor = nil
-        shapeLayer.fillRule = kCAFillRuleEvenOdd
+        shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         return shapeLayer
     }
     
