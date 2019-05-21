@@ -314,7 +314,7 @@ class ViewController: AnimatedPagingScrollViewController {
         shapeLayer.lineWidth = 4
         shapeLayer.miterLimit = 4
         shapeLayer.fillColor = nil
-        shapeLayer.fillRule = kCAFillRuleEvenOdd
+        shapeLayer.fillRule = CAShapeLayerFillRule.evenOdd
         return shapeLayer
     }
     

@@ -25,7 +25,7 @@ public class LayerStrokeEndAnimation : Animation<CGFloat>, Animatable {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(LayerStrokeEndAnimation.createStrokeEndAnimation),
-            name: NSNotification.Name.UIApplicationDidBecomeActive,
+            name: UIApplication.didBecomeActiveNotification,
             object: nil)
     }
     
@@ -54,7 +54,7 @@ public class LayerStrokeEndAnimation : Animation<CGFloat>, Animatable {
         animation.duration = 1
         animation.fromValue = 0
         animation.toValue = 1
-        animation.fillMode = kCAFillModeBoth
+        animation.fillMode = CAMediaTimingFillMode.both
         animation.isRemovedOnCompletion = false
         return animation
     }

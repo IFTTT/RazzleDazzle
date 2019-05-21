@@ -12,8 +12,8 @@ import UIKit
 View controller for creating scrolling app intros. Set animation times based on the page number, and this view controller handles calling `animate:` on the `animator`.
 */
 open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDelegate {
-    open let scrollView = UIScrollView()
-    open let contentView = UIView()
+    public let scrollView = UIScrollView()
+    public let contentView = UIView()
     open var animator = Animator()
     private var scrollViewPageConstraintAnimations = [ScrollViewPageConstraintAnimation]()
     open var pageWidth : CGFloat {
@@ -149,8 +149,8 @@ open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDe
         return 2.0 * (offset + page) / CGFloat(numberOfPages())
     }
     
-    open func layoutAttributeFromRazAttribute(_ razAttribute: HorizontalPositionAttribute) -> NSLayoutAttribute {
-        var attribute : NSLayoutAttribute
+    open func layoutAttributeFromRazAttribute(_ razAttribute: HorizontalPositionAttribute) -> NSLayoutConstraint.Attribute {
+        var attribute : NSLayoutConstraint.Attribute
         switch razAttribute {
         case .centerX:
             attribute = .centerX
