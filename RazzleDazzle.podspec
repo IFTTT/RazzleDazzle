@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.frameworks		= 'UIKit'
   s.description  = "Razzle Dazzle is a Swift keyframe animation framework by IFTTT, based on Jazz Hands. Move UIViews around the screen based on UIScrollView input, KVO, or anything really. Works well with AutoLayout."
   s.source_files	= 'Source/*.{h,swift}'
-  
+  s.swift_version = '4.2'
 end
