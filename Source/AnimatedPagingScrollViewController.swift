@@ -149,8 +149,8 @@ open class AnimatedPagingScrollViewController : UIViewController, UIScrollViewDe
         return 2.0 * (offset + page) / CGFloat(numberOfPages())
     }
     
-    open func layoutAttributeFromRazAttribute(_ razAttribute: HorizontalPositionAttribute) -> NSLayoutAttribute {
-        var attribute : NSLayoutAttribute
+    open func layoutAttributeFromRazAttribute(_ razAttribute: HorizontalPositionAttribute) -> NSLayoutConstraint.Attribute {
+        var attribute : NSLayoutConstraint.Attribute
         switch razAttribute {
         case .centerX:
             attribute = .centerX
