@@ -60,7 +60,7 @@ private func CubicBezierBinarySubdivide(_ x: CGFloat, x1: CGFloat, x2: CGFloat) 
             start = currentT
         }
         i += 1
-    } while (fabs(currentX) > epsilon && i < maxIterations)
+    } while (abs(currentX) > epsilon && i < maxIterations)
     
     return currentT
 }
