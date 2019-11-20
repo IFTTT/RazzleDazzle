@@ -41,8 +41,9 @@ class ViewController: AnimatedPagingScrollViewController {
         super.viewDidLoad()
         configureViews()
         configureAnimations()
-        UIApplication.shared.setStatusBarHidden(true, with: .fade)
     }
+    
+    override var prefersStatusBarHidden: Bool { return true }
     
     override public func viewWillAppear(_ animated: Bool) {
         scaleAirplanePathToSize(scrollView.frame.size)

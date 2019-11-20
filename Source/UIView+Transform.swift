@@ -22,7 +22,7 @@ internal extension UIView {
         static var viewExtension = "ViewTranslationExtension"
     }
     
-    internal var rotationTransform: CGAffineTransform? {
+    var rotationTransform: CGAffineTransform? {
         get {
             return getAssociatedObject(self, associativeKey: &RotationTransformAssociatedKey.viewExtension)
         }
@@ -34,7 +34,7 @@ internal extension UIView {
         }
     }
     
-    internal var scaleTransform: CGAffineTransform? {
+    var scaleTransform: CGAffineTransform? {
         get {
             return getAssociatedObject(self, associativeKey: &ScaleTransformAssociatedKey.viewExtension)
         }
@@ -46,7 +46,7 @@ internal extension UIView {
         }
     }
     
-    internal var translationTransform: CGAffineTransform? {
+    var translationTransform: CGAffineTransform? {
         get {
             return getAssociatedObject(self, associativeKey: &TranslationTransformAssociatedKey.viewExtension)
         }
