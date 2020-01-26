@@ -1,10 +1,9 @@
-
 //
 //  ViewController.swift
 //  RazzleDazzleDemo
 //
-//  Created by Laura Skelton on 6/15/15.
-//  Copyright (c) 2015 IFTTT. All rights reserved.
+//  Created by Eduardo Irias on 1/27/20.
+//  Copyright © 2020 IFTTT. All rights reserved.
 //
 
 import UIKit
@@ -36,8 +35,8 @@ class ViewController: AnimatedPagingScrollViewController {
         // Tell the scroll view how many pages it has
         return 4
     }
-    
-    override public func viewDidLoad() {
+
+    override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
         configureAnimations()
@@ -45,6 +44,7 @@ class ViewController: AnimatedPagingScrollViewController {
     }
     
     override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         scaleAirplanePathToSize(scrollView.frame.size)
     }
     
@@ -332,4 +332,6 @@ class ViewController: AnimatedPagingScrollViewController {
             planeAnimation.path = scaledPath
         }
     }
+
 }
+

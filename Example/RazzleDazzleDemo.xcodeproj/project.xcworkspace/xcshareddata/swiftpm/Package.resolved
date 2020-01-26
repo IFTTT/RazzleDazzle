@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "RazzleDazzle",
+        "repositoryURL": "https://github.com/eduardo22i/RazzleDazzle",
+        "state": {
+          "branch": null,
+          "revision": "540423f2aed2c82c0019702764da53b9257c3227",
+          "version": "0.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
