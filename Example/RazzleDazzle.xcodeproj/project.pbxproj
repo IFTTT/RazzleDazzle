@@ -138,27 +138,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FACD9C531B2A554100AC1614 = {
-			isa = PBXGroup;
-			children = (
-				FA5BC1CE1B314DCA004DB083 /* Nimble.framework */,
-				FA5BC1CF1B314DCA004DB083 /* Quick.framework */,
-				FACD9C5F1B2A554100AC1614 /* Source */,
-				FACD9C6C1B2A554100AC1614 /* RazzleDazzleTests */,
-				FACD9C5E1B2A554100AC1614 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		FACD9C5E1B2A554100AC1614 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FACD9C5D1B2A554100AC1614 /* RazzleDazzle.framework */,
-				FACD9C681B2A554100AC1614 /* RazzleDazzleTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FACD9C5F1B2A554100AC1614 /* Source */ = {
+		F9A882A423DE072D00D24DB1 /* RazzleDazzle */ = {
 			isa = PBXGroup;
 			children = (
 				FACD9C621B2A554100AC1614 /* RazzleDazzle.h */,
@@ -187,10 +167,38 @@
 				FA71FBAF1B2FB24E00C49C16 /* EasingFunction.swift */,
 				FA71FBB11B2FB48F00C49C16 /* CubicBezier.swift */,
 				FACD9C931B2D090C00AC1614 /* UIView+Transform.swift */,
+			);
+			path = RazzleDazzle;
+			sourceTree = "<group>";
+		};
+		FACD9C531B2A554100AC1614 = {
+			isa = PBXGroup;
+			children = (
+				FA5BC1CE1B314DCA004DB083 /* Nimble.framework */,
+				FA5BC1CF1B314DCA004DB083 /* Quick.framework */,
+				FACD9C5F1B2A554100AC1614 /* Sources */,
+				FACD9C6C1B2A554100AC1614 /* RazzleDazzleTests */,
+				FACD9C5E1B2A554100AC1614 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FACD9C5E1B2A554100AC1614 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FACD9C5D1B2A554100AC1614 /* RazzleDazzle.framework */,
+				FACD9C681B2A554100AC1614 /* RazzleDazzleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FACD9C5F1B2A554100AC1614 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F9A882A423DE072D00D24DB1 /* RazzleDazzle */,
 				FACD9C601B2A554100AC1614 /* Supporting Files */,
 			);
-			name = Source;
-			path = ../Source;
+			name = Sources;
+			path = ../Sources;
 			sourceTree = "<group>";
 		};
 		FACD9C601B2A554100AC1614 /* Supporting Files */ = {
@@ -502,7 +510,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
-				INFOPLIST_FILE = "$(SRCROOT)/../Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ifttt.$(PRODUCT_NAME:rfc1034identifier)";
@@ -524,7 +532,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
-				INFOPLIST_FILE = "$(SRCROOT)/../Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ifttt.$(PRODUCT_NAME:rfc1034identifier)";
