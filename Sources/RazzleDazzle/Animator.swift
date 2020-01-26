@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 /**
 Keeps an array of all of the animations being controlled, and calls the `animate:` function on each.

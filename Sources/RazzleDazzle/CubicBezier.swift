@@ -10,6 +10,7 @@
 // <https://github.com/robb/RBBAnimation/blob/a29cafe2fa91e62573cc9967990b0ad2a6b17a76/RBBAnimation/RBBCubicBezier.m>
 
 import Foundation
+import CoreGraphics
 
 public func CubicBezier(_ x1: CGFloat, _ y1: CGFloat, _ x2: CGFloat, _ y2: CGFloat) -> EasingFunction {
     if (x1 == y1) && (x2 == y2) { return EasingFunctionLinear }

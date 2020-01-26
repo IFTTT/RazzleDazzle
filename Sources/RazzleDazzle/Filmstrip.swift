@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 public class Keyframe<T: Interpolatable> where T.ValueType == T {
     let time : CGFloat

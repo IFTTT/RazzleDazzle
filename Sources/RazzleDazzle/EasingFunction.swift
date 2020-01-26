@@ -10,6 +10,7 @@
 // <https://github.com/robb/RBBAnimation/blob/a29cafe2fa91e62573cc9967990b0ad2a6b17a76/RBBAnimation/RBBEasingFunction.m>
 
 import Foundation
+import CoreGraphics
 
 public typealias EasingFunction = (CGFloat) -> (CGFloat)
 
