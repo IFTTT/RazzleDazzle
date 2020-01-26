@@ -25,7 +25,7 @@ let package = Package(
             name: "RazzleDazzle",
             dependencies: []),
         .testTarget(
-            name: "RazzleTests",
+            name: "RazzleDazzleTests",
             dependencies: ["RazzleDazzle"]),
     ]
 )

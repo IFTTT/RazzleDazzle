@@ -1,7 +1,7 @@
 import XCTest
 @testable import RazzleDazzle
 
-final class AlphaAnimationSpec: XCTestCase {
+final class AlphaAnimationTests: XCTestCase {
     var view: UIView!
     var animation: AlphaAnimation!
     

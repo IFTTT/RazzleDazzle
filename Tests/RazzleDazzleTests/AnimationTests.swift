@@ -1,7 +1,7 @@
 import XCTest
 @testable import RazzleDazzle
 
-final class AnimationSpec: XCTestCase {
+final class AnimationTests: XCTestCase {
     var view: UIView!
     var mixedTransform : CGAffineTransform!
 
