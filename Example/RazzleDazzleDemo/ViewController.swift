@@ -10,24 +10,24 @@ import UIKit
 import RazzleDazzle
 
 class ViewController: AnimatedPagingScrollViewController {
-    private let star = UIImageView(image: UIImage(named: "Star"))
-    private let iftttPresents = UIImageView(image: UIImage(named: "IFTTTPresents"))
-    private let razzle = UIImageView(image: UIImage(named: "Razzle"))
-    private let dazzle = UIImageView(image: UIImage(named: "Dazzle"))
+    private let star = UIImageView(image: #imageLiteral(resourceName: "Star"))
+    private let iftttPresents = UIImageView(image: #imageLiteral(resourceName: "IFTTTPresents"))
+    private let razzle = UIImageView(image: #imageLiteral(resourceName: "Razzle"))
+    private let dazzle = UIImageView(image: #imageLiteral(resourceName: "Dazzle"))
     
-    private let musicStand = UIImageView(image: UIImage(named: "MusicStand"))
-    private let musicNotes = UIImageView(image: UIImage(named: "MusicNotes"))
-    private let plane = UIImageView(image: UIImage(named: "Plane"))
+    private let musicStand = UIImageView(image: #imageLiteral(resourceName: "MusicStand"))
+    private let musicNotes = UIImageView(image: #imageLiteral(resourceName: "MusicNotes"))
+    private let plane = UIImageView(image: #imageLiteral(resourceName: "Plane"))
     private var planePathLayer = CAShapeLayer()
     private let planePathView = UIView()
     
-    private let bigCloud = UIImageView(image: UIImage(named: "BigCloud"))
-    private let littleCloud = UIImageView(image: UIImage(named: "LittleCloud"))
-    private let sun = UIImageView(image: UIImage(named: "Sun"))
-    private let iftttCloud = UIImageView(image: UIImage(named: "IFTTTCloud"))
+    private let bigCloud = UIImageView(image: #imageLiteral(resourceName: "BigCloud"))
+    private let littleCloud = UIImageView(image: #imageLiteral(resourceName: "LittleCloud"))
+    private let sun = UIImageView(image: #imageLiteral(resourceName: "Sun"))
+    private let iftttCloud = UIImageView(image: #imageLiteral(resourceName: "IFTTTCloud"))
     
-    private let page2Text = UIImageView(image: UIImage(named: "Page2Text"))
-    private let page3Text = UIImageView(image: UIImage(named: "Page3Text"))
+    private let page2Text = UIImageView(image: #imageLiteral(resourceName: "Page2Text"))
+    private let page3Text = UIImageView(image: #imageLiteral(resourceName: "Page3Text"))
     
     private var airplaneFlyingAnimation : PathPositionAnimation?
     
@@ -88,10 +88,10 @@ class ViewController: AnimatedPagingScrollViewController {
     private func configureScrollView() {
         // Let's change the background color of the scroll view from dark gray to light gray to blue
         let backgroundColorAnimation = BackgroundColorAnimation(view: scrollView)
-        backgroundColorAnimation[0] = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
-        backgroundColorAnimation[0.5] = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        backgroundColorAnimation[0.99] = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        backgroundColorAnimation[1] = UIColor(red: 0.14, green: 0.8, blue: 1, alpha: 1)
+        backgroundColorAnimation[0] = UIColor(named: "Background1") ?? UIColor()
+        backgroundColorAnimation[0.5] = UIColor(named: "Background2") ?? UIColor()
+        backgroundColorAnimation[0.99] = UIColor(named: "Background3") ?? UIColor()
+        backgroundColorAnimation[1] = UIColor(named: "Background4") ?? UIColor()
         animator.addAnimation(backgroundColorAnimation)
     }
     
