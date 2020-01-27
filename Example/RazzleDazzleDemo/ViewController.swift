@@ -40,7 +40,6 @@ class ViewController: AnimatedPagingScrollViewController {
         super.viewDidLoad()
         configureViews()
         configureAnimations()
-        UIApplication.shared.setStatusBarHidden(true, with: .fade)
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -98,7 +97,7 @@ class ViewController: AnimatedPagingScrollViewController {
     
     private func configureIFTTTPresents() {
         // Keep IFTTTPresents centered on pages 0 and 1, offset 20 pixels down from the top of the view
-        NSLayoutConstraint(item: iftttPresents, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 20).isActive = true
+        NSLayoutConstraint(item: iftttPresents, attribute: .top, relatedBy: .equal, toItem: contentView.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 20).isActive = true
         keepView(iftttPresents, onPages: [0,1])
         
         // Hide IFTTTPresents when we get to page 1
