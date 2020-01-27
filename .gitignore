@@ -2,8 +2,12 @@
 .DS_Store
 
 # Xcode
+
+## Build generated
 build/
-.build/
+DerivedData
+
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -12,14 +16,20 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
+xcuserdata/
+
+## Other
 *.xccheckout
 profile
 *.moved-aside
-DerivedData
+
+## Obj-C/Swift specific
 *.hmap
 *.ipa
-xcuserdata/
+
+# Swift Package Manager
 .swiftpm/
-xcshareddata/
-project.xcworkspace/
+.build/
+
+# Carthage
+Carthage/Build
