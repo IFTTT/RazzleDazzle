@@ -21,3 +21,5 @@ DerivedData
 *.ipa
 xcuserdata/
 .swiftpm/
+xcshareddata/
+project.xcworkspace/
