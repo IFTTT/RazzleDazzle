@@ -38,6 +38,7 @@
 		F9E2B63823DE6B9E00D1CF69 /* AnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B63323DE6B6500D1CF69 /* AnimationTests.swift */; };
 		F9E2B63923DE6B9E00D1CF69 /* ColorAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B63123DE6B6500D1CF69 /* ColorAnimationTests.swift */; };
 		F9E2B63E23E02B0300D1CF69 /* FilmstripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B63D23E02B0300D1CF69 /* FilmstripTests.swift */; };
+		F9E2B64023E0B53000D1CF69 /* EasingFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B63F23E0B53000D1CF69 /* EasingFunctionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		F9E2B63323DE6B6500D1CF69 /* AnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationTests.swift; path = Tests/RazzleDazzleTests/AnimationTests.swift; sourceTree = SOURCE_ROOT; };
 		F9E2B63A23DE6C4400D1CF69 /* RazzleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RazzleTests.swift; path = Tests/RazzleDazzleTests/RazzleTests.swift; sourceTree = SOURCE_ROOT; };
 		F9E2B63D23E02B0300D1CF69 /* FilmstripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilmstripTests.swift; path = Tests/RazzleDazzleTests/FilmstripTests.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B63F23E0B53000D1CF69 /* EasingFunctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasingFunctionTests.swift; path = Tests/RazzleDazzleTests/EasingFunctionTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				F9E2B63D23E02B0300D1CF69 /* FilmstripTests.swift */,
+				F9E2B63F23E0B53000D1CF69 /* EasingFunctionTests.swift */,
 				F9E2B63223DE6B6500D1CF69 /* AlphaAnimationTests.swift */,
 				F9E2B63323DE6B6500D1CF69 /* AnimationTests.swift */,
 				F9E2B63123DE6B6500D1CF69 /* ColorAnimationTests.swift */,
@@ -317,6 +320,7 @@
 				F9E2B63E23E02B0300D1CF69 /* FilmstripTests.swift in Sources */,
 				F9E2B63823DE6B9E00D1CF69 /* AnimationTests.swift in Sources */,
 				F9E2B63923DE6B9E00D1CF69 /* ColorAnimationTests.swift in Sources */,
+				F9E2B64023E0B53000D1CF69 /* EasingFunctionTests.swift in Sources */,
 				F9E2B63723DE6B9E00D1CF69 /* AlphaAnimationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
