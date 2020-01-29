@@ -42,6 +42,7 @@
 		F9E2B64223E0E81000D1CF69 /* InterpolatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B64123E0E81000D1CF69 /* InterpolatableTests.swift */; };
 		F9E2B64423E1A75F00D1CF69 /* ScaleAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B64323E1A75F00D1CF69 /* ScaleAnimationTests.swift */; };
 		F9E2B64623E22D7500D1CF69 /* RotationAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B64523E22D7500D1CF69 /* RotationAnimationTests.swift */; };
+		F9E2B64823E22EA100D1CF69 /* TranslationAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B64723E22EA100D1CF69 /* TranslationAnimationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		F9E2B64123E0E81000D1CF69 /* InterpolatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InterpolatableTests.swift; path = Tests/RazzleDazzleTests/InterpolatableTests.swift; sourceTree = SOURCE_ROOT; };
 		F9E2B64323E1A75F00D1CF69 /* ScaleAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScaleAnimationTests.swift; path = Tests/RazzleDazzleTests/ScaleAnimationTests.swift; sourceTree = SOURCE_ROOT; };
 		F9E2B64523E22D7500D1CF69 /* RotationAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RotationAnimationTests.swift; path = Tests/RazzleDazzleTests/RotationAnimationTests.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B64723E22EA100D1CF69 /* TranslationAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslationAnimationTests.swift; path = Tests/RazzleDazzleTests/TranslationAnimationTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				F9E2B63123DE6B6500D1CF69 /* ColorAnimationTests.swift */,
 				F9E2B64323E1A75F00D1CF69 /* ScaleAnimationTests.swift */,
 				F9E2B64523E22D7500D1CF69 /* RotationAnimationTests.swift */,
+				F9E2B64723E22EA100D1CF69 /* TranslationAnimationTests.swift */,
 				F9E2B63323DE6B6500D1CF69 /* AnimationTests.swift */,
 				F9E2B63A23DE6C4400D1CF69 /* RazzleTests.swift */,
 				F9E2B5ED23DE675100D1CF69 /* Info.plist */,
@@ -331,6 +334,7 @@
 				F9E2B64623E22D7500D1CF69 /* RotationAnimationTests.swift in Sources */,
 				F9E2B64423E1A75F00D1CF69 /* ScaleAnimationTests.swift in Sources */,
 				F9E2B63823DE6B9E00D1CF69 /* AnimationTests.swift in Sources */,
+				F9E2B64823E22EA100D1CF69 /* TranslationAnimationTests.swift in Sources */,
 				F9E2B63923DE6B9E00D1CF69 /* ColorAnimationTests.swift in Sources */,
 				F9E2B64023E0B53000D1CF69 /* EasingFunctionTests.swift in Sources */,
 				F9E2B63723DE6B9E00D1CF69 /* AlphaAnimationTests.swift in Sources */,
