@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,8 @@
 		F9E2B59423DE5ABC00D1CF69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E2B59323DE5ABC00D1CF69 /* Assets.xcassets */; };
 		F9E2B59723DE5ABC00D1CF69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E2B59523DE5ABC00D1CF69 /* LaunchScreen.storyboard */; };
 		F9E2B5A223DE5ABC00D1CF69 /* RazzleDazzleDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5A123DE5ABC00D1CF69 /* RazzleDazzleDemoTests.swift */; };
-		F9E2B5AE23DE5CC700D1CF69 /* RazzleDazzle in Frameworks */ = {isa = PBXBuildFile; productRef = F9E2B5AD23DE5CC700D1CF69 /* RazzleDazzle */; };
+		F9E2B65423E2313100D1CF69 /* RazzleDazzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2B64F23E230A900D1CF69 /* RazzleDazzle.framework */; };
+		F9E2B65523E2313100D1CF69 /* RazzleDazzle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2B64F23E230A900D1CF69 /* RazzleDazzle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +26,35 @@
 			remoteGlobalIDString = F9E2B58623DE5AB900D1CF69;
 			remoteInfo = RazzleDazzleDemo;
 		};
+		F9E2B64E23E230A900D1CF69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9E2B64923E230A900D1CF69 /* RazzleDazzle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9E2B5DD23DE675100D1CF69;
+			remoteInfo = RazzleDazzle;
+		};
+		F9E2B65023E230A900D1CF69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9E2B64923E230A900D1CF69 /* RazzleDazzle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9E2B5E623DE675100D1CF69;
+			remoteInfo = RazzleDazzleTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F9E2B65623E2313100D1CF69 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F9E2B65523E2313100D1CF69 /* RazzleDazzle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F9E2B58723DE5AB900D1CF69 /* RazzleDazzleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RazzleDazzleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +68,7 @@
 		F9E2B59D23DE5ABC00D1CF69 /* RazzleDazzleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RazzleDazzleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E2B5A123DE5ABC00D1CF69 /* RazzleDazzleDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazzleDazzleDemoTests.swift; sourceTree = "<group>"; };
 		F9E2B5A323DE5ABC00D1CF69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E2B64923E230A900D1CF69 /* RazzleDazzle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RazzleDazzle.xcodeproj; path = ../RazzleDazzle.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E2B5AE23DE5CC700D1CF69 /* RazzleDazzle in Frameworks */,
+				F9E2B65423E2313100D1CF69 /* RazzleDazzle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +96,7 @@
 				F9E2B58923DE5AB900D1CF69 /* RazzleDazzleDemo */,
 				F9E2B5A023DE5ABC00D1CF69 /* RazzleDazzleDemoTests */,
 				F9E2B58823DE5AB900D1CF69 /* Products */,
+				F9E2B64923E230A900D1CF69 /* RazzleDazzle.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +132,15 @@
 			path = RazzleDazzleDemoTests;
 			sourceTree = "<group>";
 		};
+		F9E2B64A23E230A900D1CF69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2B64F23E230A900D1CF69 /* RazzleDazzle.framework */,
+				F9E2B65123E230A900D1CF69 /* RazzleDazzleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,6 +151,7 @@
 				F9E2B58323DE5AB900D1CF69 /* Sources */,
 				F9E2B58423DE5AB900D1CF69 /* Frameworks */,
 				F9E2B58523DE5AB900D1CF69 /* Resources */,
+				F9E2B65623E2313100D1CF69 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -118,7 +159,6 @@
 			);
 			name = RazzleDazzleDemo;
 			packageProductDependencies = (
-				F9E2B5AD23DE5CC700D1CF69 /* RazzleDazzle */,
 			);
 			productName = RazzleDazzleDemo;
 			productReference = F9E2B58723DE5AB900D1CF69 /* RazzleDazzleDemo.app */;
@@ -171,10 +211,15 @@
 			);
 			mainGroup = F9E2B57E23DE5AB900D1CF69;
 			packageReferences = (
-				F9E2B5AC23DE5CC700D1CF69 /* XCRemoteSwiftPackageReference "RazzleDazzle" */,
 			);
 			productRefGroup = F9E2B58823DE5AB900D1CF69 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F9E2B64A23E230A900D1CF69 /* Products */;
+					ProjectRef = F9E2B64923E230A900D1CF69 /* RazzleDazzle.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F9E2B58623DE5AB900D1CF69 /* RazzleDazzleDemo */,
@@ -182,6 +227,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F9E2B64F23E230A900D1CF69 /* RazzleDazzle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RazzleDazzle.framework;
+			remoteRef = F9E2B64E23E230A900D1CF69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F9E2B65123E230A900D1CF69 /* RazzleDazzleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RazzleDazzleTests.xctest;
+			remoteRef = F9E2B65023E230A900D1CF69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F9E2B58523DE5AB900D1CF69 /* Resources */ = {
@@ -473,25 +535,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F9E2B5AC23DE5CC700D1CF69 /* XCRemoteSwiftPackageReference "RazzleDazzle" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/eduardo22i/RazzleDazzle";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F9E2B5AD23DE5CC700D1CF69 /* RazzleDazzle */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9E2B5AC23DE5CC700D1CF69 /* XCRemoteSwiftPackageReference "RazzleDazzle" */;
-			productName = RazzleDazzle;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9E2B57F23DE5AB900D1CF69 /* Project object */;
 }
