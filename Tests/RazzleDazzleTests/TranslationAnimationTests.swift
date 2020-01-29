@@ -65,7 +65,7 @@ class TranslationAnimationTests: XCTestCase {
         XCTAssertEqual(animation[10], CGPoint(x: 3, y: 4))
     }
     
-    func testViewTranslationTransform() {
+    func testViewsTranslationTransform() {
         // should apply changes to the view's scale transform
         
         animation[2] = CGPoint(x: 1, y: 2)

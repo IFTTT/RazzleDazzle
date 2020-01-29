@@ -65,7 +65,7 @@ class ScaleAnimationTests: XCTestCase {
         XCTAssertEqual(animation[10], 5)
     }
     
-    func testViewScaleTransform() {
+    func testViewsScaleTransform() {
         // should apply changes to the view's scale transform
         
         animation[1] = 3

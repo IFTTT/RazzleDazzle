@@ -54,7 +54,7 @@ final class BackgroundColorAnimationTests: XCTestCase {
         XCTAssertEqual(animation[10], UIColor.blue)
     }
     
-    func testBackgroundColor() {
+    func testViewsBackgroundColor() {
         // should apply changes to the view's background color
         
         animation[1] = UIColor.red
@@ -71,4 +71,5 @@ final class BackgroundColorAnimationTests: XCTestCase {
         animation.animate(5)
         XCTAssertEqual(view.backgroundColor, UIColor.white)
     }
+    
 }

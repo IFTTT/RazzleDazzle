@@ -75,11 +75,12 @@ class InterpolatableTests: XCTestCase {
     }
     
     // MARK: - CGRect
-
+    
     func testInterpolateRect() {
         // should interpolate rects
         
         let middleRect = CGRect.interpolateFrom(CGRect(x: 1, y: 2, width: 10, height: 20), to: CGRect(x: 3, y: 6, width: 30, height: 60), withProgress: 0.5)
         XCTAssertEqual(middleRect, CGRect(x: 2, y: 4, width: 20, height: 40))
     }
+    
 }

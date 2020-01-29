@@ -91,6 +91,6 @@ class EasingFunctionTests: XCTestCase {
         XCTAssertLessThan(cubicBezierCurve(0.5), 1)
         XCTAssertLessThan(cubicBezierCurve(0), 0.01)
         XCTAssertGreaterThan(cubicBezierCurve(0), -0.01)
-        
     }
+    
 }

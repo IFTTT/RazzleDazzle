@@ -65,7 +65,7 @@ class RotationAnimationTests: XCTestCase {
         XCTAssertEqual(animation[10], 5)
     }
     
-    func testViewRotationTransform() {
+    func testViewsRotationTransform() {
         // should apply changes to the view's scale transform
         
         animation[1] = 3
@@ -84,4 +84,5 @@ class RotationAnimationTests: XCTestCase {
         animation.animate(5)
         XCTAssertEqual(view.transform, CGAffineTransform.identity)
     }
+    
 }

@@ -105,4 +105,5 @@ final class AlphaAnimationTests: XCTestCase {
         animation.animate(5)
         XCTAssertEqual(view.alpha, 1)
     }
+    
 }

@@ -89,7 +89,6 @@
 		F9E2B63123DE6B6500D1CF69 /* ColorAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorAnimationTests.swift; path = Tests/RazzleDazzleTests/ColorAnimationTests.swift; sourceTree = SOURCE_ROOT; };
 		F9E2B63223DE6B6500D1CF69 /* AlphaAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlphaAnimationTests.swift; path = Tests/RazzleDazzleTests/AlphaAnimationTests.swift; sourceTree = SOURCE_ROOT; };
 		F9E2B63323DE6B6500D1CF69 /* AnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationTests.swift; path = Tests/RazzleDazzleTests/AnimationTests.swift; sourceTree = SOURCE_ROOT; };
-		F9E2B63A23DE6C4400D1CF69 /* RazzleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RazzleTests.swift; path = Tests/RazzleDazzleTests/RazzleTests.swift; sourceTree = SOURCE_ROOT; };
 		F9E2B63D23E02B0300D1CF69 /* FilmstripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilmstripTests.swift; path = Tests/RazzleDazzleTests/FilmstripTests.swift; sourceTree = SOURCE_ROOT; };
 		F9E2B63F23E0B53000D1CF69 /* EasingFunctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasingFunctionTests.swift; path = Tests/RazzleDazzleTests/EasingFunctionTests.swift; sourceTree = SOURCE_ROOT; };
 		F9E2B64123E0E81000D1CF69 /* InterpolatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InterpolatableTests.swift; path = Tests/RazzleDazzleTests/InterpolatableTests.swift; sourceTree = SOURCE_ROOT; };
@@ -181,7 +180,6 @@
 				F9E2B64523E22D7500D1CF69 /* RotationAnimationTests.swift */,
 				F9E2B64723E22EA100D1CF69 /* TranslationAnimationTests.swift */,
 				F9E2B63323DE6B6500D1CF69 /* AnimationTests.swift */,
-				F9E2B63A23DE6C4400D1CF69 /* RazzleTests.swift */,
 				F9E2B5ED23DE675100D1CF69 /* Info.plist */,
 			);
 			path = RazzleDazzleTests;
