@@ -2,7 +2,7 @@
 
 ![RazzleDazzle](./Example/Docs/razzledazzlebanner.jpg)
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods Version](https://img.shields.io/cocoapods/v/RazzleDazzle.svg)](http://cocoadocs.org/docsets/RazzleDazzle)
+![GitHub Actions](https://github.com/eduardo22i/razzledazzle/workflows/Razzle%20Dazzle%20CI/badge.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods Version](https://img.shields.io/cocoapods/v/RazzleDazzle.svg)](http://cocoadocs.org/docsets/RazzleDazzle)
 
 `RazzleDazzle` is a simple AutoLayout-friendly keyframe animation framework for iOS, written in Swift. Perfect for scrolling app intros.
 
