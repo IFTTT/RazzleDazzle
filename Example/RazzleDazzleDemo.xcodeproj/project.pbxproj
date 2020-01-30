@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9E2B58B23DE5AB900D1CF69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B58A23DE5AB900D1CF69 /* AppDelegate.swift */; };
+		F9E2B58D23DE5AB900D1CF69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B58C23DE5AB900D1CF69 /* SceneDelegate.swift */; };
+		F9E2B58F23DE5AB900D1CF69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B58E23DE5AB900D1CF69 /* ViewController.swift */; };
+		F9E2B59223DE5AB900D1CF69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E2B59023DE5AB900D1CF69 /* Main.storyboard */; };
+		F9E2B59423DE5ABC00D1CF69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E2B59323DE5ABC00D1CF69 /* Assets.xcassets */; };
+		F9E2B59723DE5ABC00D1CF69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E2B59523DE5ABC00D1CF69 /* LaunchScreen.storyboard */; };
+		F9E2B5A223DE5ABC00D1CF69 /* RazzleDazzleDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5A123DE5ABC00D1CF69 /* RazzleDazzleDemoTests.swift */; };
+		F9E2B65423E2313100D1CF69 /* RazzleDazzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2B64F23E230A900D1CF69 /* RazzleDazzle.framework */; };
+		F9E2B65523E2313100D1CF69 /* RazzleDazzle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2B64F23E230A900D1CF69 /* RazzleDazzle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9E2B59E23DE5ABC00D1CF69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9E2B57F23DE5AB900D1CF69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9E2B58623DE5AB900D1CF69;
+			remoteInfo = RazzleDazzleDemo;
+		};
+		F9E2B64E23E230A900D1CF69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9E2B64923E230A900D1CF69 /* RazzleDazzle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9E2B5DD23DE675100D1CF69;
+			remoteInfo = RazzleDazzle;
+		};
+		F9E2B65023E230A900D1CF69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9E2B64923E230A900D1CF69 /* RazzleDazzle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9E2B5E623DE675100D1CF69;
+			remoteInfo = RazzleDazzleTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F9E2B65623E2313100D1CF69 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F9E2B65523E2313100D1CF69 /* RazzleDazzle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F9E2B58723DE5AB900D1CF69 /* RazzleDazzleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RazzleDazzleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E2B58A23DE5AB900D1CF69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9E2B58C23DE5AB900D1CF69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F9E2B58E23DE5AB900D1CF69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9E2B59123DE5AB900D1CF69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9E2B59323DE5ABC00D1CF69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9E2B59623DE5ABC00D1CF69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9E2B59823DE5ABC00D1CF69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E2B59D23DE5ABC00D1CF69 /* RazzleDazzleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RazzleDazzleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E2B5A123DE5ABC00D1CF69 /* RazzleDazzleDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazzleDazzleDemoTests.swift; sourceTree = "<group>"; };
+		F9E2B5A323DE5ABC00D1CF69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E2B64923E230A900D1CF69 /* RazzleDazzle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RazzleDazzle.xcodeproj; path = ../RazzleDazzle.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9E2B58423DE5AB900D1CF69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E2B65423E2313100D1CF69 /* RazzleDazzle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E2B59A23DE5ABC00D1CF69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9E2B57E23DE5AB900D1CF69 = {
+			isa = PBXGroup;
+			children = (
+				F9E2B58923DE5AB900D1CF69 /* RazzleDazzleDemo */,
+				F9E2B5A023DE5ABC00D1CF69 /* RazzleDazzleDemoTests */,
+				F9E2B58823DE5AB900D1CF69 /* Products */,
+				F9E2B64923E230A900D1CF69 /* RazzleDazzle.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		F9E2B58823DE5AB900D1CF69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2B58723DE5AB900D1CF69 /* RazzleDazzleDemo.app */,
+				F9E2B59D23DE5ABC00D1CF69 /* RazzleDazzleDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9E2B58923DE5AB900D1CF69 /* RazzleDazzleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2B58A23DE5AB900D1CF69 /* AppDelegate.swift */,
+				F9E2B58C23DE5AB900D1CF69 /* SceneDelegate.swift */,
+				F9E2B58E23DE5AB900D1CF69 /* ViewController.swift */,
+				F9E2B59023DE5AB900D1CF69 /* Main.storyboard */,
+				F9E2B59323DE5ABC00D1CF69 /* Assets.xcassets */,
+				F9E2B59523DE5ABC00D1CF69 /* LaunchScreen.storyboard */,
+				F9E2B59823DE5ABC00D1CF69 /* Info.plist */,
+			);
+			path = RazzleDazzleDemo;
+			sourceTree = "<group>";
+		};
+		F9E2B5A023DE5ABC00D1CF69 /* RazzleDazzleDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2B5A123DE5ABC00D1CF69 /* RazzleDazzleDemoTests.swift */,
+				F9E2B5A323DE5ABC00D1CF69 /* Info.plist */,
+			);
+			path = RazzleDazzleDemoTests;
+			sourceTree = "<group>";
+		};
+		F9E2B64A23E230A900D1CF69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2B64F23E230A900D1CF69 /* RazzleDazzle.framework */,
+				F9E2B65123E230A900D1CF69 /* RazzleDazzleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9E2B58623DE5AB900D1CF69 /* RazzleDazzleDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E2B5A623DE5ABC00D1CF69 /* Build configuration list for PBXNativeTarget "RazzleDazzleDemo" */;
+			buildPhases = (
+				F9E2B58323DE5AB900D1CF69 /* Sources */,
+				F9E2B58423DE5AB900D1CF69 /* Frameworks */,
+				F9E2B58523DE5AB900D1CF69 /* Resources */,
+				F9E2B65623E2313100D1CF69 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RazzleDazzleDemo;
+			packageProductDependencies = (
+			);
+			productName = RazzleDazzleDemo;
+			productReference = F9E2B58723DE5AB900D1CF69 /* RazzleDazzleDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9E2B59C23DE5ABC00D1CF69 /* RazzleDazzleDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E2B5A923DE5ABC00D1CF69 /* Build configuration list for PBXNativeTarget "RazzleDazzleDemoTests" */;
+			buildPhases = (
+				F9E2B59923DE5ABC00D1CF69 /* Sources */,
+				F9E2B59A23DE5ABC00D1CF69 /* Frameworks */,
+				F9E2B59B23DE5ABC00D1CF69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9E2B59F23DE5ABC00D1CF69 /* PBXTargetDependency */,
+			);
+			name = RazzleDazzleDemoTests;
+			productName = RazzleDazzleDemoTests;
+			productReference = F9E2B59D23DE5ABC00D1CF69 /* RazzleDazzleDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9E2B57F23DE5AB900D1CF69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = IFTTT;
+				TargetAttributes = {
+					F9E2B58623DE5AB900D1CF69 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					F9E2B59C23DE5ABC00D1CF69 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = F9E2B58623DE5AB900D1CF69;
+					};
+				};
+			};
+			buildConfigurationList = F9E2B58223DE5AB900D1CF69 /* Build configuration list for PBXProject "RazzleDazzleDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9E2B57E23DE5AB900D1CF69;
+			packageReferences = (
+			);
+			productRefGroup = F9E2B58823DE5AB900D1CF69 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F9E2B64A23E230A900D1CF69 /* Products */;
+					ProjectRef = F9E2B64923E230A900D1CF69 /* RazzleDazzle.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F9E2B58623DE5AB900D1CF69 /* RazzleDazzleDemo */,
+				F9E2B59C23DE5ABC00D1CF69 /* RazzleDazzleDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F9E2B64F23E230A900D1CF69 /* RazzleDazzle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RazzleDazzle.framework;
+			remoteRef = F9E2B64E23E230A900D1CF69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F9E2B65123E230A900D1CF69 /* RazzleDazzleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RazzleDazzleTests.xctest;
+			remoteRef = F9E2B65023E230A900D1CF69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9E2B58523DE5AB900D1CF69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E2B59723DE5ABC00D1CF69 /* LaunchScreen.storyboard in Resources */,
+				F9E2B59423DE5ABC00D1CF69 /* Assets.xcassets in Resources */,
+				F9E2B59223DE5AB900D1CF69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E2B59B23DE5ABC00D1CF69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9E2B58323DE5AB900D1CF69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E2B58F23DE5AB900D1CF69 /* ViewController.swift in Sources */,
+				F9E2B58B23DE5AB900D1CF69 /* AppDelegate.swift in Sources */,
+				F9E2B58D23DE5AB900D1CF69 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E2B59923DE5ABC00D1CF69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E2B5A223DE5ABC00D1CF69 /* RazzleDazzleDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9E2B59F23DE5ABC00D1CF69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9E2B58623DE5AB900D1CF69 /* RazzleDazzleDemo */;
+			targetProxy = F9E2B59E23DE5ABC00D1CF69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9E2B59023DE5AB900D1CF69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9E2B59123DE5AB900D1CF69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9E2B59523DE5ABC00D1CF69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9E2B59623DE5ABC00D1CF69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9E2B5A423DE5ABC00D1CF69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9E2B5A523DE5ABC00D1CF69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9E2B5A723DE5ABC00D1CF69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RazzleDazzleDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ifttt.RazzleDazzleDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9E2B5A823DE5ABC00D1CF69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RazzleDazzleDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ifttt.RazzleDazzleDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9E2B5AA23DE5ABC00D1CF69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RazzleDazzleDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ifttt.RazzleDazzleDemo.RazzleDazzleDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RazzleDazzleDemo.app/RazzleDazzleDemo";
+			};
+			name = Debug;
+		};
+		F9E2B5AB23DE5ABC00D1CF69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RazzleDazzleDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ifttt.RazzleDazzleDemo.RazzleDazzleDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RazzleDazzleDemo.app/RazzleDazzleDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9E2B58223DE5AB900D1CF69 /* Build configuration list for PBXProject "RazzleDazzleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E2B5A423DE5ABC00D1CF69 /* Debug */,
+				F9E2B5A523DE5ABC00D1CF69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E2B5A623DE5ABC00D1CF69 /* Build configuration list for PBXNativeTarget "RazzleDazzleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E2B5A723DE5ABC00D1CF69 /* Debug */,
+				F9E2B5A823DE5ABC00D1CF69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E2B5A923DE5ABC00D1CF69 /* Build configuration list for PBXNativeTarget "RazzleDazzleDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E2B5AA23DE5ABC00D1CF69 /* Debug */,
+				F9E2B5AB23DE5ABC00D1CF69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9E2B57F23DE5AB900D1CF69 /* Project object */;
+}

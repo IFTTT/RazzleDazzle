@@ -2,7 +2,7 @@
 
 ![RazzleDazzle](./Example/Docs/razzledazzlebanner.jpg)
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods Version](https://img.shields.io/cocoapods/v/RazzleDazzle.svg)](http://cocoadocs.org/docsets/RazzleDazzle)
+![GitHub Actions](https://github.com/eduardo22i/razzledazzle/workflows/Razzle%20Dazzle%20CI/badge.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods Version](https://img.shields.io/cocoapods/v/RazzleDazzle.svg)](http://cocoadocs.org/docsets/RazzleDazzle)
 
 `RazzleDazzle` is a simple AutoLayout-friendly keyframe animation framework for iOS, written in Swift. Perfect for scrolling app intros.
 
@@ -25,13 +25,27 @@ As a bonus, because it's built on top of the animations library, you can even te
 
 ## Installation
 
+### Swift Package Manager
+
+`RazzleDazzle` is available through [Swift Package Manager](https://swift.org/package-manager/). To install
+```
+dependencies: [
+    .package(url: "https://github.com/eduardo22i/RazzleDazzle.git", from: "2.0")
+]
+```
+#### Adding it to an existent iOS Project via Swift Package Manager
+
+- Using Xcode 11 go to File > Swift Packages > Add Package Dependency
+- Paste the project URL: https://github.com/eduardo22i/RazzleDazzle
+- Click on next and select the project target 
+
 ### Carthage
 
 `RazzleDazzle` is available through [Carthage](https://github.com/Carthage/Carthage). To install
 it, simply add the following line to your `Cartfile`:
 
 ```
-github "IFTTT/RazzleDazzle"
+github "eduardo22i/RazzleDazzle"
 ```
 
 ### CocoaPods
@@ -246,6 +260,7 @@ Looking for libraries to build awesome keyframe animations like RazzleDazzle on 
 ## Contributors
 
 * [Laura Skelton](https://github.com/lauraskelton), creator.
+* [Eduardo Irias](https://github.com/eduardo22i), developer.
 
 ## Contributing
 

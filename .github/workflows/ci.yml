@@ -1,0 +1,17 @@
+name: "Razzle Dazzle CI"
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Test iOS
+    runs-on: macOS-latest
+    env: 
+      DEVELOPER_DIR: /Applications/Xcode_11.3.1.app/Contents/Developer
+    strategy:
+      matrix:
+        destination: ["OS=13.3,name=iPhone 11 Pro"] #, "OS=12.4,name=iPhone XS", "OS=11.4,name=iPhone X", "OS=10.3.1,name=iPhone SE"]:
+    steps:
+    - uses: actions/checkout@v2            
+    - name: iOS - ${{ matrix.destination }}
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "RazzleDazzle.xcodeproj" -scheme "RazzleDazzle" -destination "${{ matrix.destination }}" clean test | xcpretty

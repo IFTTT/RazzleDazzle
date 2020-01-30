@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9E2B5E723DE675100D1CF69 /* RazzleDazzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2B5DD23DE675100D1CF69 /* RazzleDazzle.framework */; };
+		F9E2B61023DE67B900D1CF69 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5F723DE67B700D1CF69 /* Animator.swift */; };
+		F9E2B61123DE67B900D1CF69 /* PathPositionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5F823DE67B700D1CF69 /* PathPositionAnimation.swift */; };
+		F9E2B61223DE67B900D1CF69 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5F923DE67B800D1CF69 /* Animation.swift */; };
+		F9E2B61323DE67B900D1CF69 /* Filmstrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5FA23DE67B800D1CF69 /* Filmstrip.swift */; };
+		F9E2B61423DE67B900D1CF69 /* TranslationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5FB23DE67B800D1CF69 /* TranslationAnimation.swift */; };
+		F9E2B61523DE67B900D1CF69 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5FC23DE67B800D1CF69 /* Animatable.swift */; };
+		F9E2B61623DE67B900D1CF69 /* BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5FD23DE67B800D1CF69 /* BackgroundColorAnimation.swift */; };
+		F9E2B61723DE67B900D1CF69 /* ScrollViewPageConstraintAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5FE23DE67B800D1CF69 /* ScrollViewPageConstraintAnimation.swift */; };
+		F9E2B61823DE67B900D1CF69 /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B5FF23DE67B800D1CF69 /* ScaleAnimation.swift */; };
+		F9E2B61923DE67B900D1CF69 /* LayerStrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60023DE67B800D1CF69 /* LayerStrokeColorAnimation.swift */; };
+		F9E2B61A23DE67B900D1CF69 /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60123DE67B800D1CF69 /* EasingFunction.swift */; };
+		F9E2B61B23DE67B900D1CF69 /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60223DE67B800D1CF69 /* RotationAnimation.swift */; };
+		F9E2B61C23DE67B900D1CF69 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60323DE67B800D1CF69 /* CubicBezier.swift */; };
+		F9E2B61D23DE67B900D1CF69 /* UIView+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60423DE67B800D1CF69 /* UIView+Transform.swift */; };
+		F9E2B61E23DE67B900D1CF69 /* LayerStrokeEndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60523DE67B800D1CF69 /* LayerStrokeEndAnimation.swift */; };
+		F9E2B61F23DE67B900D1CF69 /* CornerRadiusAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60623DE67B800D1CF69 /* CornerRadiusAnimation.swift */; };
+		F9E2B62023DE67B900D1CF69 /* LayerFillColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60723DE67B800D1CF69 /* LayerFillColorAnimation.swift */; };
+		F9E2B62123DE67B900D1CF69 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60823DE67B800D1CF69 /* Interpolatable.swift */; };
+		F9E2B62223DE67B900D1CF69 /* ConstraintConstantAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60923DE67B900D1CF69 /* ConstraintConstantAnimation.swift */; };
+		F9E2B62323DE67B900D1CF69 /* LabelTextColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60A23DE67B900D1CF69 /* LabelTextColorAnimation.swift */; };
+		F9E2B62423DE67B900D1CF69 /* AlphaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60B23DE67B900D1CF69 /* AlphaAnimation.swift */; };
+		F9E2B62523DE67B900D1CF69 /* HideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60C23DE67B900D1CF69 /* HideAnimation.swift */; };
+		F9E2B62623DE67B900D1CF69 /* ConstraintMultiplierAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60D23DE67B900D1CF69 /* ConstraintMultiplierAnimation.swift */; };
+		F9E2B62723DE67B900D1CF69 /* LayerStrokeStartAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60E23DE67B900D1CF69 /* LayerStrokeStartAnimation.swift */; };
+		F9E2B62823DE67B900D1CF69 /* AnimatedPagingScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B60F23DE67B900D1CF69 /* AnimatedPagingScrollViewController.swift */; };
+		F9E2B62A23DE694A00D1CF69 /* RazzleDazzle.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E2B62923DE694A00D1CF69 /* RazzleDazzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9E2B63723DE6B9E00D1CF69 /* AlphaAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B63223DE6B6500D1CF69 /* AlphaAnimationTests.swift */; };
+		F9E2B63823DE6B9E00D1CF69 /* AnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B63323DE6B6500D1CF69 /* AnimationTests.swift */; };
+		F9E2B63923DE6B9E00D1CF69 /* ColorAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B63123DE6B6500D1CF69 /* ColorAnimationTests.swift */; };
+		F9E2B63E23E02B0300D1CF69 /* FilmstripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B63D23E02B0300D1CF69 /* FilmstripTests.swift */; };
+		F9E2B64023E0B53000D1CF69 /* EasingFunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B63F23E0B53000D1CF69 /* EasingFunctionTests.swift */; };
+		F9E2B64223E0E81000D1CF69 /* InterpolatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B64123E0E81000D1CF69 /* InterpolatableTests.swift */; };
+		F9E2B64423E1A75F00D1CF69 /* ScaleAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B64323E1A75F00D1CF69 /* ScaleAnimationTests.swift */; };
+		F9E2B64623E22D7500D1CF69 /* RotationAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B64523E22D7500D1CF69 /* RotationAnimationTests.swift */; };
+		F9E2B64823E22EA100D1CF69 /* TranslationAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2B64723E22EA100D1CF69 /* TranslationAnimationTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9E2B5E823DE675100D1CF69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9E2B5D423DE675100D1CF69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9E2B5DC23DE675100D1CF69;
+			remoteInfo = RazzleDazzle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9E2B5DD23DE675100D1CF69 /* RazzleDazzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RazzleDazzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E2B5E123DE675100D1CF69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Sources/RazzleDazzle/Info.plist; sourceTree = "<group>"; };
+		F9E2B5E623DE675100D1CF69 /* RazzleDazzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RazzleDazzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E2B5ED23DE675100D1CF69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Tests/RazzleDazzleTests/Info.plist; sourceTree = "<group>"; };
+		F9E2B5F723DE67B700D1CF69 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/RazzleDazzle/Animator.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B5F823DE67B700D1CF69 /* PathPositionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathPositionAnimation.swift; path = Sources/RazzleDazzle/PathPositionAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B5F923DE67B800D1CF69 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = Sources/RazzleDazzle/Animation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B5FA23DE67B800D1CF69 /* Filmstrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Filmstrip.swift; path = Sources/RazzleDazzle/Filmstrip.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B5FB23DE67B800D1CF69 /* TranslationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TranslationAnimation.swift; path = Sources/RazzleDazzle/TranslationAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B5FC23DE67B800D1CF69 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animatable.swift; path = Sources/RazzleDazzle/Animatable.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B5FD23DE67B800D1CF69 /* BackgroundColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundColorAnimation.swift; path = Sources/RazzleDazzle/BackgroundColorAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B5FE23DE67B800D1CF69 /* ScrollViewPageConstraintAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewPageConstraintAnimation.swift; path = Sources/RazzleDazzle/ScrollViewPageConstraintAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B5FF23DE67B800D1CF69 /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScaleAnimation.swift; path = Sources/RazzleDazzle/ScaleAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60023DE67B800D1CF69 /* LayerStrokeColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayerStrokeColorAnimation.swift; path = Sources/RazzleDazzle/LayerStrokeColorAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60123DE67B800D1CF69 /* EasingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EasingFunction.swift; path = Sources/RazzleDazzle/EasingFunction.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60223DE67B800D1CF69 /* RotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RotationAnimation.swift; path = Sources/RazzleDazzle/RotationAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60323DE67B800D1CF69 /* CubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CubicBezier.swift; path = Sources/RazzleDazzle/CubicBezier.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60423DE67B800D1CF69 /* UIView+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Transform.swift"; path = "Sources/RazzleDazzle/UIView+Transform.swift"; sourceTree = SOURCE_ROOT; };
+		F9E2B60523DE67B800D1CF69 /* LayerStrokeEndAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayerStrokeEndAnimation.swift; path = Sources/RazzleDazzle/LayerStrokeEndAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60623DE67B800D1CF69 /* CornerRadiusAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CornerRadiusAnimation.swift; path = Sources/RazzleDazzle/CornerRadiusAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60723DE67B800D1CF69 /* LayerFillColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayerFillColorAnimation.swift; path = Sources/RazzleDazzle/LayerFillColorAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60823DE67B800D1CF69 /* Interpolatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Interpolatable.swift; path = Sources/RazzleDazzle/Interpolatable.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60923DE67B900D1CF69 /* ConstraintConstantAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstraintConstantAnimation.swift; path = Sources/RazzleDazzle/ConstraintConstantAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60A23DE67B900D1CF69 /* LabelTextColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelTextColorAnimation.swift; path = Sources/RazzleDazzle/LabelTextColorAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60B23DE67B900D1CF69 /* AlphaAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlphaAnimation.swift; path = Sources/RazzleDazzle/AlphaAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60C23DE67B900D1CF69 /* HideAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HideAnimation.swift; path = Sources/RazzleDazzle/HideAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60D23DE67B900D1CF69 /* ConstraintMultiplierAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierAnimation.swift; path = Sources/RazzleDazzle/ConstraintMultiplierAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60E23DE67B900D1CF69 /* LayerStrokeStartAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayerStrokeStartAnimation.swift; path = Sources/RazzleDazzle/LayerStrokeStartAnimation.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B60F23DE67B900D1CF69 /* AnimatedPagingScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimatedPagingScrollViewController.swift; path = Sources/RazzleDazzle/AnimatedPagingScrollViewController.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B62923DE694A00D1CF69 /* RazzleDazzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RazzleDazzle.h; path = Sources/RazzleDazzle/RazzleDazzle.h; sourceTree = SOURCE_ROOT; };
+		F9E2B63123DE6B6500D1CF69 /* ColorAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorAnimationTests.swift; path = Tests/RazzleDazzleTests/ColorAnimationTests.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B63223DE6B6500D1CF69 /* AlphaAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlphaAnimationTests.swift; path = Tests/RazzleDazzleTests/AlphaAnimationTests.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B63323DE6B6500D1CF69 /* AnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationTests.swift; path = Tests/RazzleDazzleTests/AnimationTests.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B63D23E02B0300D1CF69 /* FilmstripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilmstripTests.swift; path = Tests/RazzleDazzleTests/FilmstripTests.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B63F23E0B53000D1CF69 /* EasingFunctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EasingFunctionTests.swift; path = Tests/RazzleDazzleTests/EasingFunctionTests.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B64123E0E81000D1CF69 /* InterpolatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InterpolatableTests.swift; path = Tests/RazzleDazzleTests/InterpolatableTests.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B64323E1A75F00D1CF69 /* ScaleAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScaleAnimationTests.swift; path = Tests/RazzleDazzleTests/ScaleAnimationTests.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B64523E22D7500D1CF69 /* RotationAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RotationAnimationTests.swift; path = Tests/RazzleDazzleTests/RotationAnimationTests.swift; sourceTree = SOURCE_ROOT; };
+		F9E2B64723E22EA100D1CF69 /* TranslationAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslationAnimationTests.swift; path = Tests/RazzleDazzleTests/TranslationAnimationTests.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9E2B5DA23DE675100D1CF69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E2B5E323DE675100D1CF69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E2B5E723DE675100D1CF69 /* RazzleDazzle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9E2B5D323DE675100D1CF69 = {
+			isa = PBXGroup;
+			children = (
+				F9E2B5DF23DE675100D1CF69 /* RazzleDazzle */,
+				F9E2B5EA23DE675100D1CF69 /* RazzleDazzleTests */,
+				F9E2B5DE23DE675100D1CF69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9E2B5DE23DE675100D1CF69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2B5DD23DE675100D1CF69 /* RazzleDazzle.framework */,
+				F9E2B5E623DE675100D1CF69 /* RazzleDazzleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9E2B5DF23DE675100D1CF69 /* RazzleDazzle */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2B62923DE694A00D1CF69 /* RazzleDazzle.h */,
+				F9E2B60B23DE67B900D1CF69 /* AlphaAnimation.swift */,
+				F9E2B5FC23DE67B800D1CF69 /* Animatable.swift */,
+				F9E2B60F23DE67B900D1CF69 /* AnimatedPagingScrollViewController.swift */,
+				F9E2B5F923DE67B800D1CF69 /* Animation.swift */,
+				F9E2B5F723DE67B700D1CF69 /* Animator.swift */,
+				F9E2B5FD23DE67B800D1CF69 /* BackgroundColorAnimation.swift */,
+				F9E2B60923DE67B900D1CF69 /* ConstraintConstantAnimation.swift */,
+				F9E2B60D23DE67B900D1CF69 /* ConstraintMultiplierAnimation.swift */,
+				F9E2B60623DE67B800D1CF69 /* CornerRadiusAnimation.swift */,
+				F9E2B60323DE67B800D1CF69 /* CubicBezier.swift */,
+				F9E2B60123DE67B800D1CF69 /* EasingFunction.swift */,
+				F9E2B5FA23DE67B800D1CF69 /* Filmstrip.swift */,
+				F9E2B60C23DE67B900D1CF69 /* HideAnimation.swift */,
+				F9E2B60823DE67B800D1CF69 /* Interpolatable.swift */,
+				F9E2B60A23DE67B900D1CF69 /* LabelTextColorAnimation.swift */,
+				F9E2B60723DE67B800D1CF69 /* LayerFillColorAnimation.swift */,
+				F9E2B60023DE67B800D1CF69 /* LayerStrokeColorAnimation.swift */,
+				F9E2B60523DE67B800D1CF69 /* LayerStrokeEndAnimation.swift */,
+				F9E2B60E23DE67B900D1CF69 /* LayerStrokeStartAnimation.swift */,
+				F9E2B5F823DE67B700D1CF69 /* PathPositionAnimation.swift */,
+				F9E2B60223DE67B800D1CF69 /* RotationAnimation.swift */,
+				F9E2B5FF23DE67B800D1CF69 /* ScaleAnimation.swift */,
+				F9E2B5FE23DE67B800D1CF69 /* ScrollViewPageConstraintAnimation.swift */,
+				F9E2B5FB23DE67B800D1CF69 /* TranslationAnimation.swift */,
+				F9E2B60423DE67B800D1CF69 /* UIView+Transform.swift */,
+				F9E2B5E123DE675100D1CF69 /* Info.plist */,
+			);
+			path = RazzleDazzle;
+			sourceTree = "<group>";
+		};
+		F9E2B5EA23DE675100D1CF69 /* RazzleDazzleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2B63D23E02B0300D1CF69 /* FilmstripTests.swift */,
+				F9E2B63F23E0B53000D1CF69 /* EasingFunctionTests.swift */,
+				F9E2B64123E0E81000D1CF69 /* InterpolatableTests.swift */,
+				F9E2B63223DE6B6500D1CF69 /* AlphaAnimationTests.swift */,
+				F9E2B63123DE6B6500D1CF69 /* ColorAnimationTests.swift */,
+				F9E2B64323E1A75F00D1CF69 /* ScaleAnimationTests.swift */,
+				F9E2B64523E22D7500D1CF69 /* RotationAnimationTests.swift */,
+				F9E2B64723E22EA100D1CF69 /* TranslationAnimationTests.swift */,
+				F9E2B63323DE6B6500D1CF69 /* AnimationTests.swift */,
+				F9E2B5ED23DE675100D1CF69 /* Info.plist */,
+			);
+			path = RazzleDazzleTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F9E2B5D823DE675100D1CF69 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E2B62A23DE694A00D1CF69 /* RazzleDazzle.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F9E2B5DC23DE675100D1CF69 /* RazzleDazzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E2B5F123DE675100D1CF69 /* Build configuration list for PBXNativeTarget "RazzleDazzle" */;
+			buildPhases = (
+				F9E2B5D823DE675100D1CF69 /* Headers */,
+				F9E2B5D923DE675100D1CF69 /* Sources */,
+				F9E2B5DA23DE675100D1CF69 /* Frameworks */,
+				F9E2B5DB23DE675100D1CF69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RazzleDazzle;
+			productName = RazzleDazzle;
+			productReference = F9E2B5DD23DE675100D1CF69 /* RazzleDazzle.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F9E2B5E523DE675100D1CF69 /* RazzleDazzleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E2B5F423DE675100D1CF69 /* Build configuration list for PBXNativeTarget "RazzleDazzleTests" */;
+			buildPhases = (
+				F9E2B5E223DE675100D1CF69 /* Sources */,
+				F9E2B5E323DE675100D1CF69 /* Frameworks */,
+				F9E2B5E423DE675100D1CF69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9E2B5E923DE675100D1CF69 /* PBXTargetDependency */,
+			);
+			name = RazzleDazzleTests;
+			productName = RazzleDazzleTests;
+			productReference = F9E2B5E623DE675100D1CF69 /* RazzleDazzleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9E2B5D423DE675100D1CF69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = IFTTT;
+				TargetAttributes = {
+					F9E2B5DC23DE675100D1CF69 = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
+					};
+					F9E2B5E523DE675100D1CF69 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = F9E2B5D723DE675100D1CF69 /* Build configuration list for PBXProject "RazzleDazzle" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9E2B5D323DE675100D1CF69;
+			productRefGroup = F9E2B5DE23DE675100D1CF69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9E2B5DC23DE675100D1CF69 /* RazzleDazzle */,
+				F9E2B5E523DE675100D1CF69 /* RazzleDazzleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9E2B5DB23DE675100D1CF69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E2B5E423DE675100D1CF69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9E2B5D923DE675100D1CF69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E2B61A23DE67B900D1CF69 /* EasingFunction.swift in Sources */,
+				F9E2B61323DE67B900D1CF69 /* Filmstrip.swift in Sources */,
+				F9E2B61523DE67B900D1CF69 /* Animatable.swift in Sources */,
+				F9E2B61123DE67B900D1CF69 /* PathPositionAnimation.swift in Sources */,
+				F9E2B61C23DE67B900D1CF69 /* CubicBezier.swift in Sources */,
+				F9E2B62623DE67B900D1CF69 /* ConstraintMultiplierAnimation.swift in Sources */,
+				F9E2B62423DE67B900D1CF69 /* AlphaAnimation.swift in Sources */,
+				F9E2B61223DE67B900D1CF69 /* Animation.swift in Sources */,
+				F9E2B61823DE67B900D1CF69 /* ScaleAnimation.swift in Sources */,
+				F9E2B62823DE67B900D1CF69 /* AnimatedPagingScrollViewController.swift in Sources */,
+				F9E2B62023DE67B900D1CF69 /* LayerFillColorAnimation.swift in Sources */,
+				F9E2B61F23DE67B900D1CF69 /* CornerRadiusAnimation.swift in Sources */,
+				F9E2B61B23DE67B900D1CF69 /* RotationAnimation.swift in Sources */,
+				F9E2B61023DE67B900D1CF69 /* Animator.swift in Sources */,
+				F9E2B62223DE67B900D1CF69 /* ConstraintConstantAnimation.swift in Sources */,
+				F9E2B62323DE67B900D1CF69 /* LabelTextColorAnimation.swift in Sources */,
+				F9E2B62123DE67B900D1CF69 /* Interpolatable.swift in Sources */,
+				F9E2B61423DE67B900D1CF69 /* TranslationAnimation.swift in Sources */,
+				F9E2B62523DE67B900D1CF69 /* HideAnimation.swift in Sources */,
+				F9E2B61E23DE67B900D1CF69 /* LayerStrokeEndAnimation.swift in Sources */,
+				F9E2B61723DE67B900D1CF69 /* ScrollViewPageConstraintAnimation.swift in Sources */,
+				F9E2B61923DE67B900D1CF69 /* LayerStrokeColorAnimation.swift in Sources */,
+				F9E2B62723DE67B900D1CF69 /* LayerStrokeStartAnimation.swift in Sources */,
+				F9E2B61623DE67B900D1CF69 /* BackgroundColorAnimation.swift in Sources */,
+				F9E2B61D23DE67B900D1CF69 /* UIView+Transform.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E2B5E223DE675100D1CF69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E2B63E23E02B0300D1CF69 /* FilmstripTests.swift in Sources */,
+				F9E2B64223E0E81000D1CF69 /* InterpolatableTests.swift in Sources */,
+				F9E2B64623E22D7500D1CF69 /* RotationAnimationTests.swift in Sources */,
+				F9E2B64423E1A75F00D1CF69 /* ScaleAnimationTests.swift in Sources */,
+				F9E2B63823DE6B9E00D1CF69 /* AnimationTests.swift in Sources */,
+				F9E2B64823E22EA100D1CF69 /* TranslationAnimationTests.swift in Sources */,
+				F9E2B63923DE6B9E00D1CF69 /* ColorAnimationTests.swift in Sources */,
+				F9E2B64023E0B53000D1CF69 /* EasingFunctionTests.swift in Sources */,
+				F9E2B63723DE6B9E00D1CF69 /* AlphaAnimationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9E2B5E923DE675100D1CF69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9E2B5DC23DE675100D1CF69 /* RazzleDazzle */;
+			targetProxy = F9E2B5E823DE675100D1CF69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F9E2B5EF23DE675100D1CF69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F9E2B5F023DE675100D1CF69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F9E2B5F223DE675100D1CF69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/RazzleDazzle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ifttt.RazzleDazzleDemo.RazzleDazzle;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9E2B5F323DE675100D1CF69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/RazzleDazzle/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ifttt.RazzleDazzleDemo.RazzleDazzle;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9E2B5F523DE675100D1CF69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tests/RazzleDazzleTests//Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ifttt.RazzleDazzleDemo.RazzleDazzleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9E2B5F623DE675100D1CF69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tests/RazzleDazzleTests//Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ifttt.RazzleDazzleDemo.RazzleDazzleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9E2B5D723DE675100D1CF69 /* Build configuration list for PBXProject "RazzleDazzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E2B5EF23DE675100D1CF69 /* Debug */,
+				F9E2B5F023DE675100D1CF69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E2B5F123DE675100D1CF69 /* Build configuration list for PBXNativeTarget "RazzleDazzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E2B5F223DE675100D1CF69 /* Debug */,
+				F9E2B5F323DE675100D1CF69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E2B5F423DE675100D1CF69 /* Build configuration list for PBXNativeTarget "RazzleDazzleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E2B5F523DE675100D1CF69 /* Debug */,
+				F9E2B5F623DE675100D1CF69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9E2B5D423DE675100D1CF69 /* Project object */;
+}
