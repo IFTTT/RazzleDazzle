@@ -49,7 +49,7 @@ public let EasingFunctionEaseInBounce: EasingFunction = { t in
 
 public let EasingFunctionEaseOutBounce: EasingFunction = { t in
     if (t < (4.0 / 11.0)) {
-        return pow((11.0 / 4.0), 2) * pow(t, 2)
+        return pow((11.0 / 4.0), 2) * pow(t, CGFloat(2))
     }
     
     if (t < (8.0 / 11.0)) {
